@@ -1,0 +1,1604 @@
+<?xml version="1.0" encoding="WINDOWS-1251" ?>
+<dictionary dicx_version="1.28">
+
+  <group name="Связь с другими модулями">
+    <table last_changed="Смуров А.А." name="Location" personal_data="1" responsible="Смуров А.А." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>CEXTENSION</type>
+          <table>Лицо</table>
+        </format>
+      </column>
+      <column name="Name">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <column name="Описание">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <column name="ДатаОкончания">
+        <format>
+          <type>DATE</type>
+        </format>
+      </column>
+      <column name="ДатаНачала">
+        <format>
+          <type>DATE</type>
+        </format>
+      </column>
+      <column name="ВремяНачалаРаботы">
+        <format>
+          <type>TIME</type>
+        </format>
+      </column>
+      <column name="ВремяОкончанияРаботы">
+        <format>
+          <type>TIME</type>
+        </format>
+      </column>
+      <column name="Parent">
+        <format>
+          <type>HIERARCHY</type>
+          <on_delete>1</on_delete>
+          <nodes_field>1</nodes_field>
+        </format>
+      </column>
+      <index method="btree" name="Parent" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Parent" nulls_place="LAST" sorting="ASC"/>
+        <column is_expressions="0" name="Parent@" nulls_place="LAST" sorting="DESC"/>
+      </index>
+      <trigger_list/>
+    </table>
+    <table last_changed="Волков Д.Н." name="ВидПоощренияВзыскания" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>IDENTIFIER</type>
+          <max_size>4</max_size>
+        </format>
+      </column>
+      <column name="Наименование">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <column name="Тип">
+        <format>
+          <type>ENUM</type>
+          <element>
+            <string>Взыскание</string>
+            <value>0</value>
+          </element>
+          <element>
+            <string>Поощрение</string>
+            <value>1</value>
+          </element>
+          <element>
+            <string>Переработка</string>
+            <value>2</value>
+          </element>
+          <element>
+            <string>Сайт</string>
+            <value>3</value>
+          </element>
+          <element>
+            <string>Браузер</string>
+            <value>4</value>
+          </element>
+        </format>
+      </column>
+      <trigger_list/>
+    </table>
+    <table last_changed="Савин В.В." name="ВидРаботы" personal_data="0" responsible="Савин В.В." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>IDENTIFIER</type>
+          <max_size>4</max_size>
+        </format>
+      </column>
+      <trigger_list/>
+    </table>
+	<table last_changed="Шарашов М.А." name="ВидРасходаАвансовогоОтчета" personal_data="0" responsible="Карачевцев Ю.Ю." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>IDENTIFIER</type>
+          <max_size>4</max_size>
+        </format>
+      </column>
+      <column name="Название">
+        <format>
+          <type>TEXT</type>
+        </format>
+      </column>
+      <trigger_list/>
+    </table>
+    <table last_changed="Волков Д.Н." name="Документ" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>IDENTIFIER</type>
+          <max_size>4</max_size>
+        </format>
+      </column>
+      <trigger_list/>
+    </table>
+    <table last_changed="Волков Д.Н." name="ДокументРасширение" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>UEXTENSION</type>
+          <table>Документ</table>
+        </format>
+      </column>
+      <trigger_list/>
+    </table>
+    <table last_changed="Волков Д.Н." name="Лицо" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>IDENTIFIER</type>
+          <max_size>4</max_size>
+        </format>
+      </column>
+      <trigger_list/>
+    </table>
+    <table last_changed="Палочкин В.В." name="ЛицоДокумента" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>IDENTIFIER</type>
+          <max_size>4</max_size>
+        </format>
+      </column>
+      <column name="Состояние">
+        <format>
+          <not_null>1</not_null>
+          <default>0</default>
+          <type>ENUM</type>
+          <element>
+            <string>Не ознакомлен</string>
+            <value>0</value>
+          </element>
+          <element>
+            <string>Примет участие</string>
+            <value>1</value>
+          </element>
+          <element>
+            <string>Не примет участие</string>
+            <value>2</value>
+          </element>
+          <element>
+            <string>Удален</string>
+            <value>3</value>
+          </element>
+          <element>
+            <string>Ответственный</string>
+            <value>4</value>
+          </element>
+        </format>
+      </column>
+      <column name="Метка">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <column name="Удален">
+        <format>
+          <default>0</default>
+          <type>BOOLEAN</type>
+        </format>
+      </column>
+      <column name="СвязьДокументов">
+        <format>
+          <type>LINK1-N</type>
+          <table>СвязьДокументов</table>
+          <on_delete>0</on_delete>
+        </format>
+      </column>
+      <column name="Раздел">
+        <format>
+          <type>HIERARCHY</type>
+          <on_delete>2</on_delete>
+          <nodes_field>1</nodes_field>
+        </format>
+      </column>
+      <column name="СуммПланВремя">
+        <format>
+          <not_null>1</not_null>
+          <default>0</default>
+          <type>INT64</type>
+        </format>
+      </column>
+      <column name="СуммФактВремя">
+        <format>
+          <not_null>1</not_null>
+          <default>0</default>
+          <type>INT64</type>
+        </format>
+      </column>
+      <column name="Задачи">
+        <format>
+          <type>INTEGER</type>
+        </format>
+      </column>
+      <column name="Инциденты">
+        <format>
+          <type>INTEGER</type>
+        </format>
+      </column>
+      <column name="ДатаОбновления">
+        <format>
+          <type>DATE</type>
+        </format>
+      </column>
+      <index method="btree" name="СвязьДокументов" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="СвязьДокументов" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="Раздел" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Раздел" nulls_place="LAST" sorting="ASC"/>
+        <column is_expressions="0" name="Раздел@" nulls_place="LAST" sorting="DESC"/>
+      </index>
+      <index method="btree" name="Состояние" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Состояние" nulls_place="DEFAULT" sorting="ASC"/>
+      </index>
+      <trigger_list/>
+    </table>
+    <table last_changed="karachevtsevuu" name="Работа" personal_data="0" responsible="Карачевцев" table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>IDENTIFIER</type>
+          <max_size>4</max_size>
+        </format>
+      </column>
+      <trigger_list/>
+    </table>
+    <table last_changed="Палочкин В.В." name="РазличныеДокументы" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>CEXTENSION</type>
+          <table>Документ</table>
+        </format>
+      </column>
+      <trigger_list/>
+    </table>
+    <table last_changed="Палочкин В.В." name="СвязьДокументов" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>IDENTIFIER</type>
+          <max_size>4</max_size>
+        </format>
+      </column>
+      <column name="Раздел">
+        <format>
+          <type>HIERARCHY</type>
+          <on_delete>1</on_delete>
+          <nodes_field>1</nodes_field>
+        </format>
+      </column>
+      <column name="ВидРаботы">
+        <format>
+          <type>LINK1-N</type>
+          <table>ВидРаботы</table>
+          <on_delete>2</on_delete>
+        </format>
+      </column>
+      <index method="btree" name="Раздел" null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="Раздел" nulls_place="LAST" sorting="ASC"/>
+        <column is_expressions="0" name="Раздел@" nulls_place="LAST" sorting="DESC"/>
+      </index>
+      <index method="btree" name="ВидРаботы" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="ВидРаботы" nulls_place="LAST" sorting="ASC"/>
+        <predicate>
+          <body>"ВидРаботы" IS NOT NULL</body>
+        </predicate>
+      </index>
+      <trigger_list/>
+    </table>
+    <table last_changed="Палочкин В.В." name="Событие" personal_data="0" responsible="Палочкин В.В." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>IDENTIFIER</type>
+          <max_size>4</max_size>
+        </format>
+      </column>
+      <trigger_list/>
+    </table>
+    <table last_changed="Карачевцев Ю.Ю." name="СтатьяЗатрат" personal_data="0" responsible="Карачевцев Ю.Ю." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>CEXTENSION</type>
+          <table>Лицо</table>
+        </format>
+      </column>
+      <column name="Название">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <trigger_list/>
+    </table>
+    <table last_changed="Палочкин В.В." name="ТипДокумента" personal_data="0" responsible="Палочкин В.В." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>IDENTIFIER</type>
+          <max_size>4</max_size>
+        </format>
+      </column>
+      <trigger_list/>
+    </table>
+    <table last_changed="Пономарев С.А." name="ЧастноеЛицо" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>CEXTENSION</type>
+          <table>Лицо</table>
+        </format>
+      </column>
+      <column name="Название">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <trigger_list/>
+    </table>
+  </group>
+
+  <group name="Проверки">
+    <table last_changed="Палочкин В.В." name="Вопрос" personal_data="1" responsible="Палочкин В.В." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>IDENTIFIER</type>
+          <max_size>8</max_size>
+        </format>
+      </column>
+      <column name="Название">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <column name="Формулировка">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <column name="Тип">
+        <format>
+          <type>ENUM</type>
+          <element>
+            <string>Один из многих</string>
+            <value>0</value>
+          </element>
+          <element>
+            <string>Многие из многих</string>
+            <value>1</value>
+          </element>
+          <element>
+            <string>Краткий ответ</string>
+            <value>2</value>
+          </element>
+          <element>
+            <string>Число</string>
+            <value>3</value>
+          </element>
+          <element>
+            <string>Дата</string>
+            <value>4</value>
+          </element>
+          <element>
+            <string>Текст</string>
+            <value>5</value>
+          </element>
+          <element>
+            <string>На соответствие</string>
+            <value>6</value>
+          </element>
+          <element>
+            <string>ШаблонИтогов</string>
+            <value>7</value>
+          </element>
+          <element>
+            <string>Голосование</string>
+            <value>8</value>
+          </element>
+          <element>
+            <string>ШаблонОтветов</string>
+            <value>9</value>
+          </element>
+          <element>
+            <string>ГолосованиеОтвет</string>
+            <value>10</value>
+          </element>
+        </format>
+      </column>
+      <column name="Ответ">
+        <format>
+          <type>BINARY</type>
+          <max_size>1048576</max_size>
+        </format>
+      </column>
+      <column name="Флаги">
+        <format>
+          <type>FLAGS</type>
+          <element>
+            <string>Случайный порядок ответов</string>
+            <value>0</value>
+          </element>
+          <element>
+            <string>Нужен комментарий</string>
+            <value>1</value>
+          </element>
+        </format>
+      </column>
+      <column name="Балл">
+        <format>
+          <type>DOUBLE</type>
+        </format>
+      </column>
+      <column name="Статус">
+        <format>
+          <default>2</default>
+          <type>ENUM</type>
+          <element>
+            <string>положительный</string>
+            <value>0</value>
+          </element>
+          <element>
+            <string>отрицательный</string>
+            <value>1</value>
+          </element>
+          <element>
+            <string>не обработано</string>
+            <value>2</value>
+          </element>
+          <element>
+            <string>в работе</string>
+            <value>3</value>
+          </element>
+        </format>
+      </column>
+      <column name="Цвет">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <column name="Удален">
+        <format>
+          <default>0</default>
+          <type>BOOLEAN</type>
+        </format>
+      </column>
+      <column name="ПорНомер">
+        <format>
+          <type>INT64</type>
+          <index_number>1</index_number>
+        </format>
+      </column>
+      <column name="ДатаВремяСоздания">
+        <format>
+          <type>DATETIME</type>
+          <use_current>1</use_current>
+        </format>
+      </column>
+      <column name="Метка">
+        <format>
+          <default>0</default>
+          <type>ENUM</type>
+          <element>
+            <string>Обычное состояние</string>
+            <value>0</value>
+          </element>
+          <element>
+            <string>Особое состояние</string>
+            <value>1</value>
+          </element>
+        </format>
+      </column>
+      <column name="Раздел">
+        <format>
+          <type>HIERARCHY</type>
+          <on_delete>1</on_delete>
+          <nodes_field>1</nodes_field>
+        </format>
+      </column>
+      <index method="btree" name="Раздел" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Раздел" nulls_place="LAST" sorting="ASC"/>
+        <column is_expressions="0" name="Раздел@" nulls_place="LAST" sorting="DESC"/>
+      </index>
+      <index method="btree" name="ТипШаблоновИтогов" null_keys="1" service="0" unique="0">
+        <column is_expressions="1" name="&quot;Тип&quot; = 7" nulls_place="DEFAULT" sorting="ASC">
+          <definition>
+            <language>PLPGSQL</language>
+            <body>"Тип" = 7</body>
+          </definition>
+        </column>
+      </index>
+      <trigger_list/>
+    </table>
+    <table last_changed="Палочкин В.В." name="ПроверкаСобытие" personal_data="1" responsible="Палочкин В.В." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>IDENTIFIER</type>
+          <max_size>8</max_size>
+        </format>
+      </column>
+      <column name="Документ">
+        <format>
+          <type>LINK1-N</type>
+          <table>Документ</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <column name="ЧастноеЛицо">
+        <format>
+          <type>LINK1-N</type>
+          <table>ЧастноеЛицо</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <column name="Тип">
+        <format>
+          <not_null>1</not_null>
+          <default>0</default>
+          <type>ENUM</type>
+          <element>
+            <string>Больше 1 изменения</string>
+            <value>0</value>
+          </element>
+          <element>
+            <string>Отметка времени до документу</string>
+            <value>1</value>
+          </element>
+          <element>
+            <string>Создание задачи по документу</string>
+            <value>2</value>
+          </element>
+          <element>
+            <string>Изменение статуса состояния</string>
+            <value>3</value>
+          </element>
+          <element>
+            <string>Проверка (дата изменений)</string>
+            <value>4</value>
+          </element>
+        </format>
+      </column>
+      <column name="ДокументСледствие">
+        <format>
+          <type>LINK1-N</type>
+          <table>Документ</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <column name="Ресурсы">
+        <format>
+          <type>INT64</type>
+        </format>
+      </column>
+      <column name="Проверка">
+        <format>
+          <type>LINK1-N</type>
+          <table>Документ</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <column name="Вопрос">
+        <format>
+          <type>LINK1-N</type>
+          <table>Вопрос</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <column name="Дата">
+        <format>
+          <type>DATE</type>
+          <use_current>1</use_current>
+        </format>
+      </column>
+      <column name="Время">
+        <format>
+          <type>TIME</type>
+          <use_current>1</use_current>
+        </format>
+      </column>
+      <column name="Работа">
+        <format>
+          <type>LINK1-N</type>
+          <table>Работа</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <index method="btree" name="Документ" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Документ" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="ЧастноеЛицо" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="ЧастноеЛицо" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="ДокументСледствие" null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="ДокументСледствие" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="Проверка" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Проверка" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="Вопрос" null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="Вопрос" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="ПроверкаДатаПериод" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Проверка" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="Дата" nulls_place="DEFAULT" sorting="ASC"/>
+      </index>
+      <index method="btree" name="Работа" null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="Работа" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="СостояниеПроверки" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Документ" nulls_place="DEFAULT" sorting="ASC"/>
+        <predicate>
+          <body>"Тип" = 4</body>
+        </predicate>
+      </index>
+      <trigger_list/>
+    </table>
+    <table last_changed="Палочкин В.В." name="ЧеклистСтруктура" personal_data="0" responsible="Самсонов А.А." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>IDENTIFIER</type>
+          <max_size>8</max_size>
+        </format>
+      </column>
+      <column name="Название">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <column name="Метка">
+        <format>
+          <type>INTEGER</type>
+        </format>
+      </column>
+      <column name="ПорНомер">
+        <format>
+          <type>INT64</type>
+          <index_number>1</index_number>
+        </format>
+      </column>
+      <column name="Версия">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <column name="ДатаПроверки">
+        <format>
+          <type>DATE</type>
+        </format>
+      </column>
+      <column name="Описание">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <column name="Тип">
+        <format>
+          <default>0</default>
+          <type>ENUM</type>
+          <element>
+            <string>Чеклист</string>
+            <value>0</value>
+          </element>
+          <element>
+            <string>Test case</string>
+            <value>1</value>
+          </element>
+          <element>
+            <string>ЧеклистОтвет</string>
+            <value>2</value>
+          </element>
+        </format>
+      </column>
+      <column name="БазовыйРаздел">
+        <format>
+          <type>INT64</type>
+        </format>
+      </column>
+      <column name="ПлановоеВремя">
+        <format>
+          <type>TIMEINTERVAL</type>
+        </format>
+      </column>
+      <column name="Раздел">
+        <format>
+          <type>HIERARCHY</type>
+          <on_delete>1</on_delete>
+          <nodes_field>1</nodes_field>
+        </format>
+      </column>
+      <column name="Вопрос">
+        <format>
+          <type>LINK1-N</type>
+          <table>Вопрос</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <column name="Документ">
+        <format>
+          <type>LINK1-1</type>
+          <table>Документ</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <column name="ЗонаОтветственности">
+        <format>
+          <type>LINK1-N</type>
+          <table>ФункциональнаяОбласть</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <column name="Лицо">
+        <format>
+          <type>LINK1-N</type>
+          <table>ЧастноеЛицо</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <column name="ДатаВремяПересчета">
+        <format>
+          <type>DATETIME</type>
+        </format>
+      </column>
+      <column name="Задания">
+        <format>
+          <type>INTEGER</type>
+        </format>
+      </column>
+      <column name="Выполнен">
+        <format>
+          <not_null>1</not_null>
+          <default>0</default>
+          <type>BOOLEAN</type>
+        </format>
+      </column>
+      <column name="ДочерняяЗона">
+        <format>
+          <type>LINK1-N</type>
+          <table>ФункциональнаяОбласть</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <column name="Ресурсы">
+        <format>
+          <type>INTEGER</type>
+        </format>
+      </column>
+      <column name="Комментарий">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <column name="Режим">
+        <format>
+          <default>0</default>
+          <type>ENUM</type>
+          <element>
+            <string>Ручной</string>
+            <value>0</value>
+          </element>
+          <element>
+            <string>Автоматический</string>
+            <value>1</value>
+          </element>
+          <element>
+            <string>Автотест</string>
+            <value>2</value>
+          </element>
+          <element>
+            <string>Прочий</string>
+            <value>3</value>
+          </element>
+        </format>
+      </column>
+      <column name="Цвет">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <index method="btree" name="Раздел" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Раздел" nulls_place="LAST" sorting="ASC"/>
+        <column is_expressions="0" name="Раздел@" nulls_place="LAST" sorting="DESC"/>
+      </index>
+      <index method="btree" name="Вопрос" null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="Вопрос" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="Документ" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Документ" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="ЗонаОтветственности" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="ЗонаОтветственности" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="Лицо" null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="Лицо" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="Тип" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Тип" nulls_place="DEFAULT" sorting="ASC"/>
+      </index>
+      <index method="btree" name="ПунктыПроверки" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="БазовыйРаздел" nulls_place="DEFAULT" sorting="ASC"/>
+        <predicate>
+          <body>"$Черновик" IS NULL</body>
+        </predicate>
+      </index>
+      <index method="btree" name="ЛицоЗаПунктПроверки" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Лицо" nulls_place="DEFAULT" sorting="ASC"/>
+        <predicate>
+          <body>"БазовыйРаздел" IS NOT NULL AND "$Черновик" IS NULL</body>
+        </predicate>
+      </index>
+      <index method="btree" name="ПунктыПроверкиСТипом" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="БазовыйРаздел" nulls_place="DEFAULT" sorting="ASC"/>
+        <predicate>
+          <body>"Тип" = 0 AND "$Черновик" IS NULL</body>
+        </predicate>
+      </index>
+      <index method="btree" name="ПунктыЧеклистов" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="ЗонаОтветственности" nulls_place="DEFAULT" sorting="ASC"/>
+        <predicate>
+          <body>"БазовыйРаздел" IS NULL AND "$Черновик" IS NULL</body>
+        </predicate>
+      </index>
+      <index method="btree" name="Проверки" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Документ" nulls_place="DEFAULT" sorting="ASC"/>
+        <predicate>
+          <body>"БазовыйРаздел" IS NULL AND "ЗонаОтветственности" IS NULL AND "$Черновик" IS NULL</body>
+        </predicate>
+      </index>
+      <index method="btree" name="ДочерняяЗона" null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="ДочерняяЗона" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="БазовыйРаздел" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="БазовыйРаздел" nulls_place="DEFAULT" sorting="ASC"/>
+      </index>
+      <index method="btree" name="ПроверкиВложеннойЗоны" null_keys="0" service="0" unique="0">
+        <column is_expressions="0" name="ДочерняяЗона" nulls_place="DEFAULT" sorting="ASC"/>
+        <predicate>
+          <body>"$Черновик" IS NULL</body>
+        </predicate>
+      </index>
+      <index method="btree" name="ПоискПоЛицу" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Лицо" nulls_place="DEFAULT" sorting="ASC"/>
+        <predicate>
+          <body>"Тип" = 0 AND "$Черновик" IS NULL AND "БазовыйРаздел" IS NOT NULL</body>
+        </predicate>
+      </index>
+      <index method="btree" name="БазовыйРазделИРаздел" null_keys="0" service="0" unique="0">
+        <column is_expressions="0" name="БазовыйРаздел" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="Раздел" nulls_place="DEFAULT" sorting="ASC"/>
+      </index>
+      <trigger_list/>
+    </table>
+  </group>
+
+  <group name="Вехи">
+    <table last_changed="Палочкин В.В." name="ВВехе" personal_data="1" responsible="Палочкин В.В." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <comment>таблица для ускорения работы с вехами</comment>
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>IDENTIFIER</type>
+          <max_size>8</max_size>
+        </format>
+      </column>
+      <column name="Веха">
+        <format>
+          <type>LINK1-N</type>
+          <table>Документ</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <column name="Документ">
+        <format>
+          <type>LINK1-N</type>
+          <table>Документ</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <column name="ТипДокумента">
+        <format>
+          <type>LINK1-N</type>
+          <table>ТипДокумента</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <column name="Событие">
+        <format>
+          <type>LINK1-N</type>
+          <table>Событие</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <column name="СвязьДокументов">
+        <format>
+          <type>LINK1-N</type>
+          <table>СвязьДокументов</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <column name="ИдРегламента">
+        <format>
+          <type>UUID</type>
+        </format>
+      </column>
+      <column name="ИдФазы">
+        <format>
+          <type>UUID</type>
+        </format>
+      </column>
+      <index method="btree" name="Веха" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Веха" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="Документ" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Документ" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="ТипДокумента" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="ТипДокумента" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="Событие" null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="Событие" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="СвязьДокументов" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="СвязьДокументов" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="АктивныеДокументы" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Веха" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="ТипДокумента" nulls_place="DEFAULT" sorting="ASC"/>
+        <predicate>
+          <body>"Событие" IS NOT NULL</body>
+        </predicate>
+      </index>
+      <index method="btree" name="ВсеДокументы" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Веха" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="ТипДокумента" nulls_place="DEFAULT" sorting="ASC"/>
+      </index>
+      <index method="btree" name="ЗавершенныеДокументы" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Веха" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="ТипДокумента" nulls_place="DEFAULT" sorting="ASC"/>
+        <predicate>
+          <body>"Событие" IS NULL</body>
+        </predicate>
+      </index>
+      <index method="btree" name="АктивныеДокументыРегламента" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Веха" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="ТипДокумента" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="ИдРегламента" nulls_place="DEFAULT" sorting="ASC"/>
+      </index>
+      <index method="btree" name="АктивныеДокументыФазыРегламента" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Веха" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="ТипДокумента" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="ИдРегламента" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="ИдФазы" nulls_place="DEFAULT" sorting="ASC"/>
+        <predicate>
+          <body>"Событие" IS NOT NULL</body>
+        </predicate>
+      </index>
+      <index method="btree" name="НезапущенныеДокументыФазыРегламента" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Веха" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="ТипДокумента" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="ИдРегламента" nulls_place="DEFAULT" sorting="ASC"/>
+        <predicate>
+          <body>"Событие" IS NOT NULL AND "ИдФазы" IS NULL</body>
+        </predicate>
+      </index>
+      <index method="btree" name="ДокументыВФазе" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Веха" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="ТипДокумента" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="ИдРегламента" nulls_place="DEFAULT" sorting="ASC"/>
+        <predicate>
+          <body>"Событие" IS NOT NULL</body>
+        </predicate>
+      </index>
+      <trigger_list/>
+    </table>
+    <table last_changed="Палочкин В.В." name="Веха" personal_data="1" responsible="aa.shirkin" table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>CEXTENSION</type>
+          <table>Документ</table>
+        </format>
+      </column>
+      <column name="Состояние">
+        <format>
+          <default>1</default>
+          <type>ENUM</type>
+          <element>
+            <string>В работе</string>
+            <value>0</value>
+          </element>
+          <element>
+            <string>Планируется</string>
+            <value>1</value>
+          </element>
+          <element>
+            <string>Закрыта от изменений</string>
+            <value>2</value>
+          </element>
+          <element>
+            <string>Выполнена</string>
+            <value>3</value>
+          </element>
+          <element>
+            <string>Не выполнена</string>
+            <value>4</value>
+          </element>
+          <element>
+            <string>В архиве</string>
+            <value>5</value>
+          </element>
+        </format>
+      </column>
+      <column name="Название">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <column name="Описание">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <column name="Дата">
+        <format>
+          <type>DATE</type>
+        </format>
+      </column>
+      <column name="КоличествоЗадач">
+        <format>
+          <type>INTEGER</type>
+        </format>
+      </column>
+      <column name="Проект">
+        <format>
+          <type>LINK1-N</type>
+          <table>Проект</table>
+          <on_delete>2</on_delete>
+        </format>
+      </column>
+      <column name="ДатаВремяПодсчета">
+        <format>
+          <type>DATETIME</type>
+        </format>
+      </column>
+      <column name="Цвет">
+        <format>
+          <type>STRING</type>
+        </format>
+      </column>
+      <index method="btree" name="Проект" null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="Проект" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <index method="btree" name="СостояниеВехи" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Состояние" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="@Документ" nulls_place="DEFAULT" sorting="ASC"/>
+      </index>
+      <index method="btree" name="Состояние" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Состояние" nulls_place="DEFAULT" sorting="ASC"/>
+      </index>
+      <index method="gin" name="Поиск" null_keys="1" service="0" unique="0">
+        <column is_expressions="1" name="to_tsvector( 'simple'::regconfig, &quot;Название&quot; )" nulls_place="DEFAULT" sorting="ASC">
+          <definition>
+            <language>PLPGSQL</language>
+            <body>to_tsvector( 'simple'::regconfig, "Название" )</body>
+          </definition>
+        </column>
+        <predicate>
+          <body>"Название" IS NOT NULL</body>
+        </predicate>
+      </index>
+      <trigger_list/>
+    </table>
+    <table last_changed="Палочкин В.В." name="ВехаГрафик" personal_data="0" responsible="Палочкин В.В." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+        <format>
+          <type>IDENTIFIER</type>
+          <max_size>4</max_size>
+        </format>
+      </column>
+      <column name="Количество">
+        <format>
+          <type>INTEGER</type>
+        </format>
+      </column>
+      <column name="Дата">
+        <format>
+          <type>DATE</type>
+        </format>
+      </column>
+      <column name="Документ">
+        <format>
+          <type>LINK1-N</type>
+          <table>Документ</table>
+          <on_delete>1</on_delete>
+        </format>
+      </column>
+      <index method="btree" name="Документ" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Документ" nulls_place="LAST" sorting="ASC"/>
+      </index>
+      <trigger_list/>
+    </table>
+  </group>
+
+  <table last_changed="Зернов И.А." name="Проект" personal_data="1" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <column name="____SBIS_PRIMARY_KEY_FIELD____">
+      <format>
+        <type>CEXTENSION</type>
+        <table>Документ</table>
+      </format>
+    </column>
+    <column name="ПланДатаНач">
+      <format>
+        <type>DATE</type>
+      </format>
+    </column>
+    <column name="ПланДатаКнц">
+      <format>
+        <type>DATE</type>
+      </format>
+    </column>
+    <column name="ПланПродолжительность">
+      <format>
+        <type>INTEGER</type>
+      </format>
+    </column>
+    <column name="ФактДатаНач">
+      <format>
+        <type>DATE</type>
+      </format>
+    </column>
+    <column name="ФактДатаКнц">
+      <format>
+        <type>DATE</type>
+      </format>
+    </column>
+    <column name="Описание">
+      <format>
+        <type>STRING</type>
+      </format>
+    </column>
+    <column name="Выполнен">
+      <format>
+        <type>BOOLEAN</type>
+      </format>
+    </column>
+    <column name="Проверен">
+      <format>
+        <type>BOOLEAN</type>
+      </format>
+    </column>
+    <column name="Цвет">
+      <format>
+        <type>STRING</type>
+      </format>
+    </column>
+    <column name="Шрифт">
+      <format>
+        <type>STRING</type>
+      </format>
+    </column>
+    <column name="ПорНомер">
+      <format>
+        <type>INT64</type>
+        <index_number>1</index_number>
+      </format>
+    </column>
+    <column name="Ошибки">
+      <comment>Счетчик активных ошибок</comment>
+      <format>
+        <type>INTEGER</type>
+      </format>
+    </column>
+    <column name="СостояниеПроекта">
+      <comment>состояния проекта и плана работ
+для проекта: 0,1,2,3,4
+для плана работ: 0,3,10,11,12,13</comment>
+      <format>
+        <default>0</default>
+        <type>ENUM</type>
+        <element>
+          <string>планируется</string>
+          <value>0</value>
+        </element>
+        <element>
+          <string>в работе</string>
+          <value>1</value>
+        </element>
+        <element>
+          <string>завершен</string>
+          <value>2</value>
+        </element>
+        <element>
+          <string>в архиве</string>
+          <value>3</value>
+        </element>
+        <element>
+          <string>приостановлен</string>
+          <value>4</value>
+        </element>
+        <element>
+          <string>не согласован</string>
+          <value>10</value>
+        </element>
+        <element>
+          <string>выполняется</string>
+          <value>11</value>
+        </element>
+        <element>
+          <string>выполнен</string>
+          <value>12</value>
+        </element>
+        <element>
+          <string>не выполнен</string>
+          <value>13</value>
+        </element>
+      </format>
+    </column>
+    <column name="ИзменениеСрока">
+      <format>
+        <type>BOOLEAN</type>
+      </format>
+    </column>
+    <column name="Задания">
+      <format>
+        <type>INTEGER</type>
+      </format>
+    </column>
+    <column name="Ресурсы">
+      <format>
+        <type>INTEGER</type>
+      </format>
+    </column>
+    <column name="ПроектЭтапа">
+      <format>
+        <type>HIERARCHY</type>
+        <on_delete>2</on_delete>
+        <nodes_field>0</nodes_field>
+      </format>
+    </column>
+    <column name="ОкончаниеВеха">
+      <format>
+        <type>LINK1-N</type>
+        <table>Веха</table>
+        <on_delete>2</on_delete>
+      </format>
+    </column>
+    <column name="ДатаПодсчета">
+      <format>
+        <type>DATE</type>
+      </format>
+    </column>
+    <column name="ДляПоиска">
+      <format>
+        <type>STRING</type>
+      </format>
+    </column>
+    <index method="btree" name="ПорНомер" null_keys="1" service="0" unique="0">
+      <column is_expressions="0" name="ПорНомер" nulls_place="LAST" sorting="ASC"/>
+    </index>
+    <index method="btree" name="СостояниеПроекта" null_keys="1" service="0" unique="0">
+      <column is_expressions="0" name="СостояниеПроекта" nulls_place="DEFAULT" sorting="ASC"/>
+    </index>
+    <index method="btree" name="ПроектЭтапа" null_keys="0" service="1" unique="0">
+      <column is_expressions="0" name="ПроектЭтапа" nulls_place="LAST" sorting="ASC"/>
+    </index>
+    <index method="btree" name="ОкончаниеВеха" null_keys="0" service="1" unique="0">
+      <column is_expressions="0" name="ОкончаниеВеха" nulls_place="LAST" sorting="ASC"/>
+    </index>
+    <index method="btree" name="НеВАрхиве" null_keys="1" service="0" unique="0">
+      <column is_expressions="0" name="@Документ" nulls_place="DEFAULT" sorting="ASC"/>
+      <predicate>
+        <body>"СостояниеПроекта" != 3</body>
+      </predicate>
+    </index>
+    <index method="gin" name="Поиск" null_keys="1" service="0" unique="0">
+      <column is_expressions="1" name="to_tsvector( 'simple'::regconfig, &quot;ДляПоиска&quot; )" nulls_place="DEFAULT" sorting="ASC">
+        <definition>
+          <language>PLPGSQL</language>
+          <body>to_tsvector( 'simple'::regconfig, "ДляПоиска" )</body>
+        </definition>
+      </column>
+      <predicate>
+        <body>"ДляПоиска" IS NOT NULL</body>
+      </predicate>
+    </index>
+    <index method="btree" name="ПланДатаКнц" null_keys="1" service="0" unique="0">
+      <column is_expressions="0" name="ПланДатаКнц" nulls_place="DEFAULT" sorting="ASC"/>
+      <predicate>
+        <body>"ПланДатаКнц" IS NOT NULL</body>
+      </predicate>
+    </index>
+    <index method="btree" name="ПланДатаНач" null_keys="1" service="0" unique="0">
+      <column is_expressions="0" name="ПланДатаНач" nulls_place="DEFAULT" sorting="ASC"/>
+      <predicate>
+        <body>"ПланДатаНач" IS NOT NULL</body>
+      </predicate>
+    </index>
+    <trigger_list/>
+  </table>
+
+  <table last_changed="Палочкин В.В." name="ПроектСобытие" personal_data="1" responsible="Савин В.В." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <comment>События (история изменений по Проекту/Этапу)</comment>
+    <column name="____SBIS_PRIMARY_KEY_FIELD____">
+      <format>
+        <type>IDENTIFIER</type>
+        <max_size>8</max_size>
+      </format>
+    </column>
+    <column name="Название">
+      <format>
+        <type>STRING</type>
+      </format>
+    </column>
+    <column name="ДатаВремя">
+      <format>
+        <type>DATETIME</type>
+        <use_current>1</use_current>
+      </format>
+    </column>
+    <column name="Тип">
+      <format>
+        <type>ENUM</type>
+        <element>
+          <string>Создание проекта</string>
+          <value>0</value>
+        </element>
+        <element>
+          <string>Изменение проекта</string>
+          <value>1</value>
+        </element>
+        <element>
+          <string>Удаление проекта</string>
+          <value>2</value>
+        </element>
+        <element>
+          <string>Создание этапа проекта</string>
+          <value>3</value>
+        </element>
+        <element>
+          <string>Изменения этапа проекта</string>
+          <value>4</value>
+        </element>
+        <element>
+          <string>Удаление этапа проекта</string>
+          <value>5</value>
+        </element>
+        <element>
+          <string>Изменение срока проекта</string>
+          <value>6</value>
+        </element>
+        <element>
+          <string>Изменение срока этапа</string>
+          <value>7</value>
+        </element>
+        <element>
+          <string>Изменения статуса проекта</string>
+          <value>8</value>
+        </element>
+        <element>
+          <string>Изменения статуса этапа</string>
+          <value>9</value>
+        </element>
+        <element>
+          <string>Ручной ввод</string>
+          <value>10</value>
+        </element>
+        <element>
+          <string>Мутация</string>
+          <value>11</value>
+        </element>
+        <element>
+          <string>ИзменениеОтветственного</string>
+          <value>20</value>
+        </element>
+        <element>
+          <string>Изменение срока документа</string>
+          <value>21</value>
+        </element>
+      </format>
+    </column>
+    <column name="ЧастноеЛицо">
+      <format>
+        <type>LINK1-N</type>
+        <table>ЧастноеЛицо</table>
+        <on_delete>2</on_delete>
+      </format>
+    </column>
+    <column name="ДокументСледствие">
+      <format>
+        <type>LINK1-N</type>
+        <table>Документ</table>
+        <on_delete>2</on_delete>
+      </format>
+    </column>
+    <column name="Документ">
+      <format>
+        <type>LINK1-N</type>
+        <table>Документ</table>
+        <on_delete>2</on_delete>
+      </format>
+    </column>
+    <column name="СрокС">
+      <comment>Предыдущая дата</comment>
+      <format>
+        <type>DATETIME</type>
+      </format>
+    </column>
+    <column name="СрокНа">
+      <comment>Актуальная дата</comment>
+      <format>
+        <type>DATETIME</type>
+      </format>
+    </column>
+    <index method="btree" name="ЧастноеЛицо" null_keys="1" service="1" unique="0">
+      <column is_expressions="0" name="ЧастноеЛицо" nulls_place="LAST" sorting="ASC"/>
+    </index>
+    <index method="btree" name="Документ" null_keys="1" service="1" unique="0">
+      <column is_expressions="0" name="Документ" nulls_place="LAST" sorting="ASC"/>
+    </index>
+    <index method="btree" name="ДокументСледствие" null_keys="1" service="1" unique="0">
+      <column is_expressions="0" name="ДокументСледствие" nulls_place="LAST" sorting="ASC"/>
+    </index>
+    <index method="btree" name="Тип" null_keys="1" service="0" unique="0">
+      <column is_expressions="0" name="Тип" nulls_place="DEFAULT" sorting="ASC"/>
+    </index>
+    <trigger_list/>
+  </table>
+
+  <table last_changed="Зернов И.А." name="СвязьДокументовПлан" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <column name="____SBIS_PRIMARY_KEY_FIELD____">
+      <format>
+        <type>UEXTENSION</type>
+        <table>СвязьДокументов</table>
+      </format>
+    </column>
+    <column name="ПланДата">
+      <format>
+        <type>DATE</type>
+      </format>
+    </column>
+    <column name="ФактДата">
+      <format>
+        <type>DATE</type>
+      </format>
+    </column>
+    <column name="ДатаПроверки">
+      <format>
+        <type>DATE</type>
+      </format>
+    </column>
+    <column name="Выполнен">
+      <format>
+        <default>0</default>
+        <type>BOOLEAN</type>
+      </format>
+    </column>
+    <column name="Проверен">
+      <format>
+        <default>0</default>
+        <type>BOOLEAN</type>
+      </format>
+    </column>
+    <column name="Заполнен">
+      <format>
+        <default>0</default>
+        <type>BOOLEAN</type>
+      </format>
+    </column>
+    <column name="Комментарий">
+      <format>
+        <type>STRING</type>
+      </format>
+    </column>
+    <column name="Цвет">
+      <format>
+        <type>STRING</type>
+      </format>
+    </column>
+    <column name="Приоритет">
+      <comment>0 - Стандарт
+1 - Важно
+2 - Крайне важно</comment>
+      <format>
+        <default>0</default>
+        <type>INT16</type>
+      </format>
+    </column>
+    <column name="Состояние">
+      <format>
+        <default>0</default>
+        <type>ENUM</type>
+        <element>
+          <string>Планируется</string>
+          <value>0</value>
+        </element>
+        <element>
+          <string>В работе</string>
+          <value>1</value>
+        </element>
+        <element>
+          <string>Выполнен</string>
+          <value>2</value>
+        </element>
+        <element>
+          <string>Не выполнен</string>
+          <value>3</value>
+        </element>
+        <element>
+          <string>Перенесен</string>
+          <value>4</value>
+        </element>
+      </format>
+    </column>
+    <column name="Ресурсы">
+      <format>
+        <type>INTEGER</type>
+      </format>
+    </column>
+    <column name="ДатаОбновления">
+      <format>
+        <type>DATE</type>
+      </format>
+    </column>
+    <column name="Исполнитель">
+      <format>
+        <type>LINK1-N</type>
+        <table>Лицо</table>
+        <on_delete>1</on_delete>
+      </format>
+    </column>
+    <column name="Заказчик">
+      <format>
+        <type>LINK1-N</type>
+        <table>Лицо</table>
+        <on_delete>1</on_delete>
+      </format>
+    </column>
+    <column name="Документ">
+      <format>
+        <type>LINK1-1</type>
+        <table>Документ</table>
+        <on_delete>1</on_delete>
+      </format>
+    </column>
+    <column name="Расход">
+      <format>
+        <type>LINK1-N</type>
+        <table>ВидРасходаАвансовогоОтчета</table>
+        <on_delete>2</on_delete>
+      </format>
+    </column>
+    <column name="СтатьяЗатрат">
+      <format>
+        <type>LINK1-N</type>
+        <table>СтатьяЗатрат</table>
+        <on_delete>2</on_delete>
+      </format>
+    </column>
+    <column name="Работа">
+      <format>
+        <type>LINK1-N</type>
+        <table>Работа</table>
+        <on_delete>2</on_delete>
+      </format>
+    </column>
+    <index method="btree" name="Исполнитель" null_keys="0" service="1" unique="0">
+      <column is_expressions="0" name="Исполнитель" nulls_place="LAST" sorting="ASC"/>
+    </index>
+    <index method="btree" name="Заказчик" null_keys="0" service="1" unique="0">
+      <column is_expressions="0" name="Заказчик" nulls_place="LAST" sorting="ASC"/>
+    </index>
+    <index method="btree" name="Документ" null_keys="0" service="1" unique="0">
+      <column is_expressions="0" name="Документ" nulls_place="LAST" sorting="ASC"/>
+    </index>
+    <index method="btree" name="Расход" null_keys="0" service="1" unique="0">
+      <column is_expressions="0" name="Расход" nulls_place="LAST" sorting="ASC"/>
+    </index>
+    <index method="btree" name="СтатьяЗатрат" null_keys="0" service="1" unique="0">
+      <column is_expressions="0" name="СтатьяЗатрат" nulls_place="LAST" sorting="ASC"/>
+    </index>
+    <index method="btree" name="Работа" null_keys="0" service="1" unique="0">
+      <column is_expressions="0" name="Работа" nulls_place="LAST" sorting="ASC"/>
+    </index>
+    <trigger_list/>
+  </table>
+
+</dictionary>
