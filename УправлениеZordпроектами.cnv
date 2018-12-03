@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="WINDOWS-1251" ?>
+<converter_library version="1.03">
+
+  <converter abstract="0" call_once="1" deployment_stage="2" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Карачевцев Ю.Ю." name="ДобавитьИсполнителяКЗадачамPy_2" python_extension="1" responsible="Карачевцев Ю.Ю.">
+    <callback event="26">
+      <body>doctype = SqlQueryScalar(''' select "@ТипДокумента" from "ТипДокумента" where "ТипДокумента"='СлужЗап' AND "ПодТипДокумента" is NULL LIMIT 1 ''')
+if doctype is None:
+   return
+   
+sql='''
+INSERT INTO "ЛицоДокумента"("Лицо", "Документ", "Тип", "ДатаВремя") 
+select "Сотрудник", "@Документ", 1 AS "Тип", CURRENT_TIMESTAMP from "Документ" d where 
+   d."ТипДокумента"={0}
+   AND NOT EXISTS(select ld."Документ" from "ЛицоДокумента" ld where ld."Документ"=d."@Документ" AND ld."Тип" = 1);
+'''.format(doctype)
+SqlQuery(sql)</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Волков Д.Н." name="ДобавлениеСпискаРассылкиКСовещ" responsible="Волков Д.Н.">
+    <rule name=".*" schema=".*" stage="1" type="0"/>
+    <callback event="26">
+      <body>DECLARE
+   pk_type      integer;
+   pk_ext       integer; 
+BEGIN
+
+   -- ищем тип документа "Совещания"
+   SELECT "@ТипДокумента" FROM "ТипДокумента" WHERE "ТипДокумента" = 'Совещание' INTO pk_type;
+   IF pk_type IS NOT NULL THEN
+      -- добавим если нужно тип ограничения - "Список рассылки"
+      SElECT "@ОграничениеТипаДокумента" FROM "ОграничениеТипаДокумента" WHERE "ТипДокумента" = pk_type AND "Связь"=7 INTO pk_ext;
+      IF pk_ext IS NULL THEN
+         INSERT INTO "ОграничениеТипаДокумента" ( "Связь", "ТипДокумента", "Название" )
+      	  VALUES ( 7, pk_type, 'Список рассылки' );
+      END IF;
+   END IF;
+END;</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" deployment_stage="1" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Зернов И.А." name="ЗаменитьОписаниеНаДокументы" python_extension="1" responsible="Зернов И.А.">
+    <callback event="26">
+      <body>recs = SqlQuery(''' SELECT "НастройкаКарточкиДокумента" FROM "ТипДокумента" WHERE "ТипДокумента" = 'Проект' LIMIT 1 ''')
+if recs:
+    json_ = None
+    if recs and len(recs) &gt; 0:
+        json_ = recs[0].Get("НастройкаКарточкиДокумента", None)
+    if json_:     
+        json_ = json_.replace("Закладка Описание", "Закладка Документы")
+        SqlQuery(''' UPDATE "ТипДокумента" SET "НастройкаКарточкиДокумента" = '{}' WHERE "ТипДокумента" = 'Проект' '''.format(json_))</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" deployment_stage="1" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Зернов И.А." name="ЗаполнитьПолеДляПоиска" python_extension="1" responsible="Зернов И.А.">
+    <callback event="26">
+      <body>sql = """SELECT "@ТипДокумента" FROM "ТипДокумента" WHERE "ТипДокумента" = 'ПланРабот' """
+type_doc = SqlQueryScalar(sql)
+if type_doc:
+   upd = """UPDATE "Проект" set "ДляПоиска" = (
+            		SELECT CASE WHEN "ДокументРасширение"."Название" IS NOT NULL AND "Проект"."Описание" IS NOT NULL THEN "ДокументРасширение"."Название" || ' ' || "Проект"."Описание"
+            		            WHEN "ДокументРасширение"."Название" IS NOT NULL THEN "ДокументРасширение"."Название" 
+            			        WHEN "Проект"."Описание" IS NOT NULL THEN "Проект"."Описание"
+            			        ELSE NULL	
+            		       END	    
+            		FROM "ДокументРасширение"
+            		WHERE "ДокументРасширение"."@Документ" = "Проект"."@Документ"
+    	             	) 
+             WHERE "@Документ" IN (SELECT "@Документ" FROM "Документ" WHERE "ТипДокумента" = {})""".format(type_doc)
+   SqlQuery(upd)</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" deployment_stage="2" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Карачевцев Ю.Ю." name="ИсправлениеДублейОписанияЗадачPy_2" python_extension="1" responsible="Карачевцев Ю.Ю.">
+    <callback event="26">
+      <body>sql = '''
+update "ДокументРасширение"
+   set "Комментарий" = '',"Название" = ''
+   where "@Документ" in 
+   (select dr."@Документ" from "ДокументРасширение" dr
+   LEFT JOIN "РазличныеДокументы" rd ON dr."@Документ"=rd."@Документ"
+   LEFT JOIN "Документ" d ON dr."@Документ"=d."@Документ"
+   where 
+   "ТипДокумента"=(select "@ТипДокумента" from "ТипДокумента" where "ТипДокумента"='СлужЗап' AND "ПодТипДокумента" is null order by "@ТипДокумента" LIMIT 1)
+   AND rd."Информация" IS NOT NULL
+   AND rd."Информация" &lt;&gt; ''
+   AND (rd."Информация" = dr."Комментарий") OR (rd."Информация" = dr."Название"));
+'''
+SqlQuery(sql)</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Карачевцев Ю.Ю." name="ИсправлениеСконвЗадач" responsible="Савин В.В.">
+    <rule name=".*" schema=".*" stage="1" type="0"/>
+    <callback event="26">
+      <body>DECLARE
+BEGIN
+   INSERT INTO "ЛицоДокумента"("Лицо", "Документ") select "Сотрудник", "@Документ" from "Документ" d where 
+   d."ТипДокумента"=(select "@ТипДокумента" from "ТипДокумента" where "ТипДокумента"='СлужЗап' AND "ПодТипДокумента" is NULL LIMIT 1)
+   AND (select count(*) from "ЛицоДокумента" ld where ld."Документ"=d."@Документ")=0;
+END;</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Палочкин В.В." name="НазваниеПапокПланов" responsible="Палочкин В.В.">
+    <rule name=".*" schema=".*" stage="1" type="0"/>
+    <callback event="26">
+      <body>DECLARE
+   rec            record;
+   pk             integer;
+   face_name      text;
+BEGIN
+   -- определ¤ем тип документа
+   SELECT "@ТипДокумента" FROM "ТипДокумента" WHERE "ТипДокумента" = 'ПланРабот' INTO pk;
+   IF pk IS NULL THEN
+      RAISE NOTICE 'Не нашли тип документа';
+      RETURN;
+   END IF;
+   
+   FOR rec  IN (
+                  SELECT
+                        "@Документ"    AS doc,
+                        "Сотрудник"    AS face
+                  FROM "Документ"
+                  WHERE "ТипДокумента" = pk
+                        AND "$Черновик" IS NULL
+                        AND "Удален" IS NOT TRUE
+                        AND "Раздел@" IS TRUE
+
+               )
+
+      LOOP
+			SELECT "Фамилия" || ' ' || "Имя" || ' ' || "Отчество" FROM "ЧастноеЛицо" WHERE "@Лицо" = rec.face LIMIT 1 INTO face_name;
+			UPDATE "Проект" SET "Описание" = face_name  WHERE "@Документ" = rec.doc;
+      END LOOP;
+END;</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" deployment_stage="2" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Карачевцев Ю.Ю." name="НастройкаПроектаПоРегламенту_2" python_extension="1" responsible="Карачевцев Ю.Ю.">
+    <callback event="26">
+      <body>SqlQuery('''
+update "ТипДокумента" SET "НастройкаКарточкиДокумента" = '[{"Presentation":"9785090d-86dd-4033-93f8-56eeabf42bb3","Config":{"Settings":[{"Type":"1","Name":"Закладка Команда","Values":[{"Value":"0","Title":"показывать"},{"Value":"1","Title":"не показывать"}],"DefaultValue":"0","Controls":["ЗакладкиЭтапов"]},{"Type":"1","Name":"Закладка Описание","Values":[{"Value":"0","Title":"показывать"},{"Value":"1","Title":"не показывать"}],"DefaultValue":"0","Controls":["ЗакладкиЭтапов"]},{"Type":"1","Name":"Закладка Затраты","Values":[{"Value":"0","Title":"показывать"},{"Value":"1","Title":"не показывать"}],"DefaultValue":"0","Controls":["ЗакладкиЭтапов"]},{"Type":"1","Name":"Закладка Ход проекта","Values":[{"Value":"0","Title":"показывать"},{"Value":"1","Title":"не показывать"}],"DefaultValue":"0","Controls":["ЗакладкиЭтапов"]}]}}]'
+where "ТипДокумента" = 'Проект' ''')
+
+SqlQuery('''
+update "Регламент" SET "ВизуальноеПредставление" = '9785090d-86dd-4033-93f8-56eeabf42bb3',
+"НастройкаКарточкиДокумента" = ''
+where "ТипДокумента" = (select "@ТипДокумента" from "ТипДокумента" where "ТипДокумента" = 'Проект' LIMIT 1)
+''')</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Игнатьев И.В." name="ОбнулениеДатУПапокПроектов" responsible="Игнатьев И.В.">
+    <comment>Обнуление полей ПланДатаНач и ПланДатаКнц у папок проектов. Они должны быть пустыми.</comment>
+    <rule name=".*" schema=".*" stage="1" type="0"/>
+    <callback event="26">
+      <body>BEGIN
+   UPDATE "Проект" proj
+   SET "ПланДатаНач"=NULL, "ПланДатаКнц"=NULL
+   WHERE proj."@Документ" IN (
+      SELECT pr."@Документ" FROM "Проект" pr
+      LEFT JOIN "Документ" doc on doc."@Документ"=pr."@Документ"
+      LEFT JOIN "ТипДокумента" dt on doc."ТипДокумента"=dt."@ТипДокумента"
+      WHERE doc."Раздел@" = TRUE AND
+            dt."ТипДокумента"='Проект'
+   );    
+END;</body>
+      <comment>Обнуление полей ПланДатаНач и ПланДатаКнц у папок проектов. Они должны быть пустыми.</comment>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Палочкин В.В." name="ОбнулениеСчетчиковУПроектов" responsible="Палочкин В.В.">
+    <rule name=".*" schema=".*" stage="1" type="0"/>
+    <callback event="26">
+      <body>BEGIN
+   UPDATE "Проект" SET "ДатаПодсчета" = NULL;
+END;</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" deployment_stage="2" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Игнатьев И.В." name="ОкругПланВремениПоРаботамПлана" python_extension="1" responsible="Игнатьев И.В.">
+    <comment>Округление планового времени по работам плана работ для каждого сотрудника. Время от 0 до 1 откругляется до 1, если больше - отрезается нецелая часть.</comment>
+    <callback event="26">
+      <body>SqlQuery('''
+   UPDATE "ЛицоДокумента" df SET "Время" = (SELECT trunc("Время"))
+   WHERE "СвязьДокументов" IN (
+           SELECT "@СвязьДокументов" FROM "СвязьДокументов" doc_link
+           LEFT JOIN "Документ" doc ON doc."@Документ" = doc_link."ДокументОснование"
+           LEFT JOIN "ТипДокумента" dt ON dt."@ТипДокумента"=doc."ТипДокумента"
+           WHERE dt."ТипДокумента" = 'ПланРабот'
+   )
+   AND "Время"&gt;1;
+''')
+
+
+SqlQuery('''
+   UPDATE "ЛицоДокумента" df SET "Время" = 1
+   WHERE "СвязьДокументов" IN (
+           SELECT "@СвязьДокументов" FROM "СвязьДокументов" doc_link
+           LEFT JOIN "Документ" doc ON doc."@Документ" = doc_link."ДокументОснование"
+           LEFT JOIN "ТипДокумента" dt ON dt."@ТипДокумента"=doc."ТипДокумента"
+           WHERE dt."ТипДокумента" = 'ПланРабот'
+   )
+   AND "Время"&gt;0 AND "Время"&lt;1;
+END;
+''')</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Зимин В.А." name="ОчисткаИсторииФильтрНаДиалВехи" responsible="Зимин В.А.">
+    <rule name=".*" schema=".*" stage="1" type="0"/>
+    <callback event="26">
+      <body>BEGIN
+   UPDATE "Параметр"
+   SET "Значение" = NULL
+   WHERE 
+      "Параметр"."Название" = 'ФильтрТаблицыСвязейСВехойЗИ-СостояниеВех-historyFilters' OR
+      "Параметр"."Название" = 'ФильтрТаблицыСвязейСВехойЗИ-СостояниеВех-historyData' OR
+      "Параметр"."Название" = 'ФильтрТаблицыСвязейСВехойЗИ-СостояниеВех-rememberData' OR
+      "Параметр"."Название" = 'ФильтрТаблицыСвязейСВехойЗИ-СостояниеВех-filterViewData';
+END;</body>
+      <comment>Конвертер нужно выполнить один раз, чтобы удалить дубли в сложном фильтре на диалоге вехи.</comment>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Палочкин В.В." name="ОчисткаЛицаУЗон" responsible="Палочкин В.В.">
+    <rule name=".*" schema=".*" stage="1" type="0"/>
+    <callback event="26">
+      <body>DECLARE
+BEGIN
+UPDATE "Лицо" SET "Название" = NULL WHERE "@Лицо" IN (
+   SELECT "@Лицо" FROM "ФункциональнаяОбласть"
+);
+END;</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Шарашов М.А." name="ПереносИзмененияСрока" responsible="Шарашов М.А.">
+    <rule name=".*" schema=".*" stage="1" type="0"/>
+    <callback event="26">
+      <body>DECLARE
+BEGIN
+UPDATE "Проект" SET "ИзменениеСрока" = TRUE WHERE "@Документ" IN (  SELECT DISTINCT doc."@Документ"  
+    FROM "Документ" doc
+    LEFT JOIN "ПроектСобытие" event
+         ON doc."@Документ" = COALESCE(event."ДокументСледствие", event."Документ")
+    WHERE event."Тип" = 7
+          AND (event."ДокументСледствие" = doc."@Документ"
+             OR (event."Документ" =  doc."@Документ" AND event."ДокументСледствие" IS NULL))
+    );
+END;</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Савин В.В." name="ПроставлениеПорНомерПроектам" responsible="Савин В.В.">
+    <comment>Заполняем колонку ПорНомер для уже созданных Проектов, Этапов, у которых этот парметр незадан.</comment>
+    <rule name=".*" schema=".*" stage="1" type="0"/>
+    <callback event="1">
+      <body>DECLARE
+BEGIN
+   UPDATE "Проект" SET "ПорНомер"="@Документ" WHERE "ПорНомер" IS NULL;
+END;</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" deployment_stage="1" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Палочкин В.В." name="СбросДатыВехи" python_extension="1" responsible="Палочкин В.В.">
+    <callback event="1">
+      <body>SqlQuery("""
+UPDATE "Веха"
+SET "Дата" = NULL
+""")</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Никитин Е.С." name="СбросСостоянияВехи" responsible="Никитин Е.С.">
+    <rule name=".*" schema=".*" stage="1" type="0"/>
+    <callback event="1">
+      <body>DECLARE
+BEGIN
+   UPDATE "Веха"
+   SET "Состояние" = 0
+   WHERE "Состояние" = 6;
+END;</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" deployment_stage="1" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Палочкин В.В." name="СброситьВремяПересчетаПроверок" python_extension="1" responsible="Палочкин В.В.">
+    <callback event="26">
+      <body>SqlQuery("""
+UPDATE "ЧеклистСтруктура"
+SET "ДатаВремяПересчета" = NULL
+""")</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Зимин В.А." name="УдалМусораСвязьДокументовПлан" responsible="Зимин В.А.">
+    <comment>Из-за неправильного формата объекта СвязьДокументов в таблице СвязьДокументовПлан скопилось множество лишних записей. Объект поправили, записи удаляем.</comment>
+    <rule name=".*" schema=".*" stage="1" type="0"/>
+    <callback event="26">
+      <body>BEGIN
+   DELETE FROM "СвязьДокументовПлан"
+   WHERE "@СвязьДокументов" in (
+      SELECT   
+        "СвязьДокументов"."@СвязьДокументов"  
+      FROM 
+        "СвязьДокументов", 
+        "СвязьДокументовПлан", 
+        "Документ", 
+        "ТипДокумента"
+      WHERE 
+        "СвязьДокументов"."@СвязьДокументов" = "СвязьДокументовПлан"."@СвязьДокументов" AND
+        "СвязьДокументов"."ДокументОснование" = "Документ"."@Документ" AND
+        "Документ"."ТипДокумента" = "ТипДокумента"."@ТипДокумента" AND
+        "ТипДокумента"."Название" != 'Планы работ' AND
+        coalesce("СвязьДокументов"."ВидСвязи", 0) NOT IN (14, 15)
+   );
+END;</body>
+      <comment>Конвертер нужно выполнить один раз, чтобы удалить дубли в сложном фильтре на диалоге вехи.</comment>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Палочкин В.В." name="УдалениеПроектовУдаленнойПапки" responsible="Палочкин В.В.">
+    <rule name=".*" schema=".*" stage="1" type="0"/>
+    <callback event="26">
+      <body>DECLARE
+BEGIN
+   UPDATE "Документ" SET "Удален" = TRUE 
+   WHERE "@Документ" IN (
+      WITH RECURSIVE tmp AS (
+         select 
+            proj."@Документ" 
+         from "Проект" proj
+         INNER JOIN "Документ" doc
+            ON doc."@Документ" = proj."@Документ"
+         INNER JOIN "ТипДокумента" t_d
+            ON t_d."@ТипДокумента" = doc."ТипДокумента"
+         WHERE doc."Раздел@" IS TRUE 
+               AND t_d."ТипДокумента" = 'Проект' 
+               AND doc."Удален" IS TRUE
+      ),
+      aaa AS (
+         select 
+            proj."@Документ", 
+            1 AS "Уровень" , 
+            proj."СостояниеПроекта", 
+            doc."Удален"
+         from "Проект" proj
+         INNER JOIN "Документ" doc
+            ON doc."@Документ" = proj."@Документ"
+         INNER JOIN tmp
+            ON tmp."@Документ" = doc."Раздел"
+         INNER JOIN "ТипДокумента" t_d
+            ON t_d."@ТипДокумента" = doc."ТипДокумента"
+         WHERE t_d."ТипДокумента" = 'Проект' 
+               AND doc."Удален" IS NOT TRUE
+
+         UNION ALL
+         
+         select 
+            proj."@Документ", 
+            aaa."Уровень" + 1  AS "Уровень", 
+            proj."СостояниеПроекта", 
+            doc."Удален"
+         from "Проект" proj
+         INNER JOIN "Документ" doc
+            ON doc."@Документ" = proj."@Документ"
+         INNER JOIN aaa
+            ON aaa."@Документ" = doc."Раздел"
+         INNER JOIN "ТипДокумента" t_d
+            ON t_d."@ТипДокумента" = doc."ТипДокумента"
+         WHERE t_d."ТипДокумента" = 'Проект' 
+               AND doc."Удален" IS NOT TRUE
+               AND "Уровень" &lt; 20
+      )
+      select aaa."@Документ" from aaa
+   );
+END;</body>
+    </callback>
+  </converter>
+
+  <converter abstract="0" call_once="1" deployment_stage="1" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Палочкин В.В." name="УстановкаДатыВехи" python_extension="1" responsible="Палочкин В.В.">
+    <callback event="26">
+      <body>SqlQuery("""
+WITH T AS (
+    SELECT veha."@Документ" AS "Документ",
+        doc."Дата"
+    FROM "Веха" veha
+    LEFT JOIN "Документ" doc
+        ON doc."@Документ" = veha."@Документ"
+)
+UPDATE "Веха" SET "Дата" = T."Дата" FROM T WHERE "@Документ" = T."Документ"
+""")</body>
+    </callback>
+  </converter>
+
+</converter_library>
