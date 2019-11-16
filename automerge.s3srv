@@ -3,7 +3,7 @@
 
   <description>Выполнение commit’ов в svn
 Показ содержимого svn commit’ов
-Получение из хранилищ и хранение статистики по количеству commit’ов/измененных файлов</description>
+Получение из хранилищ и хранение статистики по количеству ###########333333commit’ов/измененных файлов</description>
 
   <items>
     <bl_module id="737a42f8-83c8-400b-8e9e-8bfc22f20273" name="StatSender" url="$(SBISPlatformSDK)/bl-modules/StatSender/StatSender.s3mod"/>
