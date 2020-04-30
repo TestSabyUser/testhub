@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="WINDOWS-1251" ?>
+<bl_module id="3d95f8c2-26e8-4c6b-8e92-904f10938e4e" name="ProjectManagement" package="ЭДО" responsible="Палочкин В.В." version="1.00">
+
+  <description/>
+
+  <depends>
+    <bl_module id="16779777-d6ee-4d93-bd86-83dbd7ce03b4" name="Python"/>
+    <bl_module id="32eb4c80-2f7f-4d2e-a007-9385f5f72aab" name="XML-Py"/>
+    <bl_module id="58a7d60f-e54d-49e5-a8c7-c2f2b8590b85" name="Производственный календарь (клиент)"/>
+    <bl_module id="628d2741-7e8d-4fcf-9c58-66b6fbde8966" name="Contractor"/>
+    <bl_module id="85e8ed14-9bea-4189-adaa-5f1644060250" name="Рекламации"/>
+    <bl_module id="996e9204-3bf4-40b9-94e2-74d781723657" name="WorkTimeManagementBase"/>
+    <bl_module id="b30e64cf-c328-4a07-b483-c94850182fb9" name="WorksManagement"/>
+    <bl_module id="bb2fd23c-b976-41e8-b7a7-2af29ba9b32f" name="Документооборот"/>
+    <bl_module id="d6f1fe31-2fe2-4551-a349-407fc5b0fd14" name="Документ"/>
+    <bl_module id="de4f847d-f338-4a1b-a654-76727396cc4e" name="Управление рабочим временем"/>
+    <bl_module id="dfb61f88-8e6a-4810-82f5-cfcc60d832b0" name="MainUserCalendar"/>
+    <bl_module id="e7343ec6-b827-413d-9ecc-7b5a34fa253b" name="AreaOfResponsibility"/>
+    <bl_module id="e9b0abac-52b2-4dca-81de-9716c0c2001e" name="RootPerson"/>
+  </depends>
+
+  <load_after>
+    <bl_module id="1e424826-b09d-4f1c-b3ab-2fe9591751fd" name="Электронный документооборот"/>
+  </load_after>
+
+  <parameters>
+    <parameter db_deployment_enabled="0" full_path_address="1" name="profiles2" required_debug="1" required_release="1" subgroup_name="Прочие" type="service_address" version="3">
+      <comment><![CDATA[Адрес сервиса профилей на платформе]]></comment>
+    </parameter>
+    <parameter db_deployment_enabled="1" full_path_address="1" name="Веха.ПодсчетОставшихсяЗадач" required_debug="0" required_release="0" type="boolean" version="3">
+      <comment><![CDATA[нужен для определения юнитов на которых будет запускаться подсчет оставшихся на сотрудниках задач]]></comment>
+      <default configuration="debug"><![CDATA[false]]></default>
+      <default configuration="release"><![CDATA[false]]></default>
+    </parameter>
+  </parameters>
+
+  <resources/>
+
+  <externals>
+    <external cloud="." method="FileSD.AttachList" num_args="4" service_name="disk" signature="FileSD.AttachList(ДопПоля: Текстовый массив, Фильтр: Запись, Сортировка: Сортировка, Навигация: Навигация): Таблица[Id: Строка, Раздел: Иерархия, Раздел$: Логическое, Icon: Число целое, Name: Строка, size: Число целое, ModifyDate: Дата и время, DeleteDate: Дата и время, Type: Число целое, Owner: UUID, OwnerName: Строка, Flags: Флаги, Deleted: Логическое, Object: UUID, CreationDate: Дата и время, Author: UUID, AuthorName: Строка, CountSigns: Число целое, hasPreviousRedactionSign: Логическое, countRights: Число целое, DatePermanentlyDelete: Дата и время, ParentName: Строка, ParentId: Строка, OppositeFileId: Строка, OppositeFileParentId: Строка, OppositeFileParentIntId: Число целое, OppositeFileParentName: Строка, OppositeRootName: Строка, OppositeFileParentDeleted: Логическое, attachId: Строка, redactionId: Строка, fileName: Строка, title: Строка, hash: Строка, signs: Логическое, folder: Строка, folder@: Логическое, folder$: Логическое, createDate: Дата и время, lastChange: Дата и время, canEdit: Логическое, crypt: Логическое, href: Строка, relativeUrl: Строка, IsFavorite: Логическое]"/>
+    <external cloud="." method="FileSD.ReadAttachmentInfo" num_args="1" service_name="disk" signature="FileSD.ReadAttachmentInfo(ИдО: Строка): Запись[Имя: Строка, fileName: Строка, title: Строка, Editor: UUID, createDate: Дата и время, Размер: Число целое, size: Число целое, Версия: Строка, hash: Строка, Ответственный: Строка, responsible: Строка, ПользовательИмя: Строка, МожноРедактировать: Логическое, canEdit: Логическое, typeDoc: Строка, subTypeDoc: Строка, versionForm: Строка, subVersionForm: Строка, redactionId: Строка, Object: Строка, idPreviousRedactionSign: Строка, signs: Логическое, CountSigns: Число целое, redactionsNumber: Число целое, countMessages: Число целое, href: Строка, Flags: Флаги, countRights: Число целое, ModifyDate: Дата и время, relativeUrl: Строка]"/>
+    <external cloud="." method="FileSD.RedactionSigns" num_args="4" service_name="disk" signature="FileSD.RedactionSigns(ДопПоля: Текстовый массив, Фильтр: Запись, Сортировка: Сортировка, Навигация: Навигация): Таблица[ФИО: Строка, ProfileID: UUID, DateCreateSign: Дата и время, signId: UUID]"/>
+    <external cloud="." method="FileSD.SignsList" num_args="4" service_name="disk" signature="FileSD.SignsList(ДопПоля: Текстовый массив, Фильтр: Запись, Сортировка: Сортировка, Навигация: Навигация): void"/>
+    <external cloud="." method="LinkDecorator.UndecorateRSData" num_args="2" service_name="linkdecorator" signature="LinkDecorator.UndecorateRSData(Data: Таблица[], FieldNames: Текстовый массив): Таблица[]"/>
+    <external cloud="." method="Face.ByPersonsAndAccount" num_args="2" service_name="profiles2" signature="Face.ByPersonsAndAccount(Persons: Массив UUID, Account: Число целое): Таблица[]"/>
+  </externals>
+
+</bl_module>
