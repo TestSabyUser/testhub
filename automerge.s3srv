@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<service id="f4b4a569-8053-44a1-9e30-b4167d83fffffddddddddddff" name="automerge" responsible="Палочкин В.В." system_name="automerge">
+<service id="f4b4a569-8053-44a1-9e30-b4167d83fffffdddddddddнннннннннннннннннннннdff" name="automerge" responsible="Палочкин В.В." system_name="automerge">
 
   <description>Выполнение commit’ов в svn
 Показ содержимого svn commit’ов
