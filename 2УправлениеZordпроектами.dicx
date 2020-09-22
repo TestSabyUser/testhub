@@ -5,7 +5,7 @@
     <table last_changed="Ñìóðîâ À.À." name="Location" personal_data="1" responsible="Ñìóðîâ À.À." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
-          <type>CEXTENSION</type>вававпвапвапвап
+          <type>CEXTENSION</type>вававпвапвапвапvsdvsdvsd
           <table>Ëèöî</table>
         </format>
       </column>
