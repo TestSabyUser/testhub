@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="WINDOWS-1251" ?>
 <dictionary dicx_version="1.28">
 
-  <group name="Связь с другими модулями">
-    <table last_changed="Смуров А.А." name="Location" personal_data="1" responsible="Смуров А.А." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
-      <column name="____SBIS_PRIMARY_KEY_FIELD____">
+  <group name="Г‘ГўГїГ§Гј Г± Г¤Г°ГіГЈГЁГ¬ГЁ Г¬Г®Г¤ГіГ«ГїГ¬ГЁ">
+    <table last_changed="Г‘Г¬ГіГ°Г®Гў ГЂ.ГЂ." name="Location" personal_data="1" responsible="Г‘Г¬ГіГ°Г®Гў ГЂ.ГЂ." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <column name="____SBIS_PRIMARY_KEY_FIELD20.1100/2102d420.1100/2102d4____">
         <format>
           <type>CEXTENSION</type>
-          <table>Лицо</table>
+          <table>Г‹ГЁГ¶Г®</table>
         </format>
       </column>
       <column name="Name">
@@ -14,27 +14,27 @@
           <type>STRING</type>
         </format>
       </column>
-      <column name="Описание">
+      <column name="ГЋГЇГЁГ±Г Г­ГЁГҐ">
         <format>
           <type>STRING</type>
         </format>
       </column>
-      <column name="ДатаОкончания">
+      <column name="Г„Г ГІГ ГЋГЄГ®Г­Г·Г Г­ГЁГї">
         <format>
           <type>DATE</type>
         </format>
       </column>
-      <column name="ДатаНачала">
+      <column name="Г„Г ГІГ ГЌГ Г·Г Г«Г ">
         <format>
           <type>DATE</type>
         </format>
       </column>
-      <column name="ВремяНачалаРаботы">
+      <column name="Г‚Г°ГҐГ¬ГїГЌГ Г·Г Г«Г ГђГ ГЎГ®ГІГ»">
         <format>
           <type>TIME</type>
         </format>
       </column>
-      <column name="ВремяОкончанияРаботы">
+      <column name="Г‚Г°ГҐГ¬ГїГЋГЄГ®Г­Г·Г Г­ГЁГїГђГ ГЎГ®ГІГ»">
         <format>
           <type>TIME</type>
         </format>
@@ -52,46 +52,46 @@
       </index>
       <trigger_list/>
     </table>
-    <table last_changed="Волков Д.Н." name="ВидПоощренияВзыскания" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="Г‚Г®Г«ГЄГ®Гў Г„.ГЌ." name="Г‚ГЁГ¤ГЏГ®Г®Г№Г°ГҐГ­ГЁГїГ‚Г§Г»Г±ГЄГ Г­ГЁГї" personal_data="0" responsible="Г‚Г®Г«ГЄГ®Гў Г„.ГЌ." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>IDENTIFIER</type>
           <max_size>4</max_size>
         </format>
       </column>
-      <column name="Наименование">
+      <column name="ГЌГ ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ">
         <format>
           <type>STRING</type>
         </format>
       </column>
-      <column name="Тип">
+      <column name="Г’ГЁГЇ">
         <format>
           <type>ENUM</type>
           <element>
-            <string>Взыскание</string>
+            <string>Г‚Г§Г»Г±ГЄГ Г­ГЁГҐ</string>
             <value>0</value>
           </element>
           <element>
-            <string>Поощрение</string>
+            <string>ГЏГ®Г®Г№Г°ГҐГ­ГЁГҐ</string>
             <value>1</value>
           </element>
           <element>
-            <string>Переработка</string>
+            <string>ГЏГҐГ°ГҐГ°Г ГЎГ®ГІГЄГ </string>
             <value>2</value>
           </element>
           <element>
-            <string>Сайт</string>
+            <string>Г‘Г Г©ГІ</string>
             <value>3</value>
           </element>
           <element>
-            <string>Браузер</string>
+            <string>ГЃГ°Г ГіГ§ГҐГ°</string>
             <value>4</value>
           </element>
         </format>
       </column>
       <trigger_list/>
     </table>
-    <table last_changed="Савин В.В." name="ВидРаботы" personal_data="0" responsible="Савин В.В." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="Г‘Г ГўГЁГ­ Г‚.Г‚." name="Г‚ГЁГ¤ГђГ ГЎГ®ГІГ»" personal_data="0" responsible="Г‘Г ГўГЁГ­ Г‚.Г‚." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>IDENTIFIER</type>
@@ -100,21 +100,21 @@
       </column>
       <trigger_list/>
     </table>
-	<table last_changed="Шарашов М.А." name="ВидРасходаАвансовогоОтчета" personal_data="0" responsible="Карачевцев Ю.Ю." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+	<table last_changed="ГГ Г°Г ГёГ®Гў ГЊ.ГЂ." name="Г‚ГЁГ¤ГђГ Г±ГµГ®Г¤Г ГЂГўГ Г­Г±Г®ГўГ®ГЈГ®ГЋГІГ·ГҐГІГ " personal_data="0" responsible="ГЉГ Г°Г Г·ГҐГўГ¶ГҐГў Гћ.Гћ." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>IDENTIFIER</type>
           <max_size>4</max_size>
         </format>
       </column>
-      <column name="Название">
+      <column name="ГЌГ Г§ГўГ Г­ГЁГҐ">
         <format>
           <type>TEXT</type>
         </format>
       </column>
       <trigger_list/>
     </table>
-    <table last_changed="Волков Д.Н." name="Документ" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="Г‚Г®Г«ГЄГ®Гў Г„.ГЌ." name="Г„Г®ГЄГіГ¬ГҐГ­ГІ" personal_data="0" responsible="Г‚Г®Г«ГЄГ®Гў Г„.ГЌ." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>IDENTIFIER</type>
@@ -123,16 +123,16 @@
       </column>
       <trigger_list/>
     </table>
-    <table last_changed="Волков Д.Н." name="ДокументРасширение" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="Г‚Г®Г«ГЄГ®Гў Г„.ГЌ." name="Г„Г®ГЄГіГ¬ГҐГ­ГІГђГ Г±ГёГЁГ°ГҐГ­ГЁГҐ" personal_data="0" responsible="Г‚Г®Г«ГЄГ®Гў Г„.ГЌ." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>UEXTENSION</type>
-          <table>Документ</table>
+          <table>Г„Г®ГЄГіГ¬ГҐГ­ГІ</table>
         </format>
       </column>
       <trigger_list/>
     </table>
-    <table last_changed="Волков Д.Н." name="Лицо" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="Г‚Г®Г«ГЄГ®Гў Г„.ГЌ." name="Г‹ГЁГ¶Г®" personal_data="0" responsible="Г‚Г®Г«ГЄГ®Гў Г„.ГЌ." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>IDENTIFIER</type>
@@ -141,107 +141,107 @@
       </column>
       <trigger_list/>
     </table>
-    <table last_changed="Палочкин В.В." name="ЛицоДокумента" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="Г‹ГЁГ¶Г®Г„Г®ГЄГіГ¬ГҐГ­ГІГ " personal_data="0" responsible="Г‚Г®Г«ГЄГ®Гў Г„.ГЌ." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>IDENTIFIER</type>
           <max_size>4</max_size>
         </format>
       </column>
-      <column name="Состояние">
+      <column name="Г‘Г®Г±ГІГ®ГїГ­ГЁГҐ">
         <format>
           <not_null>1</not_null>
           <default>0</default>
           <type>ENUM</type>
           <element>
-            <string>Не ознакомлен</string>
+            <string>ГЌГҐ Г®Г§Г­Г ГЄГ®Г¬Г«ГҐГ­</string>
             <value>0</value>
           </element>
           <element>
-            <string>Примет участие</string>
+            <string>ГЏГ°ГЁГ¬ГҐГІ ГіГ·Г Г±ГІГЁГҐ</string>
             <value>1</value>
           </element>
           <element>
-            <string>Не примет участие</string>
+            <string>ГЌГҐ ГЇГ°ГЁГ¬ГҐГІ ГіГ·Г Г±ГІГЁГҐ</string>
             <value>2</value>
           </element>
           <element>
-            <string>Удален</string>
+            <string>Г“Г¤Г Г«ГҐГ­</string>
             <value>3</value>
           </element>
           <element>
-            <string>Ответственный</string>
+            <string>ГЋГІГўГҐГІГ±ГІГўГҐГ­Г­Г»Г©</string>
             <value>4</value>
           </element>
         </format>
       </column>
-      <column name="Метка">
+      <column name="ГЊГҐГІГЄГ ">
         <format>
           <type>STRING</type>
         </format>
       </column>
-      <column name="Удален">
+      <column name="Г“Г¤Г Г«ГҐГ­">
         <format>
           <default>0</default>
           <type>BOOLEAN</type>
         </format>
       </column>
-      <column name="СвязьДокументов">
+      <column name="Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў">
         <format>
           <type>LINK1-N</type>
-          <table>СвязьДокументов</table>
+          <table>Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў</table>
           <on_delete>0</on_delete>
         </format>
       </column>
-      <column name="Раздел">
+      <column name="ГђГ Г§Г¤ГҐГ«">
         <format>
           <type>HIERARCHY</type>
           <on_delete>2</on_delete>
           <nodes_field>1</nodes_field>
         </format>
       </column>
-      <column name="СуммПланВремя">
+      <column name="Г‘ГіГ¬Г¬ГЏГ«Г Г­Г‚Г°ГҐГ¬Гї">
         <format>
           <not_null>1</not_null>
           <default>0</default>
           <type>INT64</type>
         </format>
       </column>
-      <column name="СуммФактВремя">
+      <column name="Г‘ГіГ¬Г¬Г”Г ГЄГІГ‚Г°ГҐГ¬Гї">
         <format>
           <not_null>1</not_null>
           <default>0</default>
           <type>INT64</type>
         </format>
       </column>
-      <column name="Задачи">
+      <column name="Г‡Г Г¤Г Г·ГЁ">
         <format>
           <type>INTEGER</type>
         </format>
       </column>
-      <column name="Инциденты">
+      <column name="Г€Г­Г¶ГЁГ¤ГҐГ­ГІГ»">
         <format>
           <type>INTEGER</type>
         </format>
       </column>
-      <column name="ДатаОбновления">
+      <column name="Г„Г ГІГ ГЋГЎГ­Г®ГўГ«ГҐГ­ГЁГї">
         <format>
           <type>DATE</type>
         </format>
       </column>
-      <index method="btree" name="СвязьДокументов" null_keys="1" service="1" unique="0">
-        <column is_expressions="0" name="СвязьДокументов" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў" nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="Раздел" null_keys="1" service="1" unique="0">
-        <column is_expressions="0" name="Раздел" nulls_place="LAST" sorting="ASC"/>
-        <column is_expressions="0" name="Раздел@" nulls_place="LAST" sorting="DESC"/>
+      <index method="btree" name="ГђГ Г§Г¤ГҐГ«" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="ГђГ Г§Г¤ГҐГ«" nulls_place="LAST" sorting="ASC"/>
+        <column is_expressions="0" name="ГђГ Г§Г¤ГҐГ«@" nulls_place="LAST" sorting="DESC"/>
       </index>
-      <index method="btree" name="Состояние" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="Состояние" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="Г‘Г®Г±ГІГ®ГїГ­ГЁГҐ" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Г‘Г®Г±ГІГ®ГїГ­ГЁГҐ" nulls_place="DEFAULT" sorting="ASC"/>
       </index>
       <trigger_list/>
     </table>
-    <table last_changed="karachevtsevuu" name="Работа" personal_data="0" responsible="Карачевцев" table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="karachevtsevuu" name="ГђГ ГЎГ®ГІГ " personal_data="0" responsible="ГЉГ Г°Г Г·ГҐГўГ¶ГҐГў" table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>IDENTIFIER</type>
@@ -250,49 +250,49 @@
       </column>
       <trigger_list/>
     </table>
-    <table last_changed="Палочкин В.В." name="РазличныеДокументы" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="ГђГ Г§Г«ГЁГ·Г­Г»ГҐГ„Г®ГЄГіГ¬ГҐГ­ГІГ»" personal_data="0" responsible="Г‚Г®Г«ГЄГ®Гў Г„.ГЌ." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>CEXTENSION</type>
-          <table>Документ</table>
+          <table>Г„Г®ГЄГіГ¬ГҐГ­ГІ</table>
         </format>
       </column>
       <trigger_list/>
     </table>
-    <table last_changed="Палочкин В.В." name="СвязьДокументов" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў" personal_data="0" responsible="Г‚Г®Г«ГЄГ®Гў Г„.ГЌ." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>IDENTIFIER</type>
           <max_size>4</max_size>
         </format>
       </column>
-      <column name="Раздел">
+      <column name="ГђГ Г§Г¤ГҐГ«">
         <format>
           <type>HIERARCHY</type>
           <on_delete>1</on_delete>
           <nodes_field>1</nodes_field>
         </format>
       </column>
-      <column name="ВидРаботы">
+      <column name="Г‚ГЁГ¤ГђГ ГЎГ®ГІГ»">
         <format>
           <type>LINK1-N</type>
-          <table>ВидРаботы</table>
+          <table>Г‚ГЁГ¤ГђГ ГЎГ®ГІГ»</table>
           <on_delete>2</on_delete>
         </format>
       </column>
-      <index method="btree" name="Раздел" null_keys="0" service="1" unique="0">
-        <column is_expressions="0" name="Раздел" nulls_place="LAST" sorting="ASC"/>
-        <column is_expressions="0" name="Раздел@" nulls_place="LAST" sorting="DESC"/>
+      <index method="btree" name="ГђГ Г§Г¤ГҐГ«" null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="ГђГ Г§Г¤ГҐГ«" nulls_place="LAST" sorting="ASC"/>
+        <column is_expressions="0" name="ГђГ Г§Г¤ГҐГ«@" nulls_place="LAST" sorting="DESC"/>
       </index>
-      <index method="btree" name="ВидРаботы" null_keys="1" service="1" unique="0">
-        <column is_expressions="0" name="ВидРаботы" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г‚ГЁГ¤ГђГ ГЎГ®ГІГ»" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Г‚ГЁГ¤ГђГ ГЎГ®ГІГ»" nulls_place="LAST" sorting="ASC"/>
         <predicate>
-          <body>"ВидРаботы" IS NOT NULL</body>
+          <body>"Г‚ГЁГ¤ГђГ ГЎГ®ГІГ»" IS NOT NULL</body>
         </predicate>
       </index>
       <trigger_list/>
     </table>
-    <table last_changed="Палочкин В.В." name="Событие" personal_data="0" responsible="Палочкин В.В." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="Г‘Г®ГЎГ»ГІГЁГҐ" personal_data="0" responsible="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>IDENTIFIER</type>
@@ -301,21 +301,21 @@
       </column>
       <trigger_list/>
     </table>
-    <table last_changed="Карачевцев Ю.Ю." name="СтатьяЗатрат" personal_data="0" responsible="Карачевцев Ю.Ю." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="ГЉГ Г°Г Г·ГҐГўГ¶ГҐГў Гћ.Гћ." name="Г‘ГІГ ГІГјГїГ‡Г ГІГ°Г ГІ" personal_data="0" responsible="ГЉГ Г°Г Г·ГҐГўГ¶ГҐГў Гћ.Гћ." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>CEXTENSION</type>
-          <table>Лицо</table>
+          <table>Г‹ГЁГ¶Г®</table>
         </format>
       </column>
-      <column name="Название">
+      <column name="ГЌГ Г§ГўГ Г­ГЁГҐ">
         <format>
           <type>STRING</type>
         </format>
       </column>
       <trigger_list/>
     </table>
-    <table last_changed="Палочкин В.В." name="ТипДокумента" personal_data="0" responsible="Палочкин В.В." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " personal_data="0" responsible="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>IDENTIFIER</type>
@@ -324,14 +324,14 @@
       </column>
       <trigger_list/>
     </table>
-    <table last_changed="Пономарев С.А." name="ЧастноеЛицо" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="ГЏГ®Г­Г®Г¬Г Г°ГҐГў Г‘.ГЂ." name="Г—Г Г±ГІГ­Г®ГҐГ‹ГЁГ¶Г®" personal_data="0" responsible="Г‚Г®Г«ГЄГ®Гў Г„.ГЌ." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>CEXTENSION</type>
-          <table>Лицо</table>
+          <table>Г‹ГЁГ¶Г®</table>
         </format>
       </column>
-      <column name="Название">
+      <column name="ГЌГ Г§ГўГ Г­ГЁГҐ">
         <format>
           <type>STRING</type>
         </format>
@@ -340,344 +340,344 @@
     </table>
   </group>
 
-  <group name="Проверки">
-    <table last_changed="Палочкин В.В." name="Вопрос" personal_data="1" responsible="Палочкин В.В." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+  <group name="ГЏГ°Г®ГўГҐГ°ГЄГЁ">
+    <table last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="Г‚Г®ГЇГ°Г®Г±" personal_data="1" responsible="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>IDENTIFIER</type>
           <max_size>8</max_size>
         </format>
       </column>
-      <column name="Название">
+      <column name="ГЌГ Г§ГўГ Г­ГЁГҐ">
         <format>
           <type>STRING</type>
         </format>
       </column>
-      <column name="Формулировка">
+      <column name="Г”Г®Г°Г¬ГіГ«ГЁГ°Г®ГўГЄГ ">
         <format>
           <type>STRING</type>
         </format>
       </column>
-      <column name="Тип">
+      <column name="Г’ГЁГЇ">
         <format>
           <type>ENUM</type>
           <element>
-            <string>Один из многих</string>
+            <string>ГЋГ¤ГЁГ­ ГЁГ§ Г¬Г­Г®ГЈГЁГµ</string>
             <value>0</value>
           </element>
           <element>
-            <string>Многие из многих</string>
+            <string>ГЊГ­Г®ГЈГЁГҐ ГЁГ§ Г¬Г­Г®ГЈГЁГµ</string>
             <value>1</value>
           </element>
           <element>
-            <string>Краткий ответ</string>
+            <string>ГЉГ°Г ГІГЄГЁГ© Г®ГІГўГҐГІ</string>
             <value>2</value>
           </element>
           <element>
-            <string>Число</string>
+            <string>Г—ГЁГ±Г«Г®</string>
             <value>3</value>
           </element>
           <element>
-            <string>Дата</string>
+            <string>Г„Г ГІГ </string>
             <value>4</value>
           </element>
           <element>
-            <string>Текст</string>
+            <string>Г’ГҐГЄГ±ГІ</string>
             <value>5</value>
           </element>
           <element>
-            <string>На соответствие</string>
+            <string>ГЌГ  Г±Г®Г®ГІГўГҐГІГ±ГІГўГЁГҐ</string>
             <value>6</value>
           </element>
           <element>
-            <string>ШаблонИтогов</string>
+            <string>ГГ ГЎГ«Г®Г­Г€ГІГ®ГЈГ®Гў</string>
             <value>7</value>
           </element>
           <element>
-            <string>Голосование</string>
+            <string>ГѓГ®Г«Г®Г±Г®ГўГ Г­ГЁГҐ</string>
             <value>8</value>
           </element>
           <element>
-            <string>ШаблонОтветов</string>
+            <string>ГГ ГЎГ«Г®Г­ГЋГІГўГҐГІГ®Гў</string>
             <value>9</value>
           </element>
           <element>
-            <string>ГолосованиеОтвет</string>
+            <string>ГѓГ®Г«Г®Г±Г®ГўГ Г­ГЁГҐГЋГІГўГҐГІ</string>
             <value>10</value>
           </element>
         </format>
       </column>
-      <column name="Ответ">
+      <column name="ГЋГІГўГҐГІ">
         <format>
           <type>BINARY</type>
           <max_size>1048576</max_size>
         </format>
       </column>
-      <column name="Флаги">
+      <column name="Г”Г«Г ГЈГЁ">
         <format>
           <type>FLAGS</type>
           <element>
-            <string>Случайный порядок ответов</string>
+            <string>Г‘Г«ГіГ·Г Г©Г­Г»Г© ГЇГ®Г°ГїГ¤Г®ГЄ Г®ГІГўГҐГІГ®Гў</string>
             <value>0</value>
           </element>
           <element>
-            <string>Нужен комментарий</string>
+            <string>ГЌГіГ¦ГҐГ­ ГЄГ®Г¬Г¬ГҐГ­ГІГ Г°ГЁГ©</string>
             <value>1</value>
           </element>
         </format>
       </column>
-      <column name="Балл">
+      <column name="ГЃГ Г«Г«">
         <format>
           <type>DOUBLE</type>
         </format>
       </column>
-      <column name="Статус">
+      <column name="Г‘ГІГ ГІГіГ±">
         <format>
           <default>2</default>
           <type>ENUM</type>
           <element>
-            <string>положительный</string>
+            <string>ГЇГ®Г«Г®Г¦ГЁГІГҐГ«ГјГ­Г»Г©</string>
             <value>0</value>
           </element>
           <element>
-            <string>отрицательный</string>
+            <string>Г®ГІГ°ГЁГ¶Г ГІГҐГ«ГјГ­Г»Г©</string>
             <value>1</value>
           </element>
           <element>
-            <string>не обработано</string>
+            <string>Г­ГҐ Г®ГЎГ°Г ГЎГ®ГІГ Г­Г®</string>
             <value>2</value>
           </element>
           <element>
-            <string>в работе</string>
+            <string>Гў Г°Г ГЎГ®ГІГҐ</string>
             <value>3</value>
           </element>
         </format>
       </column>
-      <column name="Цвет">
+      <column name="Г–ГўГҐГІ">
         <format>
           <type>STRING</type>
         </format>
       </column>
-      <column name="Удален">
+      <column name="Г“Г¤Г Г«ГҐГ­">
         <format>
           <default>0</default>
           <type>BOOLEAN</type>
         </format>
       </column>
-      <column name="ПорНомер">
+      <column name="ГЏГ®Г°ГЌГ®Г¬ГҐГ°">
         <format>
           <type>INT64</type>
           <index_number>1</index_number>
         </format>
       </column>
-      <column name="ДатаВремяСоздания">
+      <column name="Г„Г ГІГ Г‚Г°ГҐГ¬ГїГ‘Г®Г§Г¤Г Г­ГЁГї">
         <format>
           <type>DATETIME</type>
           <use_current>1</use_current>
         </format>
       </column>
-      <column name="Метка">
+      <column name="ГЊГҐГІГЄГ ">
         <format>
           <default>0</default>
           <type>ENUM</type>
           <element>
-            <string>Обычное состояние</string>
+            <string>ГЋГЎГ»Г·Г­Г®ГҐ Г±Г®Г±ГІГ®ГїГ­ГЁГҐ</string>
             <value>0</value>
           </element>
           <element>
-            <string>Особое состояние</string>
+            <string>ГЋГ±Г®ГЎГ®ГҐ Г±Г®Г±ГІГ®ГїГ­ГЁГҐ</string>
             <value>1</value>
           </element>
         </format>
       </column>
-      <column name="Раздел">
+      <column name="ГђГ Г§Г¤ГҐГ«">
         <format>
           <type>HIERARCHY</type>
           <on_delete>1</on_delete>
           <nodes_field>1</nodes_field>
         </format>
       </column>
-      <index method="btree" name="Раздел" null_keys="1" service="1" unique="0">
-        <column is_expressions="0" name="Раздел" nulls_place="LAST" sorting="ASC"/>
-        <column is_expressions="0" name="Раздел@" nulls_place="LAST" sorting="DESC"/>
+      <index method="btree" name="ГђГ Г§Г¤ГҐГ«" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="ГђГ Г§Г¤ГҐГ«" nulls_place="LAST" sorting="ASC"/>
+        <column is_expressions="0" name="ГђГ Г§Г¤ГҐГ«@" nulls_place="LAST" sorting="DESC"/>
       </index>
-      <index method="btree" name="ТипШаблоновИтогов" null_keys="1" service="0" unique="0">
-        <column is_expressions="1" name="&quot;Тип&quot; = 7" nulls_place="DEFAULT" sorting="ASC">
+      <index method="btree" name="Г’ГЁГЇГГ ГЎГ«Г®Г­Г®ГўГ€ГІГ®ГЈГ®Гў" null_keys="1" service="0" unique="0">
+        <column is_expressions="1" name="&quot;Г’ГЁГЇ&quot; = 7" nulls_place="DEFAULT" sorting="ASC">
           <definition>
             <language>PLPGSQL</language>
-            <body>"Тип" = 7</body>
+            <body>"Г’ГЁГЇ" = 7</body>
           </definition>
         </column>
       </index>
       <trigger_list/>
     </table>
-    <table last_changed="Палочкин В.В." name="ПроверкаСобытие" personal_data="1" responsible="Палочкин В.В." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="ГЏГ°Г®ГўГҐГ°ГЄГ Г‘Г®ГЎГ»ГІГЁГҐ" personal_data="1" responsible="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>IDENTIFIER</type>
           <max_size>8</max_size>
         </format>
       </column>
-      <column name="Документ">
+      <column name="Г„Г®ГЄГіГ¬ГҐГ­ГІ">
         <format>
           <type>LINK1-N</type>
-          <table>Документ</table>
+          <table>Г„Г®ГЄГіГ¬ГҐГ­ГІ</table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <column name="ЧастноеЛицо">
+      <column name="Г—Г Г±ГІГ­Г®ГҐГ‹ГЁГ¶Г®">
         <format>
           <type>LINK1-N</type>
-          <table>ЧастноеЛицо</table>
+          <table>Г—Г Г±ГІГ­Г®ГҐГ‹ГЁГ¶Г®</table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <column name="Тип">
+      <column name="Г’ГЁГЇ">
         <format>
           <not_null>1</not_null>
           <default>0</default>
           <type>ENUM</type>
           <element>
-            <string>Больше 1 изменения</string>
+            <string>ГЃГ®Г«ГјГёГҐ 1 ГЁГ§Г¬ГҐГ­ГҐГ­ГЁГї</string>
             <value>0</value>
           </element>
           <element>
-            <string>Отметка времени до документу</string>
+            <string>ГЋГІГ¬ГҐГІГЄГ  ГўГ°ГҐГ¬ГҐГ­ГЁ Г¤Г® Г¤Г®ГЄГіГ¬ГҐГ­ГІГі</string>
             <value>1</value>
           </element>
           <element>
-            <string>Создание задачи по документу</string>
+            <string>Г‘Г®Г§Г¤Г Г­ГЁГҐ Г§Г Г¤Г Г·ГЁ ГЇГ® Г¤Г®ГЄГіГ¬ГҐГ­ГІГі</string>
             <value>2</value>
           </element>
           <element>
-            <string>Изменение статуса состояния</string>
+            <string>Г€Г§Г¬ГҐГ­ГҐГ­ГЁГҐ Г±ГІГ ГІГіГ±Г  Г±Г®Г±ГІГ®ГїГ­ГЁГї</string>
             <value>3</value>
           </element>
           <element>
-            <string>Проверка (дата изменений)</string>
+            <string>ГЏГ°Г®ГўГҐГ°ГЄГ  (Г¤Г ГІГ  ГЁГ§Г¬ГҐГ­ГҐГ­ГЁГ©)</string>
             <value>4</value>
           </element>
         </format>
       </column>
-      <column name="ДокументСледствие">
+      <column name="Г„Г®ГЄГіГ¬ГҐГ­ГІГ‘Г«ГҐГ¤Г±ГІГўГЁГҐ">
         <format>
           <type>LINK1-N</type>
-          <table>Документ</table>
+          <table>Г„Г®ГЄГіГ¬ГҐГ­ГІ</table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <column name="Ресурсы">
+      <column name="ГђГҐГ±ГіГ°Г±Г»">
         <format>
           <type>INT64</type>
         </format>
       </column>
-      <column name="Проверка">
+      <column name="ГЏГ°Г®ГўГҐГ°ГЄГ ">
         <format>
           <type>LINK1-N</type>
-          <table>Документ</table>
+          <table>Г„Г®ГЄГіГ¬ГҐГ­ГІ</table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <column name="Вопрос">
+      <column name="Г‚Г®ГЇГ°Г®Г±">
         <format>
           <type>LINK1-N</type>
-          <table>Вопрос</table>
+          <table>Г‚Г®ГЇГ°Г®Г±</table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <column name="Дата">
+      <column name="Г„Г ГІГ ">
         <format>
           <type>DATE</type>
           <use_current>1</use_current>
         </format>
       </column>
-      <column name="Время">
+      <column name="Г‚Г°ГҐГ¬Гї">
         <format>
           <type>TIME</type>
           <use_current>1</use_current>
         </format>
       </column>
-      <column name="Работа">
+      <column name="ГђГ ГЎГ®ГІГ ">
         <format>
           <type>LINK1-N</type>
-          <table>Работа</table>
+          <table>ГђГ ГЎГ®ГІГ </table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <index method="btree" name="Документ" null_keys="1" service="1" unique="0">
-        <column is_expressions="0" name="Документ" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г„Г®ГЄГіГ¬ГҐГ­ГІ" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Г„Г®ГЄГіГ¬ГҐГ­ГІ" nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="ЧастноеЛицо" null_keys="1" service="1" unique="0">
-        <column is_expressions="0" name="ЧастноеЛицо" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г—Г Г±ГІГ­Г®ГҐГ‹ГЁГ¶Г®" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Г—Г Г±ГІГ­Г®ГҐГ‹ГЁГ¶Г®" nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="ДокументСледствие" null_keys="0" service="1" unique="0">
-        <column is_expressions="0" name="ДокументСледствие" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г„Г®ГЄГіГ¬ГҐГ­ГІГ‘Г«ГҐГ¤Г±ГІГўГЁГҐ" null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="Г„Г®ГЄГіГ¬ГҐГ­ГІГ‘Г«ГҐГ¤Г±ГІГўГЁГҐ" nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="Проверка" null_keys="1" service="1" unique="0">
-        <column is_expressions="0" name="Проверка" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="ГЏГ°Г®ГўГҐГ°ГЄГ " null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="ГЏГ°Г®ГўГҐГ°ГЄГ " nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="Вопрос" null_keys="0" service="1" unique="0">
-        <column is_expressions="0" name="Вопрос" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г‚Г®ГЇГ°Г®Г±" null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="Г‚Г®ГЇГ°Г®Г±" nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="ПроверкаДатаПериод" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="Проверка" nulls_place="DEFAULT" sorting="ASC"/>
-        <column is_expressions="0" name="Дата" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="ГЏГ°Г®ГўГҐГ°ГЄГ Г„Г ГІГ ГЏГҐГ°ГЁГ®Г¤" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="ГЏГ°Г®ГўГҐГ°ГЄГ " nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="Г„Г ГІГ " nulls_place="DEFAULT" sorting="ASC"/>
       </index>
-      <index method="btree" name="Работа" null_keys="0" service="1" unique="0">
-        <column is_expressions="0" name="Работа" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="ГђГ ГЎГ®ГІГ " null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="ГђГ ГЎГ®ГІГ " nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="СостояниеПроверки" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="Документ" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="Г‘Г®Г±ГІГ®ГїГ­ГЁГҐГЏГ°Г®ГўГҐГ°ГЄГЁ" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Г„Г®ГЄГіГ¬ГҐГ­ГІ" nulls_place="DEFAULT" sorting="ASC"/>
         <predicate>
-          <body>"Тип" = 4</body>
+          <body>"Г’ГЁГЇ" = 4</body>
         </predicate>
       </index>
       <trigger_list/>
     </table>
-    <table last_changed="Палочкин В.В." name="ЧеклистСтруктура" personal_data="0" responsible="Самсонов А.А." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="Г—ГҐГЄГ«ГЁГ±ГІГ‘ГІГ°ГіГЄГІГіГ°Г " personal_data="0" responsible="Г‘Г Г¬Г±Г®Г­Г®Гў ГЂ.ГЂ." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>IDENTIFIER</type>
           <max_size>8</max_size>
         </format>
       </column>
-      <column name="Название">
+      <column name="ГЌГ Г§ГўГ Г­ГЁГҐ">
         <format>
           <type>STRING</type>
         </format>
       </column>
-      <column name="Метка">
+      <column name="ГЊГҐГІГЄГ ">
         <format>
           <type>INTEGER</type>
         </format>
       </column>
-      <column name="ПорНомер">
+      <column name="ГЏГ®Г°ГЌГ®Г¬ГҐГ°">
         <format>
           <type>INT64</type>
           <index_number>1</index_number>
         </format>
       </column>
-      <column name="Версия">
+      <column name="Г‚ГҐГ°Г±ГЁГї">
         <format>
           <type>STRING</type>
         </format>
       </column>
-      <column name="ДатаПроверки">
+      <column name="Г„Г ГІГ ГЏГ°Г®ГўГҐГ°ГЄГЁ">
         <format>
           <type>DATE</type>
         </format>
       </column>
-      <column name="Описание">
+      <column name="ГЋГЇГЁГ±Г Г­ГЁГҐ">
         <format>
           <type>STRING</type>
         </format>
       </column>
-      <column name="Тип">
+      <column name="Г’ГЁГЇ">
         <format>
           <default>0</default>
           <type>ENUM</type>
           <element>
-            <string>Чеклист</string>
+            <string>Г—ГҐГЄГ«ГЁГ±ГІ</string>
             <value>0</value>
           </element>
           <element>
@@ -685,918 +685,918 @@
             <value>1</value>
           </element>
           <element>
-            <string>ЧеклистОтвет</string>
+            <string>Г—ГҐГЄГ«ГЁГ±ГІГЋГІГўГҐГІ</string>
             <value>2</value>
           </element>
         </format>
       </column>
-      <column name="БазовыйРаздел">
+      <column name="ГЃГ Г§Г®ГўГ»Г©ГђГ Г§Г¤ГҐГ«">
         <format>
           <type>INT64</type>
         </format>
       </column>
-      <column name="ПлановоеВремя">
+      <column name="ГЏГ«Г Г­Г®ГўГ®ГҐГ‚Г°ГҐГ¬Гї">
         <format>
           <type>TIMEINTERVAL</type>
         </format>
       </column>
-      <column name="Раздел">
+      <column name="ГђГ Г§Г¤ГҐГ«">
         <format>
           <type>HIERARCHY</type>
           <on_delete>1</on_delete>
           <nodes_field>1</nodes_field>
         </format>
       </column>
-      <column name="Вопрос">
+      <column name="Г‚Г®ГЇГ°Г®Г±">
         <format>
           <type>LINK1-N</type>
-          <table>Вопрос</table>
+          <table>Г‚Г®ГЇГ°Г®Г±</table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <column name="Документ">
+      <column name="Г„Г®ГЄГіГ¬ГҐГ­ГІ">
         <format>
           <type>LINK1-1</type>
-          <table>Документ</table>
+          <table>Г„Г®ГЄГіГ¬ГҐГ­ГІ</table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <column name="ЗонаОтветственности">
+      <column name="Г‡Г®Г­Г ГЋГІГўГҐГІГ±ГІГўГҐГ­Г­Г®Г±ГІГЁ">
         <format>
           <type>LINK1-N</type>
-          <table>ФункциональнаяОбласть</table>
+          <table>Г”ГіГ­ГЄГ¶ГЁГ®Г­Г Г«ГјГ­Г ГїГЋГЎГ«Г Г±ГІГј</table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <column name="Лицо">
+      <column name="Г‹ГЁГ¶Г®">
         <format>
           <type>LINK1-N</type>
-          <table>ЧастноеЛицо</table>
+          <table>Г—Г Г±ГІГ­Г®ГҐГ‹ГЁГ¶Г®</table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <column name="ДатаВремяПересчета">
+      <column name="Г„Г ГІГ Г‚Г°ГҐГ¬ГїГЏГҐГ°ГҐГ±Г·ГҐГІГ ">
         <format>
           <type>DATETIME</type>
         </format>
       </column>
-      <column name="Задания">
+      <column name="Г‡Г Г¤Г Г­ГЁГї">
         <format>
           <type>INTEGER</type>
         </format>
       </column>
-      <column name="Выполнен">
+      <column name="Г‚Г»ГЇГ®Г«Г­ГҐГ­">
         <format>
           <not_null>1</not_null>
           <default>0</default>
           <type>BOOLEAN</type>
         </format>
       </column>
-      <column name="ДочерняяЗона">
+      <column name="Г„Г®Г·ГҐГ°Г­ГїГїГ‡Г®Г­Г ">
         <format>
           <type>LINK1-N</type>
-          <table>ФункциональнаяОбласть</table>
+          <table>Г”ГіГ­ГЄГ¶ГЁГ®Г­Г Г«ГјГ­Г ГїГЋГЎГ«Г Г±ГІГј</table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <column name="Ресурсы">
+      <column name="ГђГҐГ±ГіГ°Г±Г»">
         <format>
           <type>INTEGER</type>
         </format>
       </column>
-      <column name="Комментарий">
+      <column name="ГЉГ®Г¬Г¬ГҐГ­ГІГ Г°ГЁГ©">
         <format>
           <type>STRING</type>
         </format>
       </column>
-      <column name="Режим">
+      <column name="ГђГҐГ¦ГЁГ¬">
         <format>
           <default>0</default>
           <type>ENUM</type>
           <element>
-            <string>Ручной</string>
+            <string>ГђГіГ·Г­Г®Г©</string>
             <value>0</value>
           </element>
           <element>
-            <string>Автоматический</string>
+            <string>ГЂГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГЁГ©</string>
             <value>1</value>
           </element>
           <element>
-            <string>Автотест</string>
+            <string>ГЂГўГІГ®ГІГҐГ±ГІ</string>
             <value>2</value>
           </element>
           <element>
-            <string>Прочий</string>
+            <string>ГЏГ°Г®Г·ГЁГ©</string>
             <value>3</value>
           </element>
         </format>
       </column>
-      <column name="Цвет">
+      <column name="Г–ГўГҐГІ">
         <format>
           <type>STRING</type>
         </format>
       </column>
-      <index method="btree" name="Раздел" null_keys="1" service="1" unique="0">
-        <column is_expressions="0" name="Раздел" nulls_place="LAST" sorting="ASC"/>
-        <column is_expressions="0" name="Раздел@" nulls_place="LAST" sorting="DESC"/>
+      <index method="btree" name="ГђГ Г§Г¤ГҐГ«" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="ГђГ Г§Г¤ГҐГ«" nulls_place="LAST" sorting="ASC"/>
+        <column is_expressions="0" name="ГђГ Г§Г¤ГҐГ«@" nulls_place="LAST" sorting="DESC"/>
       </index>
-      <index method="btree" name="Вопрос" null_keys="0" service="1" unique="0">
-        <column is_expressions="0" name="Вопрос" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г‚Г®ГЇГ°Г®Г±" null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="Г‚Г®ГЇГ°Г®Г±" nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="Документ" null_keys="1" service="1" unique="0">
-        <column is_expressions="0" name="Документ" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г„Г®ГЄГіГ¬ГҐГ­ГІ" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Г„Г®ГЄГіГ¬ГҐГ­ГІ" nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="ЗонаОтветственности" null_keys="1" service="1" unique="0">
-        <column is_expressions="0" name="ЗонаОтветственности" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г‡Г®Г­Г ГЋГІГўГҐГІГ±ГІГўГҐГ­Г­Г®Г±ГІГЁ" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Г‡Г®Г­Г ГЋГІГўГҐГІГ±ГІГўГҐГ­Г­Г®Г±ГІГЁ" nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="Лицо" null_keys="0" service="1" unique="0">
-        <column is_expressions="0" name="Лицо" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г‹ГЁГ¶Г®" null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="Г‹ГЁГ¶Г®" nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="Тип" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="Тип" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="Г’ГЁГЇ" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Г’ГЁГЇ" nulls_place="DEFAULT" sorting="ASC"/>
       </index>
-      <index method="btree" name="ПунктыПроверки" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="БазовыйРаздел" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="ГЏГіГ­ГЄГІГ»ГЏГ°Г®ГўГҐГ°ГЄГЁ" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="ГЃГ Г§Г®ГўГ»Г©ГђГ Г§Г¤ГҐГ«" nulls_place="DEFAULT" sorting="ASC"/>
         <predicate>
-          <body>"$Черновик" IS NULL</body>
+          <body>"$Г—ГҐГ°Г­Г®ГўГЁГЄ" IS NULL</body>
         </predicate>
       </index>
-      <index method="btree" name="ЛицоЗаПунктПроверки" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="Лицо" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="Г‹ГЁГ¶Г®Г‡Г ГЏГіГ­ГЄГІГЏГ°Г®ГўГҐГ°ГЄГЁ" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Г‹ГЁГ¶Г®" nulls_place="DEFAULT" sorting="ASC"/>
         <predicate>
-          <body>"БазовыйРаздел" IS NOT NULL AND "$Черновик" IS NULL</body>
+          <body>"ГЃГ Г§Г®ГўГ»Г©ГђГ Г§Г¤ГҐГ«" IS NOT NULL AND "$Г—ГҐГ°Г­Г®ГўГЁГЄ" IS NULL</body>
         </predicate>
       </index>
-      <index method="btree" name="ПунктыПроверкиСТипом" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="БазовыйРаздел" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="ГЏГіГ­ГЄГІГ»ГЏГ°Г®ГўГҐГ°ГЄГЁГ‘Г’ГЁГЇГ®Г¬" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="ГЃГ Г§Г®ГўГ»Г©ГђГ Г§Г¤ГҐГ«" nulls_place="DEFAULT" sorting="ASC"/>
         <predicate>
-          <body>"Тип" = 0 AND "$Черновик" IS NULL</body>
+          <body>"Г’ГЁГЇ" = 0 AND "$Г—ГҐГ°Г­Г®ГўГЁГЄ" IS NULL</body>
         </predicate>
       </index>
-      <index method="btree" name="ПунктыЧеклистов" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="ЗонаОтветственности" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="ГЏГіГ­ГЄГІГ»Г—ГҐГЄГ«ГЁГ±ГІГ®Гў" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Г‡Г®Г­Г ГЋГІГўГҐГІГ±ГІГўГҐГ­Г­Г®Г±ГІГЁ" nulls_place="DEFAULT" sorting="ASC"/>
         <predicate>
-          <body>"БазовыйРаздел" IS NULL AND "$Черновик" IS NULL</body>
+          <body>"ГЃГ Г§Г®ГўГ»Г©ГђГ Г§Г¤ГҐГ«" IS NULL AND "$Г—ГҐГ°Г­Г®ГўГЁГЄ" IS NULL</body>
         </predicate>
       </index>
-      <index method="btree" name="Проверки" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="Документ" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="ГЏГ°Г®ГўГҐГ°ГЄГЁ" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Г„Г®ГЄГіГ¬ГҐГ­ГІ" nulls_place="DEFAULT" sorting="ASC"/>
         <predicate>
-          <body>"БазовыйРаздел" IS NULL AND "ЗонаОтветственности" IS NULL AND "$Черновик" IS NULL</body>
+          <body>"ГЃГ Г§Г®ГўГ»Г©ГђГ Г§Г¤ГҐГ«" IS NULL AND "Г‡Г®Г­Г ГЋГІГўГҐГІГ±ГІГўГҐГ­Г­Г®Г±ГІГЁ" IS NULL AND "$Г—ГҐГ°Г­Г®ГўГЁГЄ" IS NULL</body>
         </predicate>
       </index>
-      <index method="btree" name="ДочерняяЗона" null_keys="0" service="1" unique="0">
-        <column is_expressions="0" name="ДочерняяЗона" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г„Г®Г·ГҐГ°Г­ГїГїГ‡Г®Г­Г " null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="Г„Г®Г·ГҐГ°Г­ГїГїГ‡Г®Г­Г " nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="БазовыйРаздел" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="БазовыйРаздел" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="ГЃГ Г§Г®ГўГ»Г©ГђГ Г§Г¤ГҐГ«" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="ГЃГ Г§Г®ГўГ»Г©ГђГ Г§Г¤ГҐГ«" nulls_place="DEFAULT" sorting="ASC"/>
       </index>
-      <index method="btree" name="ПроверкиВложеннойЗоны" null_keys="0" service="0" unique="0">
-        <column is_expressions="0" name="ДочерняяЗона" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="ГЏГ°Г®ГўГҐГ°ГЄГЁГ‚Г«Г®Г¦ГҐГ­Г­Г®Г©Г‡Г®Г­Г»" null_keys="0" service="0" unique="0">
+        <column is_expressions="0" name="Г„Г®Г·ГҐГ°Г­ГїГїГ‡Г®Г­Г " nulls_place="DEFAULT" sorting="ASC"/>
         <predicate>
-          <body>"$Черновик" IS NULL</body>
+          <body>"$Г—ГҐГ°Г­Г®ГўГЁГЄ" IS NULL</body>
         </predicate>
       </index>
-      <index method="btree" name="ПоискПоЛицу" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="Лицо" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="ГЏГ®ГЁГ±ГЄГЏГ®Г‹ГЁГ¶Гі" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Г‹ГЁГ¶Г®" nulls_place="DEFAULT" sorting="ASC"/>
         <predicate>
-          <body>"Тип" = 0 AND "$Черновик" IS NULL AND "БазовыйРаздел" IS NOT NULL</body>
+          <body>"Г’ГЁГЇ" = 0 AND "$Г—ГҐГ°Г­Г®ГўГЁГЄ" IS NULL AND "ГЃГ Г§Г®ГўГ»Г©ГђГ Г§Г¤ГҐГ«" IS NOT NULL</body>
         </predicate>
       </index>
-      <index method="btree" name="БазовыйРазделИРаздел" null_keys="0" service="0" unique="0">
-        <column is_expressions="0" name="БазовыйРаздел" nulls_place="DEFAULT" sorting="ASC"/>
-        <column is_expressions="0" name="Раздел" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="ГЃГ Г§Г®ГўГ»Г©ГђГ Г§Г¤ГҐГ«Г€ГђГ Г§Г¤ГҐГ«" null_keys="0" service="0" unique="0">
+        <column is_expressions="0" name="ГЃГ Г§Г®ГўГ»Г©ГђГ Г§Г¤ГҐГ«" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="ГђГ Г§Г¤ГҐГ«" nulls_place="DEFAULT" sorting="ASC"/>
       </index>
       <trigger_list/>
     </table>
   </group>
 
-  <group name="Вехи">
-    <table last_changed="Палочкин В.В." name="ВВехе" personal_data="1" responsible="Палочкин В.В." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
-      <comment>таблица для ускорения работы с вехами</comment>
+  <group name="Г‚ГҐГµГЁ">
+    <table last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="Г‚Г‚ГҐГµГҐ" personal_data="1" responsible="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+      <comment>ГІГ ГЎГ«ГЁГ¶Г  Г¤Г«Гї ГіГ±ГЄГ®Г°ГҐГ­ГЁГї Г°Г ГЎГ®ГІГ» Г± ГўГҐГµГ Г¬ГЁ</comment>
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>IDENTIFIER</type>
           <max_size>8</max_size>
         </format>
       </column>
-      <column name="Веха">
+      <column name="Г‚ГҐГµГ ">
         <format>
           <type>LINK1-N</type>
-          <table>Документ</table>
+          <table>Г„Г®ГЄГіГ¬ГҐГ­ГІ</table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <column name="Документ">
+      <column name="Г„Г®ГЄГіГ¬ГҐГ­ГІ">
         <format>
           <type>LINK1-N</type>
-          <table>Документ</table>
+          <table>Г„Г®ГЄГіГ¬ГҐГ­ГІ</table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <column name="ТипДокумента">
+      <column name="Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ ">
         <format>
           <type>LINK1-N</type>
-          <table>ТипДокумента</table>
+          <table>Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ </table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <column name="Событие">
+      <column name="Г‘Г®ГЎГ»ГІГЁГҐ">
         <format>
           <type>LINK1-N</type>
-          <table>Событие</table>
+          <table>Г‘Г®ГЎГ»ГІГЁГҐ</table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <column name="СвязьДокументов">
+      <column name="Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў">
         <format>
           <type>LINK1-N</type>
-          <table>СвязьДокументов</table>
+          <table>Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў</table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <column name="ИдРегламента">
+      <column name="Г€Г¤ГђГҐГЈГ«Г Г¬ГҐГ­ГІГ ">
         <format>
           <type>UUID</type>
         </format>
       </column>
-      <column name="ИдФазы">
+      <column name="Г€Г¤Г”Г Г§Г»">
         <format>
           <type>UUID</type>
         </format>
       </column>
-      <index method="btree" name="Веха" null_keys="1" service="1" unique="0">
-        <column is_expressions="0" name="Веха" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г‚ГҐГµГ " null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Г‚ГҐГµГ " nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="Документ" null_keys="1" service="1" unique="0">
-        <column is_expressions="0" name="Документ" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г„Г®ГЄГіГ¬ГҐГ­ГІ" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Г„Г®ГЄГіГ¬ГҐГ­ГІ" nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="ТипДокумента" null_keys="1" service="1" unique="0">
-        <column is_expressions="0" name="ТипДокумента" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="Событие" null_keys="0" service="1" unique="0">
-        <column is_expressions="0" name="Событие" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г‘Г®ГЎГ»ГІГЁГҐ" null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="Г‘Г®ГЎГ»ГІГЁГҐ" nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="СвязьДокументов" null_keys="1" service="1" unique="0">
-        <column is_expressions="0" name="СвязьДокументов" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў" nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="АктивныеДокументы" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="Веха" nulls_place="DEFAULT" sorting="ASC"/>
-        <column is_expressions="0" name="ТипДокумента" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="ГЂГЄГІГЁГўГ­Г»ГҐГ„Г®ГЄГіГ¬ГҐГ­ГІГ»" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Г‚ГҐГµГ " nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " nulls_place="DEFAULT" sorting="ASC"/>
         <predicate>
-          <body>"Событие" IS NOT NULL</body>
+          <body>"Г‘Г®ГЎГ»ГІГЁГҐ" IS NOT NULL</body>
         </predicate>
       </index>
-      <index method="btree" name="ВсеДокументы" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="Веха" nulls_place="DEFAULT" sorting="ASC"/>
-        <column is_expressions="0" name="ТипДокумента" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="Г‚Г±ГҐГ„Г®ГЄГіГ¬ГҐГ­ГІГ»" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Г‚ГҐГµГ " nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " nulls_place="DEFAULT" sorting="ASC"/>
       </index>
-      <index method="btree" name="ЗавершенныеДокументы" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="Веха" nulls_place="DEFAULT" sorting="ASC"/>
-        <column is_expressions="0" name="ТипДокумента" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="Г‡Г ГўГҐГ°ГёГҐГ­Г­Г»ГҐГ„Г®ГЄГіГ¬ГҐГ­ГІГ»" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Г‚ГҐГµГ " nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " nulls_place="DEFAULT" sorting="ASC"/>
         <predicate>
-          <body>"Событие" IS NULL</body>
+          <body>"Г‘Г®ГЎГ»ГІГЁГҐ" IS NULL</body>
         </predicate>
       </index>
-      <index method="btree" name="АктивныеДокументыРегламента" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="Веха" nulls_place="DEFAULT" sorting="ASC"/>
-        <column is_expressions="0" name="ТипДокумента" nulls_place="DEFAULT" sorting="ASC"/>
-        <column is_expressions="0" name="ИдРегламента" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="ГЂГЄГІГЁГўГ­Г»ГҐГ„Г®ГЄГіГ¬ГҐГ­ГІГ»ГђГҐГЈГ«Г Г¬ГҐГ­ГІГ " null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Г‚ГҐГµГ " nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="Г€Г¤ГђГҐГЈГ«Г Г¬ГҐГ­ГІГ " nulls_place="DEFAULT" sorting="ASC"/>
       </index>
-      <index method="btree" name="АктивныеДокументыФазыРегламента" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="Веха" nulls_place="DEFAULT" sorting="ASC"/>
-        <column is_expressions="0" name="ТипДокумента" nulls_place="DEFAULT" sorting="ASC"/>
-        <column is_expressions="0" name="ИдРегламента" nulls_place="DEFAULT" sorting="ASC"/>
-        <column is_expressions="0" name="ИдФазы" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="ГЂГЄГІГЁГўГ­Г»ГҐГ„Г®ГЄГіГ¬ГҐГ­ГІГ»Г”Г Г§Г»ГђГҐГЈГ«Г Г¬ГҐГ­ГІГ " null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Г‚ГҐГµГ " nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="Г€Г¤ГђГҐГЈГ«Г Г¬ГҐГ­ГІГ " nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="Г€Г¤Г”Г Г§Г»" nulls_place="DEFAULT" sorting="ASC"/>
         <predicate>
-          <body>"Событие" IS NOT NULL</body>
+          <body>"Г‘Г®ГЎГ»ГІГЁГҐ" IS NOT NULL</body>
         </predicate>
       </index>
-      <index method="btree" name="НезапущенныеДокументыФазыРегламента" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="Веха" nulls_place="DEFAULT" sorting="ASC"/>
-        <column is_expressions="0" name="ТипДокумента" nulls_place="DEFAULT" sorting="ASC"/>
-        <column is_expressions="0" name="ИдРегламента" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="ГЌГҐГ§Г ГЇГіГ№ГҐГ­Г­Г»ГҐГ„Г®ГЄГіГ¬ГҐГ­ГІГ»Г”Г Г§Г»ГђГҐГЈГ«Г Г¬ГҐГ­ГІГ " null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Г‚ГҐГµГ " nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="Г€Г¤ГђГҐГЈГ«Г Г¬ГҐГ­ГІГ " nulls_place="DEFAULT" sorting="ASC"/>
         <predicate>
-          <body>"Событие" IS NOT NULL AND "ИдФазы" IS NULL</body>
+          <body>"Г‘Г®ГЎГ»ГІГЁГҐ" IS NOT NULL AND "Г€Г¤Г”Г Г§Г»" IS NULL</body>
         </predicate>
       </index>
-      <index method="btree" name="ДокументыВФазе" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="Веха" nulls_place="DEFAULT" sorting="ASC"/>
-        <column is_expressions="0" name="ТипДокумента" nulls_place="DEFAULT" sorting="ASC"/>
-        <column is_expressions="0" name="ИдРегламента" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="Г„Г®ГЄГіГ¬ГҐГ­ГІГ»Г‚Г”Г Г§ГҐ" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Г‚ГҐГµГ " nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="Г€Г¤ГђГҐГЈГ«Г Г¬ГҐГ­ГІГ " nulls_place="DEFAULT" sorting="ASC"/>
         <predicate>
-          <body>"Событие" IS NOT NULL</body>
+          <body>"Г‘Г®ГЎГ»ГІГЁГҐ" IS NOT NULL</body>
         </predicate>
       </index>
       <trigger_list/>
     </table>
-    <table last_changed="Палочкин В.В." name="Веха" personal_data="1" responsible="aa.shirkin" table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="Г‚ГҐГµГ " personal_data="1" responsible="aa.shirkin" table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>CEXTENSION</type>
-          <table>Документ</table>
+          <table>Г„Г®ГЄГіГ¬ГҐГ­ГІ</table>
         </format>
       </column>
-      <column name="Состояние">
+      <column name="Г‘Г®Г±ГІГ®ГїГ­ГЁГҐ">
         <format>
           <default>1</default>
           <type>ENUM</type>
           <element>
-            <string>В работе</string>
+            <string>Г‚ Г°Г ГЎГ®ГІГҐ</string>
             <value>0</value>
           </element>
           <element>
-            <string>Планируется</string>
+            <string>ГЏГ«Г Г­ГЁГ°ГіГҐГІГ±Гї</string>
             <value>1</value>
           </element>
           <element>
-            <string>Закрыта от изменений</string>
+            <string>Г‡Г ГЄГ°Г»ГІГ  Г®ГІ ГЁГ§Г¬ГҐГ­ГҐГ­ГЁГ©</string>
             <value>2</value>
           </element>
           <element>
-            <string>Выполнена</string>
+            <string>Г‚Г»ГЇГ®Г«Г­ГҐГ­Г </string>
             <value>3</value>
           </element>
           <element>
-            <string>Не выполнена</string>
+            <string>ГЌГҐ ГўГ»ГЇГ®Г«Г­ГҐГ­Г </string>
             <value>4</value>
           </element>
           <element>
-            <string>В архиве</string>
+            <string>Г‚ Г Г°ГµГЁГўГҐ</string>
             <value>5</value>
           </element>
         </format>
       </column>
-      <column name="Название">
+      <column name="ГЌГ Г§ГўГ Г­ГЁГҐ">
         <format>
           <type>STRING</type>
         </format>
       </column>
-      <column name="Описание">
+      <column name="ГЋГЇГЁГ±Г Г­ГЁГҐ">
         <format>
           <type>STRING</type>
         </format>
       </column>
-      <column name="Дата">
+      <column name="Г„Г ГІГ ">
         <format>
           <type>DATE</type>
         </format>
       </column>
-      <column name="КоличествоЗадач">
+      <column name="ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ®Г‡Г Г¤Г Г·">
         <format>
           <type>INTEGER</type>
         </format>
       </column>
-      <column name="Проект">
+      <column name="ГЏГ°Г®ГҐГЄГІ">
         <format>
           <type>LINK1-N</type>
-          <table>Проект</table>
+          <table>ГЏГ°Г®ГҐГЄГІ</table>
           <on_delete>2</on_delete>
         </format>
       </column>
-      <column name="ДатаВремяПодсчета">
+      <column name="Г„Г ГІГ Г‚Г°ГҐГ¬ГїГЏГ®Г¤Г±Г·ГҐГІГ ">
         <format>
           <type>DATETIME</type>
         </format>
       </column>
-      <column name="Цвет">
+      <column name="Г–ГўГҐГІ">
         <format>
           <type>STRING</type>
         </format>
       </column>
-      <index method="btree" name="Проект" null_keys="0" service="1" unique="0">
-        <column is_expressions="0" name="Проект" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="ГЏГ°Г®ГҐГЄГІ" null_keys="0" service="1" unique="0">
+        <column is_expressions="0" name="ГЏГ°Г®ГҐГЄГІ" nulls_place="LAST" sorting="ASC"/>
       </index>
-      <index method="btree" name="СостояниеВехи" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="Состояние" nulls_place="DEFAULT" sorting="ASC"/>
-        <column is_expressions="0" name="@Документ" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="Г‘Г®Г±ГІГ®ГїГ­ГЁГҐГ‚ГҐГµГЁ" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Г‘Г®Г±ГІГ®ГїГ­ГЁГҐ" nulls_place="DEFAULT" sorting="ASC"/>
+        <column is_expressions="0" name="@Г„Г®ГЄГіГ¬ГҐГ­ГІ" nulls_place="DEFAULT" sorting="ASC"/>
       </index>
-      <index method="btree" name="Состояние" null_keys="1" service="0" unique="0">
-        <column is_expressions="0" name="Состояние" nulls_place="DEFAULT" sorting="ASC"/>
+      <index method="btree" name="Г‘Г®Г±ГІГ®ГїГ­ГЁГҐ" null_keys="1" service="0" unique="0">
+        <column is_expressions="0" name="Г‘Г®Г±ГІГ®ГїГ­ГЁГҐ" nulls_place="DEFAULT" sorting="ASC"/>
       </index>
-      <index method="gin" name="Поиск" null_keys="1" service="0" unique="0">
-        <column is_expressions="1" name="to_tsvector( 'simple'::regconfig, &quot;Название&quot; )" nulls_place="DEFAULT" sorting="ASC">
+      <index method="gin" name="ГЏГ®ГЁГ±ГЄ" null_keys="1" service="0" unique="0">
+        <column is_expressions="1" name="to_tsvector( 'simple'::regconfig, &quot;ГЌГ Г§ГўГ Г­ГЁГҐ&quot; )" nulls_place="DEFAULT" sorting="ASC">
           <definition>
             <language>PLPGSQL</language>
-            <body>to_tsvector( 'simple'::regconfig, "Название" )</body>
+            <body>to_tsvector( 'simple'::regconfig, "ГЌГ Г§ГўГ Г­ГЁГҐ" )</body>
           </definition>
         </column>
         <predicate>
-          <body>"Название" IS NOT NULL</body>
+          <body>"ГЌГ Г§ГўГ Г­ГЁГҐ" IS NOT NULL</body>
         </predicate>
       </index>
       <trigger_list/>
     </table>
-    <table last_changed="Палочкин В.В." name="ВехаГрафик" personal_data="0" responsible="Палочкин В.В." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <table last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="Г‚ГҐГµГ ГѓГ°Г ГґГЁГЄ" personal_data="0" responsible="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
       <column name="____SBIS_PRIMARY_KEY_FIELD____">
         <format>
           <type>IDENTIFIER</type>
           <max_size>4</max_size>
         </format>
       </column>
-      <column name="Количество">
+      <column name="ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ®">
         <format>
           <type>INTEGER</type>
         </format>
       </column>
-      <column name="Дата">
+      <column name="Г„Г ГІГ ">
         <format>
           <type>DATE</type>
         </format>
       </column>
-      <column name="Документ">
+      <column name="Г„Г®ГЄГіГ¬ГҐГ­ГІ">
         <format>
           <type>LINK1-N</type>
-          <table>Документ</table>
+          <table>Г„Г®ГЄГіГ¬ГҐГ­ГІ</table>
           <on_delete>1</on_delete>
         </format>
       </column>
-      <index method="btree" name="Документ" null_keys="1" service="1" unique="0">
-        <column is_expressions="0" name="Документ" nulls_place="LAST" sorting="ASC"/>
+      <index method="btree" name="Г„Г®ГЄГіГ¬ГҐГ­ГІ" null_keys="1" service="1" unique="0">
+        <column is_expressions="0" name="Г„Г®ГЄГіГ¬ГҐГ­ГІ" nulls_place="LAST" sorting="ASC"/>
       </index>
       <trigger_list/>
     </table>
   </group>
 
-  <table last_changed="Зернов И.А." name="Проект" personal_data="1" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+  <table last_changed="Г‡ГҐГ°Г­Г®Гў Г€.ГЂ." name="ГЏГ°Г®ГҐГЄГІ" personal_data="1" responsible="Г‚Г®Г«ГЄГ®Гў Г„.ГЌ." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
     <column name="____SBIS_PRIMARY_KEY_FIELD____">
       <format>
         <type>CEXTENSION</type>
-        <table>Документ</table>
+        <table>Г„Г®ГЄГіГ¬ГҐГ­ГІ</table>
       </format>
     </column>
-    <column name="ПланДатаНач">
+    <column name="ГЏГ«Г Г­Г„Г ГІГ ГЌГ Г·">
       <format>
         <type>DATE</type>
       </format>
     </column>
-    <column name="ПланДатаКнц">
+    <column name="ГЏГ«Г Г­Г„Г ГІГ ГЉГ­Г¶">
       <format>
         <type>DATE</type>
       </format>
     </column>
-    <column name="ПланПродолжительность">
+    <column name="ГЏГ«Г Г­ГЏГ°Г®Г¤Г®Г«Г¦ГЁГІГҐГ«ГјГ­Г®Г±ГІГј">
       <format>
         <type>INTEGER</type>
       </format>
     </column>
-    <column name="ФактДатаНач">
+    <column name="Г”Г ГЄГІГ„Г ГІГ ГЌГ Г·">
       <format>
         <type>DATE</type>
       </format>
     </column>
-    <column name="ФактДатаКнц">
+    <column name="Г”Г ГЄГІГ„Г ГІГ ГЉГ­Г¶">
       <format>
         <type>DATE</type>
       </format>
     </column>
-    <column name="Описание">
+    <column name="ГЋГЇГЁГ±Г Г­ГЁГҐ">
       <format>
         <type>STRING</type>
       </format>
     </column>
-    <column name="Выполнен">
+    <column name="Г‚Г»ГЇГ®Г«Г­ГҐГ­">
       <format>
         <type>BOOLEAN</type>
       </format>
     </column>
-    <column name="Проверен">
+    <column name="ГЏГ°Г®ГўГҐГ°ГҐГ­">
       <format>
         <type>BOOLEAN</type>
       </format>
     </column>
-    <column name="Цвет">
+    <column name="Г–ГўГҐГІ">
       <format>
         <type>STRING</type>
       </format>
     </column>
-    <column name="Шрифт">
+    <column name="ГГ°ГЁГґГІ">
       <format>
         <type>STRING</type>
       </format>
     </column>
-    <column name="ПорНомер">
+    <column name="ГЏГ®Г°ГЌГ®Г¬ГҐГ°">
       <format>
         <type>INT64</type>
         <index_number>1</index_number>
       </format>
     </column>
-    <column name="Ошибки">
-      <comment>Счетчик активных ошибок</comment>
+    <column name="ГЋГёГЁГЎГЄГЁ">
+      <comment>Г‘Г·ГҐГІГ·ГЁГЄ Г ГЄГІГЁГўГ­Г»Гµ Г®ГёГЁГЎГ®ГЄ</comment>
       <format>
         <type>INTEGER</type>
       </format>
     </column>
-    <column name="СостояниеПроекта">
-      <comment>состояния проекта и плана работ
-для проекта: 0,1,2,3,4
-для плана работ: 0,3,10,11,12,13</comment>
+    <column name="Г‘Г®Г±ГІГ®ГїГ­ГЁГҐГЏГ°Г®ГҐГЄГІГ ">
+      <comment>Г±Г®Г±ГІГ®ГїГ­ГЁГї ГЇГ°Г®ГҐГЄГІГ  ГЁ ГЇГ«Г Г­Г  Г°Г ГЎГ®ГІ
+Г¤Г«Гї ГЇГ°Г®ГҐГЄГІГ : 0,1,2,3,4
+Г¤Г«Гї ГЇГ«Г Г­Г  Г°Г ГЎГ®ГІ: 0,3,10,11,12,13</comment>
       <format>
         <default>0</default>
         <type>ENUM</type>
         <element>
-          <string>планируется</string>
+          <string>ГЇГ«Г Г­ГЁГ°ГіГҐГІГ±Гї</string>
           <value>0</value>
         </element>
         <element>
-          <string>в работе</string>
+          <string>Гў Г°Г ГЎГ®ГІГҐ</string>
           <value>1</value>
         </element>
         <element>
-          <string>завершен</string>
+          <string>Г§Г ГўГҐГ°ГёГҐГ­</string>
           <value>2</value>
         </element>
         <element>
-          <string>в архиве</string>
+          <string>Гў Г Г°ГµГЁГўГҐ</string>
           <value>3</value>
         </element>
         <element>
-          <string>приостановлен</string>
+          <string>ГЇГ°ГЁГ®Г±ГІГ Г­Г®ГўГ«ГҐГ­</string>
           <value>4</value>
         </element>
         <element>
-          <string>не согласован</string>
+          <string>Г­ГҐ Г±Г®ГЈГ«Г Г±Г®ГўГ Г­</string>
           <value>10</value>
         </element>
         <element>
-          <string>выполняется</string>
+          <string>ГўГ»ГЇГ®Г«Г­ГїГҐГІГ±Гї</string>
           <value>11</value>
         </element>
         <element>
-          <string>выполнен</string>
+          <string>ГўГ»ГЇГ®Г«Г­ГҐГ­</string>
           <value>12</value>
         </element>
         <element>
-          <string>не выполнен</string>
+          <string>Г­ГҐ ГўГ»ГЇГ®Г«Г­ГҐГ­</string>
           <value>13</value>
         </element>
       </format>
     </column>
-    <column name="ИзменениеСрока">
+    <column name="Г€Г§Г¬ГҐГ­ГҐГ­ГЁГҐГ‘Г°Г®ГЄГ ">
       <format>
         <type>BOOLEAN</type>
       </format>
     </column>
-    <column name="Задания">
+    <column name="Г‡Г Г¤Г Г­ГЁГї">
       <format>
         <type>INTEGER</type>
       </format>
     </column>
-    <column name="Ресурсы">
+    <column name="ГђГҐГ±ГіГ°Г±Г»">
       <format>
         <type>INTEGER</type>
       </format>
     </column>
-    <column name="ПроектЭтапа">
+    <column name="ГЏГ°Г®ГҐГЄГІГќГІГ ГЇГ ">
       <format>
         <type>HIERARCHY</type>
         <on_delete>2</on_delete>
         <nodes_field>0</nodes_field>
       </format>
     </column>
-    <column name="ОкончаниеВеха">
+    <column name="ГЋГЄГ®Г­Г·Г Г­ГЁГҐГ‚ГҐГµГ ">
       <format>
         <type>LINK1-N</type>
-        <table>Веха</table>
+        <table>Г‚ГҐГµГ </table>
         <on_delete>2</on_delete>
       </format>
     </column>
-    <column name="ДатаПодсчета">
+    <column name="Г„Г ГІГ ГЏГ®Г¤Г±Г·ГҐГІГ ">
       <format>
         <type>DATE</type>
       </format>
     </column>
-    <column name="ДляПоиска">
+    <column name="Г„Г«ГїГЏГ®ГЁГ±ГЄГ ">
       <format>
         <type>STRING</type>
       </format>
     </column>
-    <index method="btree" name="ПорНомер" null_keys="1" service="0" unique="0">
-      <column is_expressions="0" name="ПорНомер" nulls_place="LAST" sorting="ASC"/>
+    <index method="btree" name="ГЏГ®Г°ГЌГ®Г¬ГҐГ°" null_keys="1" service="0" unique="0">
+      <column is_expressions="0" name="ГЏГ®Г°ГЌГ®Г¬ГҐГ°" nulls_place="LAST" sorting="ASC"/>
     </index>
-    <index method="btree" name="СостояниеПроекта" null_keys="1" service="0" unique="0">
-      <column is_expressions="0" name="СостояниеПроекта" nulls_place="DEFAULT" sorting="ASC"/>
+    <index method="btree" name="Г‘Г®Г±ГІГ®ГїГ­ГЁГҐГЏГ°Г®ГҐГЄГІГ " null_keys="1" service="0" unique="0">
+      <column is_expressions="0" name="Г‘Г®Г±ГІГ®ГїГ­ГЁГҐГЏГ°Г®ГҐГЄГІГ " nulls_place="DEFAULT" sorting="ASC"/>
     </index>
-    <index method="btree" name="ПроектЭтапа" null_keys="0" service="1" unique="0">
-      <column is_expressions="0" name="ПроектЭтапа" nulls_place="LAST" sorting="ASC"/>
+    <index method="btree" name="ГЏГ°Г®ГҐГЄГІГќГІГ ГЇГ " null_keys="0" service="1" unique="0">
+      <column is_expressions="0" name="ГЏГ°Г®ГҐГЄГІГќГІГ ГЇГ " nulls_place="LAST" sorting="ASC"/>
     </index>
-    <index method="btree" name="ОкончаниеВеха" null_keys="0" service="1" unique="0">
-      <column is_expressions="0" name="ОкончаниеВеха" nulls_place="LAST" sorting="ASC"/>
+    <index method="btree" name="ГЋГЄГ®Г­Г·Г Г­ГЁГҐГ‚ГҐГµГ " null_keys="0" service="1" unique="0">
+      <column is_expressions="0" name="ГЋГЄГ®Г­Г·Г Г­ГЁГҐГ‚ГҐГµГ " nulls_place="LAST" sorting="ASC"/>
     </index>
-    <index method="btree" name="НеВАрхиве" null_keys="1" service="0" unique="0">
-      <column is_expressions="0" name="@Документ" nulls_place="DEFAULT" sorting="ASC"/>
+    <index method="btree" name="ГЌГҐГ‚ГЂГ°ГµГЁГўГҐ" null_keys="1" service="0" unique="0">
+      <column is_expressions="0" name="@Г„Г®ГЄГіГ¬ГҐГ­ГІ" nulls_place="DEFAULT" sorting="ASC"/>
       <predicate>
-        <body>"СостояниеПроекта" != 3</body>
+        <body>"Г‘Г®Г±ГІГ®ГїГ­ГЁГҐГЏГ°Г®ГҐГЄГІГ " != 3</body>
       </predicate>
     </index>
-    <index method="gin" name="Поиск" null_keys="1" service="0" unique="0">
-      <column is_expressions="1" name="to_tsvector( 'simple'::regconfig, &quot;ДляПоиска&quot; )" nulls_place="DEFAULT" sorting="ASC">
+    <index method="gin" name="ГЏГ®ГЁГ±ГЄ" null_keys="1" service="0" unique="0">
+      <column is_expressions="1" name="to_tsvector( 'simple'::regconfig, &quot;Г„Г«ГїГЏГ®ГЁГ±ГЄГ &quot; )" nulls_place="DEFAULT" sorting="ASC">
         <definition>
           <language>PLPGSQL</language>
-          <body>to_tsvector( 'simple'::regconfig, "ДляПоиска" )</body>
+          <body>to_tsvector( 'simple'::regconfig, "Г„Г«ГїГЏГ®ГЁГ±ГЄГ " )</body>
         </definition>
       </column>
       <predicate>
-        <body>"ДляПоиска" IS NOT NULL</body>
+        <body>"Г„Г«ГїГЏГ®ГЁГ±ГЄГ " IS NOT NULL</body>
       </predicate>
     </index>
-    <index method="btree" name="ПланДатаКнц" null_keys="1" service="0" unique="0">
-      <column is_expressions="0" name="ПланДатаКнц" nulls_place="DEFAULT" sorting="ASC"/>
+    <index method="btree" name="ГЏГ«Г Г­Г„Г ГІГ ГЉГ­Г¶" null_keys="1" service="0" unique="0">
+      <column is_expressions="0" name="ГЏГ«Г Г­Г„Г ГІГ ГЉГ­Г¶" nulls_place="DEFAULT" sorting="ASC"/>
       <predicate>
-        <body>"ПланДатаКнц" IS NOT NULL</body>
+        <body>"ГЏГ«Г Г­Г„Г ГІГ ГЉГ­Г¶" IS NOT NULL</body>
       </predicate>
     </index>
-    <index method="btree" name="ПланДатаНач" null_keys="1" service="0" unique="0">
-      <column is_expressions="0" name="ПланДатаНач" nulls_place="DEFAULT" sorting="ASC"/>
+    <index method="btree" name="ГЏГ«Г Г­Г„Г ГІГ ГЌГ Г·" null_keys="1" service="0" unique="0">
+      <column is_expressions="0" name="ГЏГ«Г Г­Г„Г ГІГ ГЌГ Г·" nulls_place="DEFAULT" sorting="ASC"/>
       <predicate>
-        <body>"ПланДатаНач" IS NOT NULL</body>
+        <body>"ГЏГ«Г Г­Г„Г ГІГ ГЌГ Г·" IS NOT NULL</body>
       </predicate>
     </index>
     <trigger_list/>
   </table>
 
-  <table last_changed="Палочкин В.В." name="ПроектСобытие" personal_data="1" responsible="Савин В.В." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
-    <comment>События (история изменений по Проекту/Этапу)</comment>
+  <table last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="ГЏГ°Г®ГҐГЄГІГ‘Г®ГЎГ»ГІГЁГҐ" personal_data="1" responsible="Г‘Г ГўГЁГ­ Г‚.Г‚." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+    <comment>Г‘Г®ГЎГ»ГІГЁГї (ГЁГ±ГІГ®Г°ГЁГї ГЁГ§Г¬ГҐГ­ГҐГ­ГЁГ© ГЇГ® ГЏГ°Г®ГҐГЄГІГі/ГќГІГ ГЇГі)</comment>
     <column name="____SBIS_PRIMARY_KEY_FIELD____">
       <format>
         <type>IDENTIFIER</type>
         <max_size>8</max_size>
       </format>
     </column>
-    <column name="Название">
+    <column name="ГЌГ Г§ГўГ Г­ГЁГҐ">
       <format>
         <type>STRING</type>
       </format>
     </column>
-    <column name="ДатаВремя">
+    <column name="Г„Г ГІГ Г‚Г°ГҐГ¬Гї">
       <format>
         <type>DATETIME</type>
         <use_current>1</use_current>
       </format>
     </column>
-    <column name="Тип">
+    <column name="Г’ГЁГЇ">
       <format>
         <type>ENUM</type>
         <element>
-          <string>Создание проекта</string>
+          <string>Г‘Г®Г§Г¤Г Г­ГЁГҐ ГЇГ°Г®ГҐГЄГІГ </string>
           <value>0</value>
         </element>
         <element>
-          <string>Изменение проекта</string>
+          <string>Г€Г§Г¬ГҐГ­ГҐГ­ГЁГҐ ГЇГ°Г®ГҐГЄГІГ </string>
           <value>1</value>
         </element>
         <element>
-          <string>Удаление проекта</string>
+          <string>Г“Г¤Г Г«ГҐГ­ГЁГҐ ГЇГ°Г®ГҐГЄГІГ </string>
           <value>2</value>
         </element>
         <element>
-          <string>Создание этапа проекта</string>
+          <string>Г‘Г®Г§Г¤Г Г­ГЁГҐ ГЅГІГ ГЇГ  ГЇГ°Г®ГҐГЄГІГ </string>
           <value>3</value>
         </element>
         <element>
-          <string>Изменения этапа проекта</string>
+          <string>Г€Г§Г¬ГҐГ­ГҐГ­ГЁГї ГЅГІГ ГЇГ  ГЇГ°Г®ГҐГЄГІГ </string>
           <value>4</value>
         </element>
         <element>
-          <string>Удаление этапа проекта</string>
+          <string>Г“Г¤Г Г«ГҐГ­ГЁГҐ ГЅГІГ ГЇГ  ГЇГ°Г®ГҐГЄГІГ </string>
           <value>5</value>
         </element>
         <element>
-          <string>Изменение срока проекта</string>
+          <string>Г€Г§Г¬ГҐГ­ГҐГ­ГЁГҐ Г±Г°Г®ГЄГ  ГЇГ°Г®ГҐГЄГІГ </string>
           <value>6</value>
         </element>
         <element>
-          <string>Изменение срока этапа</string>
+          <string>Г€Г§Г¬ГҐГ­ГҐГ­ГЁГҐ Г±Г°Г®ГЄГ  ГЅГІГ ГЇГ </string>
           <value>7</value>
         </element>
         <element>
-          <string>Изменения статуса проекта</string>
+          <string>Г€Г§Г¬ГҐГ­ГҐГ­ГЁГї Г±ГІГ ГІГіГ±Г  ГЇГ°Г®ГҐГЄГІГ </string>
           <value>8</value>
         </element>
         <element>
-          <string>Изменения статуса этапа</string>
+          <string>Г€Г§Г¬ГҐГ­ГҐГ­ГЁГї Г±ГІГ ГІГіГ±Г  ГЅГІГ ГЇГ </string>
           <value>9</value>
         </element>
         <element>
-          <string>Ручной ввод</string>
+          <string>ГђГіГ·Г­Г®Г© ГўГўГ®Г¤</string>
           <value>10</value>
         </element>
         <element>
-          <string>Мутация</string>
+          <string>ГЊГіГІГ Г¶ГЁГї</string>
           <value>11</value>
         </element>
         <element>
-          <string>ИзменениеОтветственного</string>
+          <string>Г€Г§Г¬ГҐГ­ГҐГ­ГЁГҐГЋГІГўГҐГІГ±ГІГўГҐГ­Г­Г®ГЈГ®</string>
           <value>20</value>
         </element>
         <element>
-          <string>Изменение срока документа</string>
+          <string>Г€Г§Г¬ГҐГ­ГҐГ­ГЁГҐ Г±Г°Г®ГЄГ  Г¤Г®ГЄГіГ¬ГҐГ­ГІГ </string>
           <value>21</value>
         </element>
       </format>
     </column>
-    <column name="ЧастноеЛицо">
+    <column name="Г—Г Г±ГІГ­Г®ГҐГ‹ГЁГ¶Г®">
       <format>
         <type>LINK1-N</type>
-        <table>ЧастноеЛицо</table>
+        <table>Г—Г Г±ГІГ­Г®ГҐГ‹ГЁГ¶Г®</table>
         <on_delete>2</on_delete>
       </format>
     </column>
-    <column name="ДокументСледствие">
+    <column name="Г„Г®ГЄГіГ¬ГҐГ­ГІГ‘Г«ГҐГ¤Г±ГІГўГЁГҐ">
       <format>
         <type>LINK1-N</type>
-        <table>Документ</table>
+        <table>Г„Г®ГЄГіГ¬ГҐГ­ГІ</table>
         <on_delete>2</on_delete>
       </format>
     </column>
-    <column name="Документ">
+    <column name="Г„Г®ГЄГіГ¬ГҐГ­ГІ">
       <format>
         <type>LINK1-N</type>
-        <table>Документ</table>
+        <table>Г„Г®ГЄГіГ¬ГҐГ­ГІ</table>
         <on_delete>2</on_delete>
       </format>
     </column>
-    <column name="СрокС">
-      <comment>Предыдущая дата</comment>
+    <column name="Г‘Г°Г®ГЄГ‘">
+      <comment>ГЏГ°ГҐГ¤Г»Г¤ГіГ№Г Гї Г¤Г ГІГ </comment>
       <format>
         <type>DATETIME</type>
       </format>
     </column>
-    <column name="СрокНа">
-      <comment>Актуальная дата</comment>
+    <column name="Г‘Г°Г®ГЄГЌГ ">
+      <comment>ГЂГЄГІГіГ Г«ГјГ­Г Гї Г¤Г ГІГ </comment>
       <format>
         <type>DATETIME</type>
       </format>
     </column>
-    <index method="btree" name="ЧастноеЛицо" null_keys="1" service="1" unique="0">
-      <column is_expressions="0" name="ЧастноеЛицо" nulls_place="LAST" sorting="ASC"/>
+    <index method="btree" name="Г—Г Г±ГІГ­Г®ГҐГ‹ГЁГ¶Г®" null_keys="1" service="1" unique="0">
+      <column is_expressions="0" name="Г—Г Г±ГІГ­Г®ГҐГ‹ГЁГ¶Г®" nulls_place="LAST" sorting="ASC"/>
     </index>
-    <index method="btree" name="Документ" null_keys="1" service="1" unique="0">
-      <column is_expressions="0" name="Документ" nulls_place="LAST" sorting="ASC"/>
+    <index method="btree" name="Г„Г®ГЄГіГ¬ГҐГ­ГІ" null_keys="1" service="1" unique="0">
+      <column is_expressions="0" name="Г„Г®ГЄГіГ¬ГҐГ­ГІ" nulls_place="LAST" sorting="ASC"/>
     </index>
-    <index method="btree" name="ДокументСледствие" null_keys="1" service="1" unique="0">
-      <column is_expressions="0" name="ДокументСледствие" nulls_place="LAST" sorting="ASC"/>
+    <index method="btree" name="Г„Г®ГЄГіГ¬ГҐГ­ГІГ‘Г«ГҐГ¤Г±ГІГўГЁГҐ" null_keys="1" service="1" unique="0">
+      <column is_expressions="0" name="Г„Г®ГЄГіГ¬ГҐГ­ГІГ‘Г«ГҐГ¤Г±ГІГўГЁГҐ" nulls_place="LAST" sorting="ASC"/>
     </index>
-    <index method="btree" name="Тип" null_keys="1" service="0" unique="0">
-      <column is_expressions="0" name="Тип" nulls_place="DEFAULT" sorting="ASC"/>
+    <index method="btree" name="Г’ГЁГЇ" null_keys="1" service="0" unique="0">
+      <column is_expressions="0" name="Г’ГЁГЇ" nulls_place="DEFAULT" sorting="ASC"/>
     </index>
     <trigger_list/>
   </table>
 
-  <table last_changed="Зернов И.А." name="СвязьДокументовПлан" personal_data="0" responsible="Волков Д.Н." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
+  <table last_changed="Г‡ГҐГ°Г­Г®Гў Г€.ГЂ." name="Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®ГўГЏГ«Г Г­" personal_data="0" responsible="Г‚Г®Г«ГЄГ®Гў Г„.ГЌ." table_ignore_convert="0" table_logged="0" table_partitioned="0" unlogged_table="0">
     <column name="____SBIS_PRIMARY_KEY_FIELD____">
       <format>
         <type>UEXTENSION</type>
-        <table>СвязьДокументов</table>
+        <table>Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў</table>
       </format>
     </column>
-    <column name="ПланДата">
+    <column name="ГЏГ«Г Г­Г„Г ГІГ ">
       <format>
         <type>DATE</type>
       </format>
     </column>
-    <column name="ФактДата">
+    <column name="Г”Г ГЄГІГ„Г ГІГ ">
       <format>
         <type>DATE</type>
       </format>
     </column>
-    <column name="ДатаПроверки">
+    <column name="Г„Г ГІГ ГЏГ°Г®ГўГҐГ°ГЄГЁ">
       <format>
         <type>DATE</type>
       </format>
     </column>
-    <column name="Выполнен">
+    <column name="Г‚Г»ГЇГ®Г«Г­ГҐГ­">
       <format>
         <default>0</default>
         <type>BOOLEAN</type>
       </format>
     </column>
-    <column name="Проверен">
+    <column name="ГЏГ°Г®ГўГҐГ°ГҐГ­">
       <format>
         <default>0</default>
         <type>BOOLEAN</type>
       </format>
     </column>
-    <column name="Заполнен">
+    <column name="Г‡Г ГЇГ®Г«Г­ГҐГ­">
       <format>
         <default>0</default>
         <type>BOOLEAN</type>
       </format>
     </column>
-    <column name="Комментарий">
+    <column name="ГЉГ®Г¬Г¬ГҐГ­ГІГ Г°ГЁГ©">
       <format>
         <type>STRING</type>
       </format>
     </column>
-    <column name="Цвет">
+    <column name="Г–ГўГҐГІ">
       <format>
         <type>STRING</type>
       </format>
     </column>
-    <column name="Приоритет">
-      <comment>0 - Стандарт
-1 - Важно
-2 - Крайне важно</comment>
+    <column name="ГЏГ°ГЁГ®Г°ГЁГІГҐГІ">
+      <comment>0 - Г‘ГІГ Г­Г¤Г Г°ГІ
+1 - Г‚Г Г¦Г­Г®
+2 - ГЉГ°Г Г©Г­ГҐ ГўГ Г¦Г­Г®</comment>
       <format>
         <default>0</default>
         <type>INT16</type>
       </format>
     </column>
-    <column name="Состояние">
+    <column name="Г‘Г®Г±ГІГ®ГїГ­ГЁГҐ">
       <format>
         <default>0</default>
         <type>ENUM</type>
         <element>
-          <string>Планируется</string>
+          <string>ГЏГ«Г Г­ГЁГ°ГіГҐГІГ±Гї</string>
           <value>0</value>
         </element>
         <element>
-          <string>В работе</string>
+          <string>Г‚ Г°Г ГЎГ®ГІГҐ</string>
           <value>1</value>
         </element>
         <element>
-          <string>Выполнен</string>
+          <string>Г‚Г»ГЇГ®Г«Г­ГҐГ­</string>
           <value>2</value>
         </element>
         <element>
-          <string>Не выполнен</string>
+          <string>ГЌГҐ ГўГ»ГЇГ®Г«Г­ГҐГ­</string>
           <value>3</value>
         </element>
         <element>
-          <string>Перенесен</string>
+          <string>ГЏГҐГ°ГҐГ­ГҐГ±ГҐГ­</string>
           <value>4</value>
         </element>
       </format>
     </column>
-    <column name="Ресурсы">
+    <column name="ГђГҐГ±ГіГ°Г±Г»">
       <format>
         <type>INTEGER</type>
       </format>
     </column>
-    <column name="ДатаОбновления">
+    <column name="Г„Г ГІГ ГЋГЎГ­Г®ГўГ«ГҐГ­ГЁГї">
       <format>
         <type>DATE</type>
       </format>
     </column>
-    <column name="Исполнитель">
+    <column name="Г€Г±ГЇГ®Г«Г­ГЁГІГҐГ«Гј">
       <format>
         <type>LINK1-N</type>
-        <table>Лицо</table>
+        <table>Г‹ГЁГ¶Г®</table>
         <on_delete>1</on_delete>
       </format>
     </column>
-    <column name="Заказчик">
+    <column name="Г‡Г ГЄГ Г§Г·ГЁГЄ">
       <format>
         <type>LINK1-N</type>
-        <table>Лицо</table>
+        <table>Г‹ГЁГ¶Г®</table>
         <on_delete>1</on_delete>
       </format>
     </column>
-    <column name="Документ">
+    <column name="Г„Г®ГЄГіГ¬ГҐГ­ГІ">
       <format>
         <type>LINK1-1</type>
-        <table>Документ</table>
+        <table>Г„Г®ГЄГіГ¬ГҐГ­ГІ</table>
         <on_delete>1</on_delete>
       </format>
     </column>
-    <column name="Расход">
+    <column name="ГђГ Г±ГµГ®Г¤">
       <format>
         <type>LINK1-N</type>
-        <table>ВидРасходаАвансовогоОтчета</table>
+        <table>Г‚ГЁГ¤ГђГ Г±ГµГ®Г¤Г ГЂГўГ Г­Г±Г®ГўГ®ГЈГ®ГЋГІГ·ГҐГІГ </table>
         <on_delete>2</on_delete>
       </format>
     </column>
-    <column name="СтатьяЗатрат">
+    <column name="Г‘ГІГ ГІГјГїГ‡Г ГІГ°Г ГІ">
       <format>
         <type>LINK1-N</type>
-        <table>СтатьяЗатрат</table>
+        <table>Г‘ГІГ ГІГјГїГ‡Г ГІГ°Г ГІ</table>
         <on_delete>2</on_delete>
       </format>
     </column>
-    <column name="Работа">
+    <column name="ГђГ ГЎГ®ГІГ ">
       <format>
         <type>LINK1-N</type>
-        <table>Работа</table>
+        <table>ГђГ ГЎГ®ГІГ </table>
         <on_delete>2</on_delete>
       </format>
     </column>
-    <index method="btree" name="Исполнитель" null_keys="0" service="1" unique="0">
-      <column is_expressions="0" name="Исполнитель" nulls_place="LAST" sorting="ASC"/>
+    <index method="btree" name="Г€Г±ГЇГ®Г«Г­ГЁГІГҐГ«Гј" null_keys="0" service="1" unique="0">
+      <column is_expressions="0" name="Г€Г±ГЇГ®Г«Г­ГЁГІГҐГ«Гј" nulls_place="LAST" sorting="ASC"/>
     </index>
-    <index method="btree" name="Заказчик" null_keys="0" service="1" unique="0">
-      <column is_expressions="0" name="Заказчик" nulls_place="LAST" sorting="ASC"/>
+    <index method="btree" name="Г‡Г ГЄГ Г§Г·ГЁГЄ" null_keys="0" service="1" unique="0">
+      <column is_expressions="0" name="Г‡Г ГЄГ Г§Г·ГЁГЄ" nulls_place="LAST" sorting="ASC"/>
     </index>
-    <index method="btree" name="Документ" null_keys="0" service="1" unique="0">
-      <column is_expressions="0" name="Документ" nulls_place="LAST" sorting="ASC"/>
+    <index method="btree" name="Г„Г®ГЄГіГ¬ГҐГ­ГІ" null_keys="0" service="1" unique="0">
+      <column is_expressions="0" name="Г„Г®ГЄГіГ¬ГҐГ­ГІ" nulls_place="LAST" sorting="ASC"/>
     </index>
-    <index method="btree" name="Расход" null_keys="0" service="1" unique="0">
-      <column is_expressions="0" name="Расход" nulls_place="LAST" sorting="ASC"/>
+    <index method="btree" name="ГђГ Г±ГµГ®Г¤" null_keys="0" service="1" unique="0">
+      <column is_expressions="0" name="ГђГ Г±ГµГ®Г¤" nulls_place="LAST" sorting="ASC"/>
     </index>
-    <index method="btree" name="СтатьяЗатрат" null_keys="0" service="1" unique="0">
-      <column is_expressions="0" name="СтатьяЗатрат" nulls_place="LAST" sorting="ASC"/>
+    <index method="btree" name="Г‘ГІГ ГІГјГїГ‡Г ГІГ°Г ГІ" null_keys="0" service="1" unique="0">
+      <column is_expressions="0" name="Г‘ГІГ ГІГјГїГ‡Г ГІГ°Г ГІ" nulls_place="LAST" sorting="ASC"/>
     </index>
-    <index method="btree" name="Работа" null_keys="0" service="1" unique="0">
-      <column is_expressions="0" name="Работа" nulls_place="LAST" sorting="ASC"/>
+    <index method="btree" name="ГђГ ГЎГ®ГІГ " null_keys="0" service="1" unique="0">
+      <column is_expressions="0" name="ГђГ ГЎГ®ГІГ " nulls_place="LAST" sorting="ASC"/>
     </index>
     <trigger_list/>
   </table>
