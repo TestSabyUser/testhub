@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="WINDOWS-1251" ?>
 <trigger_library version="1.02">
 
-  <trigger last_changed="Игнатьев И.В." name="ПередУдалитьПунктПланаРабот" responsible="Игнатьев И.В.">
+  <trigger last_changed="Г€ГЈГ­Г ГІГјГҐГў Г€.Г‚." name="ГЏГҐГ°ГҐГ¤Г“Г¤Г Г«ГЁГІГјГЏГіГ­ГЄГІГЏГ«Г Г­Г ГђГ ГЎГ®ГІ" responsible="Г€ГЈГ­Г ГІГјГҐГў Г€.Г‚.">
     <definition>
       <language>PLPGSQL</language>
       <body>BEGIN
-   DELETE FROM "ЛицоДокумента" WHERE "СвязьДокументов" = OLD."@СвязьДокументов" AND
-   ((SELECT dt."ТипДокумента" FROM "Документ" doc
-    LEFT JOIN "ТипДокумента" dt ON doc."ТипДокумента"=dt."@ТипДокумента"
-    WHERE doc."@Документ" = OLD."ДокументОснование"
-    ) = 'ПланРабот');
+   DELETE FROM "Г‹ГЁГ¶Г®Г„Г®ГЄГіГ¬ГҐГ­ГІГ " WHERE "Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў" = OLD."@Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў" AND
+   ((SELECT dt."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " FROM "Г„Г®ГЄГіГ¬ГҐГ­ГІ" doc
+    LEFT JOIN "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " dt ON doc."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "=dt."@Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "
+    WHERE doc."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" = OLD."Г„Г®ГЄГіГ¬ГҐГ­ГІГЋГ±Г­Г®ГўГ Г­ГЁГҐ"
+    ) = 'ГЏГ«Г Г­ГђГ ГЎГ®ГІ');
    RETURN OLD;
 END;</body>
     </definition>
   </trigger>
 
 </trigger_library>
+sdvfsdvds
+avsa
