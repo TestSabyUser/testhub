@@ -7,7 +7,7 @@
 
   <items>
     <bl_module id="737a42f8-83c8-400b-8e9e-8bfc22f20273" name="StatSender" url="$(SBISPlatformSDK)/bl-modules/StatSender/StatSender.s3mod"/>
-    <bl_module id="ba8767c2-e7a0-4ed3-ba03-540dbf8c57c4" name="Автоматизация добросок" url="./automerge/www/service/Модули/Автоматизация добросок/Автоматизация добросок.s3mod"/>
+    <bl_module id="ba8767c2-e7a0-4ed3-ba03-540dbf8c57c4" name="Автоматизация добросо222222222222к" url="./automerge/www/service/Модули/Автоматизация добросок/Автоматизация добросок.s3mod"/>
   </items>
 
   <parent path="$(SBISPlatformSDK)/components/basic_platform.s3srv"/>
