@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary version="1.0">
+    <description></description>
+    <schema name="public">
+        <package type="1" synchronization="0" name="СчетчикВитрины" id="33db0c71-bb98-46da-b87d-783d88f87511" responsible="Зернов И.А." last_changed="Зернов И.А." responsible_uuid="9128db45-48b7-48d9-b730-11a0eedf6dd8" last_changed_uuid="9128db45-48b7-48d9-b730-11a0eedf6dd8">
+            <description></description>
+            <metadata>
+                <item name="hierarchy_column" type="1" value=""/>
+                <item name="hierarchy_title_column" type="1" value=""/>
+                <item name="table" type="1" value="СчетчикВитрины"/>
+            </metadata>
+            <format>
+                <column name="Тип" type="14" table="СчетчикВитрины" table_column="Тип">
+                    <metadata>
+                        <item name="dictionary" type="2">
+                            <dictionary>
+                                <item key="Все заведения" value="0"/>
+                            </dictionary>
+                        </item>
+                        <item name="not_null" type="0" value="true"/>
+                    </metadata>
+                </column>
+                <column name="Счетчик" type="6" table="СчетчикВитрины" table_column="Счетчик"/>
+            </format>
+            <key_columns>
+                <key_column name="Тип"/>
+            </key_columns>
+            <unsynced_columns>
+                <unsynced_column name="Счетчик"/>
+            </unsynced_columns>
+            <data>
+                <record id="db3f66fb-72dc-42bc-9c79-5bc32c027a05">
+                    <f nm="Тип" t="3" v="0"/>
+                    <f nm="Счетчик" t="0" v="null"/>
+                </record>
+            </data>
+        </package>
+        <package type="1" synchronization="0" name="Категория" id="2ef45c24-929a-4c36-be56-137277c73d8f" responsible="Палочкин В.В." last_changed="Палочкин В.В." responsible_uuid="ab4a81a7-b80f-4cc0-9052-46ac4926c872" last_changed_uuid="ab4a81a7-b80f-4cc0-9052-46ac4926c872">
+            <description></description>
+            <metadata>
+                <item name="hierarchy_column" type="1" value=""/>
+                <item name="hierarchy_title_column" type="1" value=""/>
+                <item name="object" type="1" value="Категория"/>
+            </metadata>
+            <format>
+                <column name="Название" type="11" table="Категория" table_column="Название"/>
+                <column name="ПорНомер" type="6" table="Категория" table_column="ПорНомер"/>
+                <column name="Идентификатор" type="34" table="Категория" table_column="Идентификатор"/>
+                <column name="Публиковать" type="1" table="Категория" table_column="Публиковать">
+                    <metadata>
+                        <item name="not_null" type="0" value="true"/>
+                    </metadata>
+                </column>
+                <column name="Иконка" type="11" table="Категория" table_column="Иконка"/>
+                <column name="Заведения" type="5" table="Категория" table_column="Заведения"/>
+                <column name="IdCtSpp" type="6" table="Категория" table_column="IdCtSpp"/>
+                <column name="Тип" type="14" table="Категория" table_column="Тип">
+                    <metadata>
+                        <item name="dictionary" type="2">
+                            <dictionary>
+                                <item key="Общая" value="0"/>
+                                <item key="Торговый центр" value="1"/>
+                            </dictionary>
+                        </item>
+                        <item name="not_null" type="0" value="true"/>
+                    </metadata>
+                </column>
+                <column name="Раздел" type="22" table="Категория" table_column="Раздел">
+                    <metadata>
+                        <item name="linked_table" type="1" value="Категория"/>
+                    </metadata>
+                </column>
+                <column name="Раздел@" type="1" table="Категория" table_column="Раздел@">
+                    <metadata>
+                        <item name="hierarchy_branch" type="0" value="true"/>
+                    </metadata>
+                </column>
+            </format>
+            <key_columns>
+                <key_column name="Название"/>
+                <key_column name="Публиковать"/>
+                <key_column name="Тип"/>
+            </key_columns>
+            <unsynced_columns>
+                <unsynced_column name="Заведения"/>
+            </unsynced_columns>
+            <data>
+                <record id="bb356fa8-d184-4e63-a382-3e8a37f23e6c">
+                    <f nm="Название" t="2" v="Торговые центры" />
+                    <f nm="ПорНомер" t="0" v="null"/>
+                    <f nm="Идентификатор" t="0" v="null"/>
+                    <f nm="Публиковать" t="1" v="true"/>
+                    <f nm="Иконка" t="0" v="null"/>
+                    <f nm="Заведения" t="0" v="null"/>
+                    <f nm="IdCtSpp" t="0" v="null"/>
+                    <f nm="Тип" t="3" v="1"/>
+                    <f nm="Раздел" t="0" v="null"/>
+                    <f nm="Раздел@" t="0" v="null"/>
+                </record>
+            </data>
+        </package>
+    </schema>
+</dictionary>
