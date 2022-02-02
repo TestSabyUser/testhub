@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<search_object_repository version="1.00">
+
+  <object endpoint_system_name="notes-elasticsearch" endpoint_type="Elasticsearch" last_changed="Шамхалов Р.М." name="notes_fts" responsible="Шамхалов Р.М.">
+    <comment>Индекс для хранения заметок</comment>
+    <search_field name="content">
+      <format>
+        <type>STRING</type>
+      </format>
+      <comment>Текст заметки</comment>
+      <highlight/>
+    </search_field>
+    <search_field name="files">
+      <format>
+        <type>TEXT[]</type>
+      </format>
+      <comment>Название файлов</comment>
+      <highlight/>
+    </search_field>
+    <filter_field name="person">
+      <format>
+        <type>UUID</type>
+      </format>
+      <comment>Ид персоны</comment>
+    </filter_field>
+    <select name="SearchNotes">
+      <comment>Запрос на поиск заметок. Включает в себя поиск по тексту заметок, а также поиск по имени файла прикрепленного к заметке</comment>
+      <search_field name="content"/>
+      <search_field name="files"/>
+      <filter>
+        <simple field_name="person" operation="EQ"/>
+      </filter>
+    </select>
+  </object>
+
+  <object endpoint_system_name="notes-elasticsearch" endpoint_type="Elasticsearch" last_changed="Шамхалов Р.М." name="tags_fts" responsible="Шамхалов Р.М.">
+    <comment>Индекс для хранения тэгов</comment>
+    <search_field name="tag_name">
+      <format>
+        <type>STRING</type>
+      </format>
+      <comment>Название тэга</comment>
+      <highlight enabled="0"/>
+    </search_field>
+    <filter_field name="person">
+      <format>
+        <type>UUID</type>
+      </format>
+      <comment>Ид персоны</comment>
+    </filter_field>
+    <select name="SearchTags">
+      <comment>Запрос на поиск тэгов</comment>
+      <search_field name="tag_name"/>
+      <filter>
+        <simple field_name="person" operation="EQ"/>
+      </filter>
+    </select>
+  </object>
+
+</search_object_repository>
