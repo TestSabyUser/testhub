@@ -3,6 +3,10 @@
 
   <object endpoint_system_name="notes-elasticsearch" endpoint_type="Elasticsearch" last_changed="Шамхалов Р.М." name="notes_fts" responsible="Шамхалов Р.М.">
     <comment>Индекс для хранения заметок</comment>
+    fffffffffffff
+    dfdd
+    f
+    dfdf
     <search_field name="content">
       <format>
         <type>STRING</type>
