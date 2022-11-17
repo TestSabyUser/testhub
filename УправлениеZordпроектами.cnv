@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="WINDOWS-1251" ?>
 <converter_library version="1.03">
 
-  <converter abstract="0" call_once="1" deployment_stage="2" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Карачевцев Ю.Ю." name="ДобавитьИсполнителяКЗадачамPy_2" python_extension="1" responsible="Карачевцев Ю.Ю.">
+  <converter abstract="0" call_once="1" deployment_stage="2" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="ГЉГ Г°Г Г·ГҐГўГ¶ГҐГў Гћ.Гћ." name="Г„Г®ГЎГ ГўГЁГІГјГ€Г±ГЇГ®Г«Г­ГЁГІГҐГ«ГїГЉГ‡Г Г¤Г Г·Г Г¬Py_2" python_extension="1" responsible="ГЉГ Г°Г Г·ГҐГўГ¶ГҐГў Гћ.Гћ.">
     <callback event="26">
-      <body>doctype = SqlQueryScalar(''' select "@ТипДокумента" from "ТипДокумента" where "ТипДокумента"='СлужЗап' AND "ПодТипДокумента" is NULL LIMIT 1 ''')
+      <body>doctype = SqlQueryScalar(''' select "@Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " from "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " where "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "='Г‘Г«ГіГ¦Г‡Г ГЇ' AND "ГЏГ®Г¤Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " is NULL LIMIT 1 ''')
 if doctype is None:
    return
-   
+   22.7100/1711d1
+	      22.7100/1711d1
+	      22.7100/1711d1
+	      22.7100/1711d1
+	      22.7100/1711d1
+	      22.7100/1711d1
+	      22.7100/1711d122.7100/1711d1
 sql='''
-INSERT INTO "ЛицоДокумента"("Лицо", "Документ", "Тип", "ДатаВремя") 
-select "Сотрудник", "@Документ", 1 AS "Тип", CURRENT_TIMESTAMP from "Документ" d where 
-   d."ТипДокумента"={0}
-   AND NOT EXISTS(select ld."Документ" from "ЛицоДокумента" ld where ld."Документ"=d."@Документ" AND ld."Тип" = 1);
+INSERT INTO "Г‹ГЁГ¶Г®Г„Г®ГЄГіГ¬ГҐГ­ГІГ "("Г‹ГЁГ¶Г®", "Г„Г®ГЄГіГ¬ГҐГ­ГІ", "Г’ГЁГЇ", "Г„Г ГІГ Г‚Г°ГҐГ¬Гї") 
+select "Г‘Г®ГІГ°ГіГ¤Г­ГЁГЄ", "@Г„Г®ГЄГіГ¬ГҐГ­ГІ", 1 AS "Г’ГЁГЇ", CURRENT_TIMESTAMP from "Г„Г®ГЄГіГ¬ГҐГ­ГІ" d where 
+   d."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "={0}
+   AND NOT EXISTS(select ld."Г„Г®ГЄГіГ¬ГҐГ­ГІ" from "Г‹ГЁГ¶Г®Г„Г®ГЄГіГ¬ГҐГ­ГІГ " ld where ld."Г„Г®ГЄГіГ¬ГҐГ­ГІ"=d."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" AND ld."Г’ГЁГЇ" = 1);
 '''.format(doctype)
 SqlQuery(sql)</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Волков Д.Н." name="ДобавлениеСпискаРассылкиКСовещ" responsible="Волков Д.Н.">
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Г‚Г®Г«ГЄГ®Гў Г„.ГЌ." name="Г„Г®ГЎГ ГўГ«ГҐГ­ГЁГҐГ‘ГЇГЁГ±ГЄГ ГђГ Г±Г±Г»Г«ГЄГЁГЉГ‘Г®ГўГҐГ№" responsible="Г‚Г®Г«ГЄГ®Гў Г„.ГЌ.">
     <rule name=".*" schema=".*" stage="1" type="0"/>
     <callback event="26">
       <body>DECLARE
@@ -25,84 +31,84 @@ SqlQuery(sql)</body>
    pk_ext       integer; 
 BEGIN
 
-   -- ищем тип документа "Совещания"
-   SELECT "@ТипДокумента" FROM "ТипДокумента" WHERE "ТипДокумента" = 'Совещание' INTO pk_type;
+   -- ГЁГ№ГҐГ¬ ГІГЁГЇ Г¤Г®ГЄГіГ¬ГҐГ­ГІГ  "Г‘Г®ГўГҐГ№Г Г­ГЁГї"
+   SELECT "@Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " FROM "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " WHERE "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = 'Г‘Г®ГўГҐГ№Г Г­ГЁГҐ' INTO pk_type;
    IF pk_type IS NOT NULL THEN
-      -- добавим если нужно тип ограничения - "Список рассылки"
-      SElECT "@ОграничениеТипаДокумента" FROM "ОграничениеТипаДокумента" WHERE "ТипДокумента" = pk_type AND "Связь"=7 INTO pk_ext;
+      -- Г¤Г®ГЎГ ГўГЁГ¬ ГҐГ±Г«ГЁ Г­ГіГ¦Г­Г® ГІГЁГЇ Г®ГЈГ°Г Г­ГЁГ·ГҐГ­ГЁГї - "Г‘ГЇГЁГ±Г®ГЄ Г°Г Г±Г±Г»Г«ГЄГЁ"
+      SElECT "@ГЋГЈГ°Г Г­ГЁГ·ГҐГ­ГЁГҐГ’ГЁГЇГ Г„Г®ГЄГіГ¬ГҐГ­ГІГ " FROM "ГЋГЈГ°Г Г­ГЁГ·ГҐГ­ГЁГҐГ’ГЁГЇГ Г„Г®ГЄГіГ¬ГҐГ­ГІГ " WHERE "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = pk_type AND "Г‘ГўГїГ§Гј"=7 INTO pk_ext;
       IF pk_ext IS NULL THEN
-         INSERT INTO "ОграничениеТипаДокумента" ( "Связь", "ТипДокумента", "Название" )
-      	  VALUES ( 7, pk_type, 'Список рассылки' );
+         INSERT INTO "ГЋГЈГ°Г Г­ГЁГ·ГҐГ­ГЁГҐГ’ГЁГЇГ Г„Г®ГЄГіГ¬ГҐГ­ГІГ " ( "Г‘ГўГїГ§Гј", "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ ", "ГЌГ Г§ГўГ Г­ГЁГҐ" )
+      	  VALUES ( 7, pk_type, 'Г‘ГЇГЁГ±Г®ГЄ Г°Г Г±Г±Г»Г«ГЄГЁ' );
       END IF;
    END IF;
 END;</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" deployment_stage="1" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Зернов И.А." name="ЗаменитьОписаниеНаДокументы" python_extension="1" responsible="Зернов И.А.">
+  <converter abstract="0" call_once="1" deployment_stage="1" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Г‡ГҐГ°Г­Г®Гў Г€.ГЂ." name="Г‡Г Г¬ГҐГ­ГЁГІГјГЋГЇГЁГ±Г Г­ГЁГҐГЌГ Г„Г®ГЄГіГ¬ГҐГ­ГІГ»" python_extension="1" responsible="Г‡ГҐГ°Г­Г®Гў Г€.ГЂ.">
     <callback event="26">
-      <body>recs = SqlQuery(''' SELECT "НастройкаКарточкиДокумента" FROM "ТипДокумента" WHERE "ТипДокумента" = 'Проект' LIMIT 1 ''')
+      <body>recs = SqlQuery(''' SELECT "ГЌГ Г±ГІГ°Г®Г©ГЄГ ГЉГ Г°ГІГ®Г·ГЄГЁГ„Г®ГЄГіГ¬ГҐГ­ГІГ " FROM "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " WHERE "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = 'ГЏГ°Г®ГҐГЄГІ' LIMIT 1 ''')
 if recs:
     json_ = None
     if recs and len(recs) &gt; 0:
-        json_ = recs[0].Get("НастройкаКарточкиДокумента", None)
+        json_ = recs[0].Get("ГЌГ Г±ГІГ°Г®Г©ГЄГ ГЉГ Г°ГІГ®Г·ГЄГЁГ„Г®ГЄГіГ¬ГҐГ­ГІГ ", None)
     if json_:     
-        json_ = json_.replace("Закладка Описание", "Закладка Документы")
-        SqlQuery(''' UPDATE "ТипДокумента" SET "НастройкаКарточкиДокумента" = '{}' WHERE "ТипДокумента" = 'Проект' '''.format(json_))</body>
+        json_ = json_.replace("Г‡Г ГЄГ«Г Г¤ГЄГ  ГЋГЇГЁГ±Г Г­ГЁГҐ", "Г‡Г ГЄГ«Г Г¤ГЄГ  Г„Г®ГЄГіГ¬ГҐГ­ГІГ»")
+        SqlQuery(''' UPDATE "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " SET "ГЌГ Г±ГІГ°Г®Г©ГЄГ ГЉГ Г°ГІГ®Г·ГЄГЁГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = '{}' WHERE "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = 'ГЏГ°Г®ГҐГЄГІ' '''.format(json_))</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" deployment_stage="1" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Зернов И.А." name="ЗаполнитьПолеДляПоиска" python_extension="1" responsible="Зернов И.А.">
+  <converter abstract="0" call_once="1" deployment_stage="1" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Г‡ГҐГ°Г­Г®Гў Г€.ГЂ." name="Г‡Г ГЇГ®Г«Г­ГЁГІГјГЏГ®Г«ГҐГ„Г«ГїГЏГ®ГЁГ±ГЄГ " python_extension="1" responsible="Г‡ГҐГ°Г­Г®Гў Г€.ГЂ.">
     <callback event="26">
-      <body>sql = """SELECT "@ТипДокумента" FROM "ТипДокумента" WHERE "ТипДокумента" = 'ПланРабот' """
+      <body>sql = """SELECT "@Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " FROM "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " WHERE "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = 'ГЏГ«Г Г­ГђГ ГЎГ®ГІ' """
 type_doc = SqlQueryScalar(sql)
 if type_doc:
-   upd = """UPDATE "Проект" set "ДляПоиска" = (
-            		SELECT CASE WHEN "ДокументРасширение"."Название" IS NOT NULL AND "Проект"."Описание" IS NOT NULL THEN "ДокументРасширение"."Название" || ' ' || "Проект"."Описание"
-            		            WHEN "ДокументРасширение"."Название" IS NOT NULL THEN "ДокументРасширение"."Название" 
-            			        WHEN "Проект"."Описание" IS NOT NULL THEN "Проект"."Описание"
+   upd = """UPDATE "ГЏГ°Г®ГҐГЄГІ" set "Г„Г«ГїГЏГ®ГЁГ±ГЄГ " = (
+            		SELECT CASE WHEN "Г„Г®ГЄГіГ¬ГҐГ­ГІГђГ Г±ГёГЁГ°ГҐГ­ГЁГҐ"."ГЌГ Г§ГўГ Г­ГЁГҐ" IS NOT NULL AND "ГЏГ°Г®ГҐГЄГІ"."ГЋГЇГЁГ±Г Г­ГЁГҐ" IS NOT NULL THEN "Г„Г®ГЄГіГ¬ГҐГ­ГІГђГ Г±ГёГЁГ°ГҐГ­ГЁГҐ"."ГЌГ Г§ГўГ Г­ГЁГҐ" || ' ' || "ГЏГ°Г®ГҐГЄГІ"."ГЋГЇГЁГ±Г Г­ГЁГҐ"
+            		            WHEN "Г„Г®ГЄГіГ¬ГҐГ­ГІГђГ Г±ГёГЁГ°ГҐГ­ГЁГҐ"."ГЌГ Г§ГўГ Г­ГЁГҐ" IS NOT NULL THEN "Г„Г®ГЄГіГ¬ГҐГ­ГІГђГ Г±ГёГЁГ°ГҐГ­ГЁГҐ"."ГЌГ Г§ГўГ Г­ГЁГҐ" 
+            			        WHEN "ГЏГ°Г®ГҐГЄГІ"."ГЋГЇГЁГ±Г Г­ГЁГҐ" IS NOT NULL THEN "ГЏГ°Г®ГҐГЄГІ"."ГЋГЇГЁГ±Г Г­ГЁГҐ"
             			        ELSE NULL	
             		       END	    
-            		FROM "ДокументРасширение"
-            		WHERE "ДокументРасширение"."@Документ" = "Проект"."@Документ"
+            		FROM "Г„Г®ГЄГіГ¬ГҐГ­ГІГђГ Г±ГёГЁГ°ГҐГ­ГЁГҐ"
+            		WHERE "Г„Г®ГЄГіГ¬ГҐГ­ГІГђГ Г±ГёГЁГ°ГҐГ­ГЁГҐ"."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" = "ГЏГ°Г®ГҐГЄГІ"."@Г„Г®ГЄГіГ¬ГҐГ­ГІ"
     	             	) 
-             WHERE "@Документ" IN (SELECT "@Документ" FROM "Документ" WHERE "ТипДокумента" = {})""".format(type_doc)
+             WHERE "@Г„Г®ГЄГіГ¬ГҐГ­ГІ" IN (SELECT "@Г„Г®ГЄГіГ¬ГҐГ­ГІ" FROM "Г„Г®ГЄГіГ¬ГҐГ­ГІ" WHERE "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = {})""".format(type_doc)
    SqlQuery(upd)</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" deployment_stage="2" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Карачевцев Ю.Ю." name="ИсправлениеДублейОписанияЗадачPy_2" python_extension="1" responsible="Карачевцев Ю.Ю.">
+  <converter abstract="0" call_once="1" deployment_stage="2" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="ГЉГ Г°Г Г·ГҐГўГ¶ГҐГў Гћ.Гћ." name="Г€Г±ГЇГ°Г ГўГ«ГҐГ­ГЁГҐГ„ГіГЎГ«ГҐГ©ГЋГЇГЁГ±Г Г­ГЁГїГ‡Г Г¤Г Г·Py_2" python_extension="1" responsible="ГЉГ Г°Г Г·ГҐГўГ¶ГҐГў Гћ.Гћ.">
     <callback event="26">
       <body>sql = '''
-update "ДокументРасширение"
-   set "Комментарий" = '',"Название" = ''
-   where "@Документ" in 
-   (select dr."@Документ" from "ДокументРасширение" dr
-   LEFT JOIN "РазличныеДокументы" rd ON dr."@Документ"=rd."@Документ"
-   LEFT JOIN "Документ" d ON dr."@Документ"=d."@Документ"
+update "Г„Г®ГЄГіГ¬ГҐГ­ГІГђГ Г±ГёГЁГ°ГҐГ­ГЁГҐ"
+   set "ГЉГ®Г¬Г¬ГҐГ­ГІГ Г°ГЁГ©" = '',"ГЌГ Г§ГўГ Г­ГЁГҐ" = ''
+   where "@Г„Г®ГЄГіГ¬ГҐГ­ГІ" in 
+   (select dr."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" from "Г„Г®ГЄГіГ¬ГҐГ­ГІГђГ Г±ГёГЁГ°ГҐГ­ГЁГҐ" dr
+   LEFT JOIN "ГђГ Г§Г«ГЁГ·Г­Г»ГҐГ„Г®ГЄГіГ¬ГҐГ­ГІГ»" rd ON dr."@Г„Г®ГЄГіГ¬ГҐГ­ГІ"=rd."@Г„Г®ГЄГіГ¬ГҐГ­ГІ"
+   LEFT JOIN "Г„Г®ГЄГіГ¬ГҐГ­ГІ" d ON dr."@Г„Г®ГЄГіГ¬ГҐГ­ГІ"=d."@Г„Г®ГЄГіГ¬ГҐГ­ГІ"
    where 
-   "ТипДокумента"=(select "@ТипДокумента" from "ТипДокумента" where "ТипДокумента"='СлужЗап' AND "ПодТипДокумента" is null order by "@ТипДокумента" LIMIT 1)
-   AND rd."Информация" IS NOT NULL
-   AND rd."Информация" &lt;&gt; ''
-   AND (rd."Информация" = dr."Комментарий") OR (rd."Информация" = dr."Название"));
+   "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "=(select "@Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " from "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " where "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "='Г‘Г«ГіГ¦Г‡Г ГЇ' AND "ГЏГ®Г¤Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " is null order by "@Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " LIMIT 1)
+   AND rd."Г€Г­ГґГ®Г°Г¬Г Г¶ГЁГї" IS NOT NULL
+   AND rd."Г€Г­ГґГ®Г°Г¬Г Г¶ГЁГї" &lt;&gt; ''
+   AND (rd."Г€Г­ГґГ®Г°Г¬Г Г¶ГЁГї" = dr."ГЉГ®Г¬Г¬ГҐГ­ГІГ Г°ГЁГ©") OR (rd."Г€Г­ГґГ®Г°Г¬Г Г¶ГЁГї" = dr."ГЌГ Г§ГўГ Г­ГЁГҐ"));
 '''
 SqlQuery(sql)</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Карачевцев Ю.Ю." name="ИсправлениеСконвЗадач" responsible="Савин В.В.">
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="ГЉГ Г°Г Г·ГҐГўГ¶ГҐГў Гћ.Гћ." name="Г€Г±ГЇГ°Г ГўГ«ГҐГ­ГЁГҐГ‘ГЄГ®Г­ГўГ‡Г Г¤Г Г·" responsible="Г‘Г ГўГЁГ­ Г‚.Г‚.">
     <rule name=".*" schema=".*" stage="1" type="0"/>
     <callback event="26">
       <body>DECLARE
 BEGIN
-   INSERT INTO "ЛицоДокумента"("Лицо", "Документ") select "Сотрудник", "@Документ" from "Документ" d where 
-   d."ТипДокумента"=(select "@ТипДокумента" from "ТипДокумента" where "ТипДокумента"='СлужЗап' AND "ПодТипДокумента" is NULL LIMIT 1)
-   AND (select count(*) from "ЛицоДокумента" ld where ld."Документ"=d."@Документ")=0;
+   INSERT INTO "Г‹ГЁГ¶Г®Г„Г®ГЄГіГ¬ГҐГ­ГІГ "("Г‹ГЁГ¶Г®", "Г„Г®ГЄГіГ¬ГҐГ­ГІ") select "Г‘Г®ГІГ°ГіГ¤Г­ГЁГЄ", "@Г„Г®ГЄГіГ¬ГҐГ­ГІ" from "Г„Г®ГЄГіГ¬ГҐГ­ГІ" d where 
+   d."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "=(select "@Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " from "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " where "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "='Г‘Г«ГіГ¦Г‡Г ГЇ' AND "ГЏГ®Г¤Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " is NULL LIMIT 1)
+   AND (select count(*) from "Г‹ГЁГ¶Г®Г„Г®ГЄГіГ¬ГҐГ­ГІГ " ld where ld."Г„Г®ГЄГіГ¬ГҐГ­ГІ"=d."@Г„Г®ГЄГіГ¬ГҐГ­ГІ")=0;
 END;</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Палочкин В.В." name="НазваниеПапокПланов" responsible="Палочкин В.В.">
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="ГЌГ Г§ГўГ Г­ГЁГҐГЏГ ГЇГ®ГЄГЏГ«Г Г­Г®Гў" responsible="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚.">
     <rule name=".*" schema=".*" stage="1" type="0"/>
     <callback event="26">
       <body>DECLARE
@@ -110,286 +116,286 @@ END;</body>
    pk             integer;
    face_name      text;
 BEGIN
-   -- определ¤ем тип документа
-   SELECT "@ТипДокумента" FROM "ТипДокумента" WHERE "ТипДокумента" = 'ПланРабот' INTO pk;
+   -- Г®ГЇГ°ГҐГ¤ГҐГ«В¤ГҐГ¬ ГІГЁГЇ Г¤Г®ГЄГіГ¬ГҐГ­ГІГ 
+   SELECT "@Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " FROM "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " WHERE "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = 'ГЏГ«Г Г­ГђГ ГЎГ®ГІ' INTO pk;
    IF pk IS NULL THEN
-      RAISE NOTICE 'Не нашли тип документа';
+      RAISE NOTICE 'ГЌГҐ Г­Г ГёГ«ГЁ ГІГЁГЇ Г¤Г®ГЄГіГ¬ГҐГ­ГІГ ';
       RETURN;
    END IF;
    
    FOR rec  IN (
                   SELECT
-                        "@Документ"    AS doc,
-                        "Сотрудник"    AS face
-                  FROM "Документ"
-                  WHERE "ТипДокумента" = pk
-                        AND "$Черновик" IS NULL
-                        AND "Удален" IS NOT TRUE
-                        AND "Раздел@" IS TRUE
+                        "@Г„Г®ГЄГіГ¬ГҐГ­ГІ"    AS doc,
+                        "Г‘Г®ГІГ°ГіГ¤Г­ГЁГЄ"    AS face
+                  FROM "Г„Г®ГЄГіГ¬ГҐГ­ГІ"
+                  WHERE "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = pk
+                        AND "$Г—ГҐГ°Г­Г®ГўГЁГЄ" IS NULL
+                        AND "Г“Г¤Г Г«ГҐГ­" IS NOT TRUE
+                        AND "ГђГ Г§Г¤ГҐГ«@" IS TRUE
 
                )
 
       LOOP
-			SELECT "Фамилия" || ' ' || "Имя" || ' ' || "Отчество" FROM "ЧастноеЛицо" WHERE "@Лицо" = rec.face LIMIT 1 INTO face_name;
-			UPDATE "Проект" SET "Описание" = face_name  WHERE "@Документ" = rec.doc;
+			SELECT "Г”Г Г¬ГЁГ«ГЁГї" || ' ' || "Г€Г¬Гї" || ' ' || "ГЋГІГ·ГҐГ±ГІГўГ®" FROM "Г—Г Г±ГІГ­Г®ГҐГ‹ГЁГ¶Г®" WHERE "@Г‹ГЁГ¶Г®" = rec.face LIMIT 1 INTO face_name;
+			UPDATE "ГЏГ°Г®ГҐГЄГІ" SET "ГЋГЇГЁГ±Г Г­ГЁГҐ" = face_name  WHERE "@Г„Г®ГЄГіГ¬ГҐГ­ГІ" = rec.doc;
       END LOOP;
 END;</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" deployment_stage="2" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Карачевцев Ю.Ю." name="НастройкаПроектаПоРегламенту_2" python_extension="1" responsible="Карачевцев Ю.Ю.">
+  <converter abstract="0" call_once="1" deployment_stage="2" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="ГЉГ Г°Г Г·ГҐГўГ¶ГҐГў Гћ.Гћ." name="ГЌГ Г±ГІГ°Г®Г©ГЄГ ГЏГ°Г®ГҐГЄГІГ ГЏГ®ГђГҐГЈГ«Г Г¬ГҐГ­ГІГі_2" python_extension="1" responsible="ГЉГ Г°Г Г·ГҐГўГ¶ГҐГў Гћ.Гћ.">
     <callback event="26">
       <body>SqlQuery('''
-update "ТипДокумента" SET "НастройкаКарточкиДокумента" = '[{"Presentation":"9785090d-86dd-4033-93f8-56eeabf42bb3","Config":{"Settings":[{"Type":"1","Name":"Закладка Команда","Values":[{"Value":"0","Title":"показывать"},{"Value":"1","Title":"не показывать"}],"DefaultValue":"0","Controls":["ЗакладкиЭтапов"]},{"Type":"1","Name":"Закладка Описание","Values":[{"Value":"0","Title":"показывать"},{"Value":"1","Title":"не показывать"}],"DefaultValue":"0","Controls":["ЗакладкиЭтапов"]},{"Type":"1","Name":"Закладка Затраты","Values":[{"Value":"0","Title":"показывать"},{"Value":"1","Title":"не показывать"}],"DefaultValue":"0","Controls":["ЗакладкиЭтапов"]},{"Type":"1","Name":"Закладка Ход проекта","Values":[{"Value":"0","Title":"показывать"},{"Value":"1","Title":"не показывать"}],"DefaultValue":"0","Controls":["ЗакладкиЭтапов"]}]}}]'
-where "ТипДокумента" = 'Проект' ''')
+update "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " SET "ГЌГ Г±ГІГ°Г®Г©ГЄГ ГЉГ Г°ГІГ®Г·ГЄГЁГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = '[{"Presentation":"9785090d-86dd-4033-93f8-56eeabf42bb3","Config":{"Settings":[{"Type":"1","Name":"Г‡Г ГЄГ«Г Г¤ГЄГ  ГЉГ®Г¬Г Г­Г¤Г ","Values":[{"Value":"0","Title":"ГЇГ®ГЄГ Г§Г»ГўГ ГІГј"},{"Value":"1","Title":"Г­ГҐ ГЇГ®ГЄГ Г§Г»ГўГ ГІГј"}],"DefaultValue":"0","Controls":["Г‡Г ГЄГ«Г Г¤ГЄГЁГќГІГ ГЇГ®Гў"]},{"Type":"1","Name":"Г‡Г ГЄГ«Г Г¤ГЄГ  ГЋГЇГЁГ±Г Г­ГЁГҐ","Values":[{"Value":"0","Title":"ГЇГ®ГЄГ Г§Г»ГўГ ГІГј"},{"Value":"1","Title":"Г­ГҐ ГЇГ®ГЄГ Г§Г»ГўГ ГІГј"}],"DefaultValue":"0","Controls":["Г‡Г ГЄГ«Г Г¤ГЄГЁГќГІГ ГЇГ®Гў"]},{"Type":"1","Name":"Г‡Г ГЄГ«Г Г¤ГЄГ  Г‡Г ГІГ°Г ГІГ»","Values":[{"Value":"0","Title":"ГЇГ®ГЄГ Г§Г»ГўГ ГІГј"},{"Value":"1","Title":"Г­ГҐ ГЇГ®ГЄГ Г§Г»ГўГ ГІГј"}],"DefaultValue":"0","Controls":["Г‡Г ГЄГ«Г Г¤ГЄГЁГќГІГ ГЇГ®Гў"]},{"Type":"1","Name":"Г‡Г ГЄГ«Г Г¤ГЄГ  Г•Г®Г¤ ГЇГ°Г®ГҐГЄГІГ ","Values":[{"Value":"0","Title":"ГЇГ®ГЄГ Г§Г»ГўГ ГІГј"},{"Value":"1","Title":"Г­ГҐ ГЇГ®ГЄГ Г§Г»ГўГ ГІГј"}],"DefaultValue":"0","Controls":["Г‡Г ГЄГ«Г Г¤ГЄГЁГќГІГ ГЇГ®Гў"]}]}}]'
+where "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = 'ГЏГ°Г®ГҐГЄГІ' ''')
 
 SqlQuery('''
-update "Регламент" SET "ВизуальноеПредставление" = '9785090d-86dd-4033-93f8-56eeabf42bb3',
-"НастройкаКарточкиДокумента" = ''
-where "ТипДокумента" = (select "@ТипДокумента" from "ТипДокумента" where "ТипДокумента" = 'Проект' LIMIT 1)
+update "ГђГҐГЈГ«Г Г¬ГҐГ­ГІ" SET "Г‚ГЁГ§ГіГ Г«ГјГ­Г®ГҐГЏГ°ГҐГ¤Г±ГІГ ГўГ«ГҐГ­ГЁГҐ" = '9785090d-86dd-4033-93f8-56eeabf42bb3',
+"ГЌГ Г±ГІГ°Г®Г©ГЄГ ГЉГ Г°ГІГ®Г·ГЄГЁГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = ''
+where "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = (select "@Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " from "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " where "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = 'ГЏГ°Г®ГҐГЄГІ' LIMIT 1)
 ''')</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Игнатьев И.В." name="ОбнулениеДатУПапокПроектов" responsible="Игнатьев И.В.">
-    <comment>Обнуление полей ПланДатаНач и ПланДатаКнц у папок проектов. Они должны быть пустыми.</comment>
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Г€ГЈГ­Г ГІГјГҐГў Г€.Г‚." name="ГЋГЎГ­ГіГ«ГҐГ­ГЁГҐГ„Г ГІГ“ГЏГ ГЇГ®ГЄГЏГ°Г®ГҐГЄГІГ®Гў" responsible="Г€ГЈГ­Г ГІГјГҐГў Г€.Г‚.">
+    <comment>ГЋГЎГ­ГіГ«ГҐГ­ГЁГҐ ГЇГ®Г«ГҐГ© ГЏГ«Г Г­Г„Г ГІГ ГЌГ Г· ГЁ ГЏГ«Г Г­Г„Г ГІГ ГЉГ­Г¶ Гі ГЇГ ГЇГ®ГЄ ГЇГ°Г®ГҐГЄГІГ®Гў. ГЋГ­ГЁ Г¤Г®Г«Г¦Г­Г» ГЎГ»ГІГј ГЇГіГ±ГІГ»Г¬ГЁ.</comment>
     <rule name=".*" schema=".*" stage="1" type="0"/>
     <callback event="26">
       <body>BEGIN
-   UPDATE "Проект" proj
-   SET "ПланДатаНач"=NULL, "ПланДатаКнц"=NULL
-   WHERE proj."@Документ" IN (
-      SELECT pr."@Документ" FROM "Проект" pr
-      LEFT JOIN "Документ" doc on doc."@Документ"=pr."@Документ"
-      LEFT JOIN "ТипДокумента" dt on doc."ТипДокумента"=dt."@ТипДокумента"
-      WHERE doc."Раздел@" = TRUE AND
-            dt."ТипДокумента"='Проект'
+   UPDATE "ГЏГ°Г®ГҐГЄГІ" proj
+   SET "ГЏГ«Г Г­Г„Г ГІГ ГЌГ Г·"=NULL, "ГЏГ«Г Г­Г„Г ГІГ ГЉГ­Г¶"=NULL
+   WHERE proj."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" IN (
+      SELECT pr."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" FROM "ГЏГ°Г®ГҐГЄГІ" pr
+      LEFT JOIN "Г„Г®ГЄГіГ¬ГҐГ­ГІ" doc on doc."@Г„Г®ГЄГіГ¬ГҐГ­ГІ"=pr."@Г„Г®ГЄГіГ¬ГҐГ­ГІ"
+      LEFT JOIN "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " dt on doc."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "=dt."@Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "
+      WHERE doc."ГђГ Г§Г¤ГҐГ«@" = TRUE AND
+            dt."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "='ГЏГ°Г®ГҐГЄГІ'
    );    
 END;</body>
-      <comment>Обнуление полей ПланДатаНач и ПланДатаКнц у папок проектов. Они должны быть пустыми.</comment>
+      <comment>ГЋГЎГ­ГіГ«ГҐГ­ГЁГҐ ГЇГ®Г«ГҐГ© ГЏГ«Г Г­Г„Г ГІГ ГЌГ Г· ГЁ ГЏГ«Г Г­Г„Г ГІГ ГЉГ­Г¶ Гі ГЇГ ГЇГ®ГЄ ГЇГ°Г®ГҐГЄГІГ®Гў. ГЋГ­ГЁ Г¤Г®Г«Г¦Г­Г» ГЎГ»ГІГј ГЇГіГ±ГІГ»Г¬ГЁ.</comment>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Палочкин В.В." name="ОбнулениеСчетчиковУПроектов" responsible="Палочкин В.В.">
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="ГЋГЎГ­ГіГ«ГҐГ­ГЁГҐГ‘Г·ГҐГІГ·ГЁГЄГ®ГўГ“ГЏГ°Г®ГҐГЄГІГ®Гў" responsible="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚.">
     <rule name=".*" schema=".*" stage="1" type="0"/>
     <callback event="26">
       <body>BEGIN
-   UPDATE "Проект" SET "ДатаПодсчета" = NULL;
+   UPDATE "ГЏГ°Г®ГҐГЄГІ" SET "Г„Г ГІГ ГЏГ®Г¤Г±Г·ГҐГІГ " = NULL;
 END;</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" deployment_stage="2" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Игнатьев И.В." name="ОкругПланВремениПоРаботамПлана" python_extension="1" responsible="Игнатьев И.В.">
-    <comment>Округление планового времени по работам плана работ для каждого сотрудника. Время от 0 до 1 откругляется до 1, если больше - отрезается нецелая часть.</comment>
+  <converter abstract="0" call_once="1" deployment_stage="2" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Г€ГЈГ­Г ГІГјГҐГў Г€.Г‚." name="ГЋГЄГ°ГіГЈГЏГ«Г Г­Г‚Г°ГҐГ¬ГҐГ­ГЁГЏГ®ГђГ ГЎГ®ГІГ Г¬ГЏГ«Г Г­Г " python_extension="1" responsible="Г€ГЈГ­Г ГІГјГҐГў Г€.Г‚.">
+    <comment>ГЋГЄГ°ГіГЈГ«ГҐГ­ГЁГҐ ГЇГ«Г Г­Г®ГўГ®ГЈГ® ГўГ°ГҐГ¬ГҐГ­ГЁ ГЇГ® Г°Г ГЎГ®ГІГ Г¬ ГЇГ«Г Г­Г  Г°Г ГЎГ®ГІ Г¤Г«Гї ГЄГ Г¦Г¤Г®ГЈГ® Г±Г®ГІГ°ГіГ¤Г­ГЁГЄГ . Г‚Г°ГҐГ¬Гї Г®ГІ 0 Г¤Г® 1 Г®ГІГЄГ°ГіГЈГ«ГїГҐГІГ±Гї Г¤Г® 1, ГҐГ±Г«ГЁ ГЎГ®Г«ГјГёГҐ - Г®ГІГ°ГҐГ§Г ГҐГІГ±Гї Г­ГҐГ¶ГҐГ«Г Гї Г·Г Г±ГІГј.</comment>
     <callback event="26">
       <body>SqlQuery('''
-   UPDATE "ЛицоДокумента" df SET "Время" = (SELECT trunc("Время"))
-   WHERE "СвязьДокументов" IN (
-           SELECT "@СвязьДокументов" FROM "СвязьДокументов" doc_link
-           LEFT JOIN "Документ" doc ON doc."@Документ" = doc_link."ДокументОснование"
-           LEFT JOIN "ТипДокумента" dt ON dt."@ТипДокумента"=doc."ТипДокумента"
-           WHERE dt."ТипДокумента" = 'ПланРабот'
+   UPDATE "Г‹ГЁГ¶Г®Г„Г®ГЄГіГ¬ГҐГ­ГІГ " df SET "Г‚Г°ГҐГ¬Гї" = (SELECT trunc("Г‚Г°ГҐГ¬Гї"))
+   WHERE "Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў" IN (
+           SELECT "@Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў" FROM "Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў" doc_link
+           LEFT JOIN "Г„Г®ГЄГіГ¬ГҐГ­ГІ" doc ON doc."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" = doc_link."Г„Г®ГЄГіГ¬ГҐГ­ГІГЋГ±Г­Г®ГўГ Г­ГЁГҐ"
+           LEFT JOIN "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " dt ON dt."@Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "=doc."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "
+           WHERE dt."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = 'ГЏГ«Г Г­ГђГ ГЎГ®ГІ'
    )
-   AND "Время"&gt;1;
+   AND "Г‚Г°ГҐГ¬Гї"&gt;1;
 ''')
 
 
 SqlQuery('''
-   UPDATE "ЛицоДокумента" df SET "Время" = 1
-   WHERE "СвязьДокументов" IN (
-           SELECT "@СвязьДокументов" FROM "СвязьДокументов" doc_link
-           LEFT JOIN "Документ" doc ON doc."@Документ" = doc_link."ДокументОснование"
-           LEFT JOIN "ТипДокумента" dt ON dt."@ТипДокумента"=doc."ТипДокумента"
-           WHERE dt."ТипДокумента" = 'ПланРабот'
+   UPDATE "Г‹ГЁГ¶Г®Г„Г®ГЄГіГ¬ГҐГ­ГІГ " df SET "Г‚Г°ГҐГ¬Гї" = 1
+   WHERE "Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў" IN (
+           SELECT "@Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў" FROM "Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў" doc_link
+           LEFT JOIN "Г„Г®ГЄГіГ¬ГҐГ­ГІ" doc ON doc."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" = doc_link."Г„Г®ГЄГіГ¬ГҐГ­ГІГЋГ±Г­Г®ГўГ Г­ГЁГҐ"
+           LEFT JOIN "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " dt ON dt."@Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "=doc."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "
+           WHERE dt."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = 'ГЏГ«Г Г­ГђГ ГЎГ®ГІ'
    )
-   AND "Время"&gt;0 AND "Время"&lt;1;
+   AND "Г‚Г°ГҐГ¬Гї"&gt;0 AND "Г‚Г°ГҐГ¬Гї"&lt;1;
 END;
 ''')</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Зимин В.А." name="ОчисткаИсторииФильтрНаДиалВехи" responsible="Зимин В.А.">
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Г‡ГЁГ¬ГЁГ­ Г‚.ГЂ." name="ГЋГ·ГЁГ±ГІГЄГ Г€Г±ГІГ®Г°ГЁГЁГ”ГЁГ«ГјГІГ°ГЌГ Г„ГЁГ Г«Г‚ГҐГµГЁ" responsible="Г‡ГЁГ¬ГЁГ­ Г‚.ГЂ.">
     <rule name=".*" schema=".*" stage="1" type="0"/>
     <callback event="26">
       <body>BEGIN
-   UPDATE "Параметр"
-   SET "Значение" = NULL
+   UPDATE "ГЏГ Г°Г Г¬ГҐГІГ°"
+   SET "Г‡Г­Г Г·ГҐГ­ГЁГҐ" = NULL
    WHERE 
-      "Параметр"."Название" = 'ФильтрТаблицыСвязейСВехойЗИ-СостояниеВех-historyFilters' OR
-      "Параметр"."Название" = 'ФильтрТаблицыСвязейСВехойЗИ-СостояниеВех-historyData' OR
-      "Параметр"."Название" = 'ФильтрТаблицыСвязейСВехойЗИ-СостояниеВех-rememberData' OR
-      "Параметр"."Название" = 'ФильтрТаблицыСвязейСВехойЗИ-СостояниеВех-filterViewData';
+      "ГЏГ Г°Г Г¬ГҐГІГ°"."ГЌГ Г§ГўГ Г­ГЁГҐ" = 'Г”ГЁГ«ГјГІГ°Г’Г ГЎГ«ГЁГ¶Г»Г‘ГўГїГ§ГҐГ©Г‘Г‚ГҐГµГ®Г©Г‡Г€-Г‘Г®Г±ГІГ®ГїГ­ГЁГҐГ‚ГҐГµ-historyFilters' OR
+      "ГЏГ Г°Г Г¬ГҐГІГ°"."ГЌГ Г§ГўГ Г­ГЁГҐ" = 'Г”ГЁГ«ГјГІГ°Г’Г ГЎГ«ГЁГ¶Г»Г‘ГўГїГ§ГҐГ©Г‘Г‚ГҐГµГ®Г©Г‡Г€-Г‘Г®Г±ГІГ®ГїГ­ГЁГҐГ‚ГҐГµ-historyData' OR
+      "ГЏГ Г°Г Г¬ГҐГІГ°"."ГЌГ Г§ГўГ Г­ГЁГҐ" = 'Г”ГЁГ«ГјГІГ°Г’Г ГЎГ«ГЁГ¶Г»Г‘ГўГїГ§ГҐГ©Г‘Г‚ГҐГµГ®Г©Г‡Г€-Г‘Г®Г±ГІГ®ГїГ­ГЁГҐГ‚ГҐГµ-rememberData' OR
+      "ГЏГ Г°Г Г¬ГҐГІГ°"."ГЌГ Г§ГўГ Г­ГЁГҐ" = 'Г”ГЁГ«ГјГІГ°Г’Г ГЎГ«ГЁГ¶Г»Г‘ГўГїГ§ГҐГ©Г‘Г‚ГҐГµГ®Г©Г‡Г€-Г‘Г®Г±ГІГ®ГїГ­ГЁГҐГ‚ГҐГµ-filterViewData';
 END;</body>
-      <comment>Конвертер нужно выполнить один раз, чтобы удалить дубли в сложном фильтре на диалоге вехи.</comment>
+      <comment>ГЉГ®Г­ГўГҐГ°ГІГҐГ° Г­ГіГ¦Г­Г® ГўГ»ГЇГ®Г«Г­ГЁГІГј Г®Г¤ГЁГ­ Г°Г Г§, Г·ГІГ®ГЎГ» ГіГ¤Г Г«ГЁГІГј Г¤ГіГЎГ«ГЁ Гў Г±Г«Г®Г¦Г­Г®Г¬ ГґГЁГ«ГјГІГ°ГҐ Г­Г  Г¤ГЁГ Г«Г®ГЈГҐ ГўГҐГµГЁ.</comment>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Палочкин В.В." name="ОчисткаЛицаУЗон" responsible="Палочкин В.В.">
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="ГЋГ·ГЁГ±ГІГЄГ Г‹ГЁГ¶Г Г“Г‡Г®Г­" responsible="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚.">
     <rule name=".*" schema=".*" stage="1" type="0"/>
     <callback event="26">
       <body>DECLARE
 BEGIN
-UPDATE "Лицо" SET "Название" = NULL WHERE "@Лицо" IN (
-   SELECT "@Лицо" FROM "ФункциональнаяОбласть"
+UPDATE "Г‹ГЁГ¶Г®" SET "ГЌГ Г§ГўГ Г­ГЁГҐ" = NULL WHERE "@Г‹ГЁГ¶Г®" IN (
+   SELECT "@Г‹ГЁГ¶Г®" FROM "Г”ГіГ­ГЄГ¶ГЁГ®Г­Г Г«ГјГ­Г ГїГЋГЎГ«Г Г±ГІГј"
 );
 END;</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Шарашов М.А." name="ПереносИзмененияСрока" responsible="Шарашов М.А.">
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="ГГ Г°Г ГёГ®Гў ГЊ.ГЂ." name="ГЏГҐГ°ГҐГ­Г®Г±Г€Г§Г¬ГҐГ­ГҐГ­ГЁГїГ‘Г°Г®ГЄГ " responsible="ГГ Г°Г ГёГ®Гў ГЊ.ГЂ.">
     <rule name=".*" schema=".*" stage="1" type="0"/>
     <callback event="26">
       <body>DECLARE
 BEGIN
-UPDATE "Проект" SET "ИзменениеСрока" = TRUE WHERE "@Документ" IN (  SELECT DISTINCT doc."@Документ"  
-    FROM "Документ" doc
-    LEFT JOIN "ПроектСобытие" event
-         ON doc."@Документ" = COALESCE(event."ДокументСледствие", event."Документ")
-    WHERE event."Тип" = 7
-          AND (event."ДокументСледствие" = doc."@Документ"
-             OR (event."Документ" =  doc."@Документ" AND event."ДокументСледствие" IS NULL))
+UPDATE "ГЏГ°Г®ГҐГЄГІ" SET "Г€Г§Г¬ГҐГ­ГҐГ­ГЁГҐГ‘Г°Г®ГЄГ " = TRUE WHERE "@Г„Г®ГЄГіГ¬ГҐГ­ГІ" IN (  SELECT DISTINCT doc."@Г„Г®ГЄГіГ¬ГҐГ­ГІ"  
+    FROM "Г„Г®ГЄГіГ¬ГҐГ­ГІ" doc
+    LEFT JOIN "ГЏГ°Г®ГҐГЄГІГ‘Г®ГЎГ»ГІГЁГҐ" event
+         ON doc."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" = COALESCE(event."Г„Г®ГЄГіГ¬ГҐГ­ГІГ‘Г«ГҐГ¤Г±ГІГўГЁГҐ", event."Г„Г®ГЄГіГ¬ГҐГ­ГІ")
+    WHERE event."Г’ГЁГЇ" = 7
+          AND (event."Г„Г®ГЄГіГ¬ГҐГ­ГІГ‘Г«ГҐГ¤Г±ГІГўГЁГҐ" = doc."@Г„Г®ГЄГіГ¬ГҐГ­ГІ"
+             OR (event."Г„Г®ГЄГіГ¬ГҐГ­ГІ" =  doc."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" AND event."Г„Г®ГЄГіГ¬ГҐГ­ГІГ‘Г«ГҐГ¤Г±ГІГўГЁГҐ" IS NULL))
     );
 END;</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Савин В.В." name="ПроставлениеПорНомерПроектам" responsible="Савин В.В.">
-    <comment>Заполняем колонку ПорНомер для уже созданных Проектов, Этапов, у которых этот парметр незадан.</comment>
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Г‘Г ГўГЁГ­ Г‚.Г‚." name="ГЏГ°Г®Г±ГІГ ГўГ«ГҐГ­ГЁГҐГЏГ®Г°ГЌГ®Г¬ГҐГ°ГЏГ°Г®ГҐГЄГІГ Г¬" responsible="Г‘Г ГўГЁГ­ Г‚.Г‚.">
+    <comment>Г‡Г ГЇГ®Г«Г­ГїГҐГ¬ ГЄГ®Г«Г®Г­ГЄГі ГЏГ®Г°ГЌГ®Г¬ГҐГ° Г¤Г«Гї ГіГ¦ГҐ Г±Г®Г§Г¤Г Г­Г­Г»Гµ ГЏГ°Г®ГҐГЄГІГ®Гў, ГќГІГ ГЇГ®Гў, Гі ГЄГ®ГІГ®Г°Г»Гµ ГЅГІГ®ГІ ГЇГ Г°Г¬ГҐГІГ° Г­ГҐГ§Г Г¤Г Г­.</comment>
     <rule name=".*" schema=".*" stage="1" type="0"/>
     <callback event="1">
       <body>DECLARE
 BEGIN
-   UPDATE "Проект" SET "ПорНомер"="@Документ" WHERE "ПорНомер" IS NULL;
+   UPDATE "ГЏГ°Г®ГҐГЄГІ" SET "ГЏГ®Г°ГЌГ®Г¬ГҐГ°"="@Г„Г®ГЄГіГ¬ГҐГ­ГІ" WHERE "ГЏГ®Г°ГЌГ®Г¬ГҐГ°" IS NULL;
 END;</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" deployment_stage="1" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Палочкин В.В." name="СбросДатыВехи" python_extension="1" responsible="Палочкин В.В.">
+  <converter abstract="0" call_once="1" deployment_stage="1" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="Г‘ГЎГ°Г®Г±Г„Г ГІГ»Г‚ГҐГµГЁ" python_extension="1" responsible="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚.">
     <callback event="1">
       <body>SqlQuery("""
-UPDATE "Веха"
-SET "Дата" = NULL
+UPDATE "Г‚ГҐГµГ "
+SET "Г„Г ГІГ " = NULL
 """)</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Никитин Е.С." name="СбросСостоянияВехи" responsible="Никитин Е.С.">
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="ГЌГЁГЄГЁГІГЁГ­ Г….Г‘." name="Г‘ГЎГ°Г®Г±Г‘Г®Г±ГІГ®ГїГ­ГЁГїГ‚ГҐГµГЁ" responsible="ГЌГЁГЄГЁГІГЁГ­ Г….Г‘.">
     <rule name=".*" schema=".*" stage="1" type="0"/>
     <callback event="1">
       <body>DECLARE
 BEGIN
-   UPDATE "Веха"
-   SET "Состояние" = 0
-   WHERE "Состояние" = 6;
+   UPDATE "Г‚ГҐГµГ "
+   SET "Г‘Г®Г±ГІГ®ГїГ­ГЁГҐ" = 0
+   WHERE "Г‘Г®Г±ГІГ®ГїГ­ГЁГҐ" = 6;
 END;</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" deployment_stage="1" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Палочкин В.В." name="СброситьВремяПересчетаПроверок" python_extension="1" responsible="Палочкин В.В.">
+  <converter abstract="0" call_once="1" deployment_stage="1" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="Г‘ГЎГ°Г®Г±ГЁГІГјГ‚Г°ГҐГ¬ГїГЏГҐГ°ГҐГ±Г·ГҐГІГ ГЏГ°Г®ГўГҐГ°Г®ГЄ" python_extension="1" responsible="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚.">
     <callback event="26">
       <body>SqlQuery("""
-UPDATE "ЧеклистСтруктура"
-SET "ДатаВремяПересчета" = NULL
+UPDATE "Г—ГҐГЄГ«ГЁГ±ГІГ‘ГІГ°ГіГЄГІГіГ°Г "
+SET "Г„Г ГІГ Г‚Г°ГҐГ¬ГїГЏГҐГ°ГҐГ±Г·ГҐГІГ " = NULL
 """)</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Зимин В.А." name="УдалМусораСвязьДокументовПлан" responsible="Зимин В.А.">
-    <comment>Из-за неправильного формата объекта СвязьДокументов в таблице СвязьДокументовПлан скопилось множество лишних записей. Объект поправили, записи удаляем.</comment>
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Г‡ГЁГ¬ГЁГ­ Г‚.ГЂ." name="Г“Г¤Г Г«ГЊГіГ±Г®Г°Г Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®ГўГЏГ«Г Г­" responsible="Г‡ГЁГ¬ГЁГ­ Г‚.ГЂ.">
+    <comment>Г€Г§-Г§Г  Г­ГҐГЇГ°Г ГўГЁГ«ГјГ­Г®ГЈГ® ГґГ®Г°Г¬Г ГІГ  Г®ГЎГєГҐГЄГІГ  Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў Гў ГІГ ГЎГ«ГЁГ¶ГҐ Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®ГўГЏГ«Г Г­ Г±ГЄГ®ГЇГЁГ«Г®Г±Гј Г¬Г­Г®Г¦ГҐГ±ГІГўГ® Г«ГЁГёГ­ГЁГµ Г§Г ГЇГЁГ±ГҐГ©. ГЋГЎГєГҐГЄГІ ГЇГ®ГЇГ°Г ГўГЁГ«ГЁ, Г§Г ГЇГЁГ±ГЁ ГіГ¤Г Г«ГїГҐГ¬.</comment>
     <rule name=".*" schema=".*" stage="1" type="0"/>
     <callback event="26">
       <body>BEGIN
-   DELETE FROM "СвязьДокументовПлан"
-   WHERE "@СвязьДокументов" in (
+   DELETE FROM "Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®ГўГЏГ«Г Г­"
+   WHERE "@Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў" in (
       SELECT   
-        "СвязьДокументов"."@СвязьДокументов"  
+        "Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў"."@Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў"  
       FROM 
-        "СвязьДокументов", 
-        "СвязьДокументовПлан", 
-        "Документ", 
-        "ТипДокумента"
+        "Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў", 
+        "Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®ГўГЏГ«Г Г­", 
+        "Г„Г®ГЄГіГ¬ГҐГ­ГІ", 
+        "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "
       WHERE 
-        "СвязьДокументов"."@СвязьДокументов" = "СвязьДокументовПлан"."@СвязьДокументов" AND
-        "СвязьДокументов"."ДокументОснование" = "Документ"."@Документ" AND
-        "Документ"."ТипДокумента" = "ТипДокумента"."@ТипДокумента" AND
-        "ТипДокумента"."Название" != 'Планы работ' AND
-        coalesce("СвязьДокументов"."ВидСвязи", 0) NOT IN (14, 15)
+        "Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў"."@Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў" = "Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®ГўГЏГ«Г Г­"."@Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў" AND
+        "Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў"."Г„Г®ГЄГіГ¬ГҐГ­ГІГЋГ±Г­Г®ГўГ Г­ГЁГҐ" = "Г„Г®ГЄГіГ¬ГҐГ­ГІ"."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" AND
+        "Г„Г®ГЄГіГ¬ГҐГ­ГІ"."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "."@Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " AND
+        "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "."ГЌГ Г§ГўГ Г­ГЁГҐ" != 'ГЏГ«Г Г­Г» Г°Г ГЎГ®ГІ' AND
+        coalesce("Г‘ГўГїГ§ГјГ„Г®ГЄГіГ¬ГҐГ­ГІГ®Гў"."Г‚ГЁГ¤Г‘ГўГїГ§ГЁ", 0) NOT IN (14, 15)
    );
 END;</body>
-      <comment>Конвертер нужно выполнить один раз, чтобы удалить дубли в сложном фильтре на диалоге вехи.</comment>
+      <comment>ГЉГ®Г­ГўГҐГ°ГІГҐГ° Г­ГіГ¦Г­Г® ГўГ»ГЇГ®Г«Г­ГЁГІГј Г®Г¤ГЁГ­ Г°Г Г§, Г·ГІГ®ГЎГ» ГіГ¤Г Г«ГЁГІГј Г¤ГіГЎГ«ГЁ Гў Г±Г«Г®Г¦Г­Г®Г¬ ГґГЁГ«ГјГІГ°ГҐ Г­Г  Г¤ГЁГ Г«Г®ГЈГҐ ГўГҐГµГЁ.</comment>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" for_new_db="0" last_changed="Палочкин В.В." name="УдалениеПроектовУдаленнойПапки" responsible="Палочкин В.В.">
+  <converter abstract="0" call_once="1" for_new_db="0" last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="Г“Г¤Г Г«ГҐГ­ГЁГҐГЏГ°Г®ГҐГЄГІГ®ГўГ“Г¤Г Г«ГҐГ­Г­Г®Г©ГЏГ ГЇГЄГЁ" responsible="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚.">
     <rule name=".*" schema=".*" stage="1" type="0"/>
     <callback event="26">
       <body>DECLARE
 BEGIN
-   UPDATE "Документ" SET "Удален" = TRUE 
-   WHERE "@Документ" IN (
+   UPDATE "Г„Г®ГЄГіГ¬ГҐГ­ГІ" SET "Г“Г¤Г Г«ГҐГ­" = TRUE 
+   WHERE "@Г„Г®ГЄГіГ¬ГҐГ­ГІ" IN (
       WITH RECURSIVE tmp AS (
          select 
-            proj."@Документ" 
-         from "Проект" proj
-         INNER JOIN "Документ" doc
-            ON doc."@Документ" = proj."@Документ"
-         INNER JOIN "ТипДокумента" t_d
-            ON t_d."@ТипДокумента" = doc."ТипДокумента"
-         WHERE doc."Раздел@" IS TRUE 
-               AND t_d."ТипДокумента" = 'Проект' 
-               AND doc."Удален" IS TRUE
+            proj."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" 
+         from "ГЏГ°Г®ГҐГЄГІ" proj
+         INNER JOIN "Г„Г®ГЄГіГ¬ГҐГ­ГІ" doc
+            ON doc."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" = proj."@Г„Г®ГЄГіГ¬ГҐГ­ГІ"
+         INNER JOIN "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " t_d
+            ON t_d."@Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = doc."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "
+         WHERE doc."ГђГ Г§Г¤ГҐГ«@" IS TRUE 
+               AND t_d."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = 'ГЏГ°Г®ГҐГЄГІ' 
+               AND doc."Г“Г¤Г Г«ГҐГ­" IS TRUE
       ),
       aaa AS (
          select 
-            proj."@Документ", 
-            1 AS "Уровень" , 
-            proj."СостояниеПроекта", 
-            doc."Удален"
-         from "Проект" proj
-         INNER JOIN "Документ" doc
-            ON doc."@Документ" = proj."@Документ"
+            proj."@Г„Г®ГЄГіГ¬ГҐГ­ГІ", 
+            1 AS "Г“Г°Г®ГўГҐГ­Гј" , 
+            proj."Г‘Г®Г±ГІГ®ГїГ­ГЁГҐГЏГ°Г®ГҐГЄГІГ ", 
+            doc."Г“Г¤Г Г«ГҐГ­"
+         from "ГЏГ°Г®ГҐГЄГІ" proj
+         INNER JOIN "Г„Г®ГЄГіГ¬ГҐГ­ГІ" doc
+            ON doc."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" = proj."@Г„Г®ГЄГіГ¬ГҐГ­ГІ"
          INNER JOIN tmp
-            ON tmp."@Документ" = doc."Раздел"
-         INNER JOIN "ТипДокумента" t_d
-            ON t_d."@ТипДокумента" = doc."ТипДокумента"
-         WHERE t_d."ТипДокумента" = 'Проект' 
-               AND doc."Удален" IS NOT TRUE
+            ON tmp."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" = doc."ГђГ Г§Г¤ГҐГ«"
+         INNER JOIN "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " t_d
+            ON t_d."@Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = doc."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "
+         WHERE t_d."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = 'ГЏГ°Г®ГҐГЄГІ' 
+               AND doc."Г“Г¤Г Г«ГҐГ­" IS NOT TRUE
 
          UNION ALL
          
          select 
-            proj."@Документ", 
-            aaa."Уровень" + 1  AS "Уровень", 
-            proj."СостояниеПроекта", 
-            doc."Удален"
-         from "Проект" proj
-         INNER JOIN "Документ" doc
-            ON doc."@Документ" = proj."@Документ"
+            proj."@Г„Г®ГЄГіГ¬ГҐГ­ГІ", 
+            aaa."Г“Г°Г®ГўГҐГ­Гј" + 1  AS "Г“Г°Г®ГўГҐГ­Гј", 
+            proj."Г‘Г®Г±ГІГ®ГїГ­ГЁГҐГЏГ°Г®ГҐГЄГІГ ", 
+            doc."Г“Г¤Г Г«ГҐГ­"
+         from "ГЏГ°Г®ГҐГЄГІ" proj
+         INNER JOIN "Г„Г®ГЄГіГ¬ГҐГ­ГІ" doc
+            ON doc."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" = proj."@Г„Г®ГЄГіГ¬ГҐГ­ГІ"
          INNER JOIN aaa
-            ON aaa."@Документ" = doc."Раздел"
-         INNER JOIN "ТипДокумента" t_d
-            ON t_d."@ТипДокумента" = doc."ТипДокумента"
-         WHERE t_d."ТипДокумента" = 'Проект' 
-               AND doc."Удален" IS NOT TRUE
-               AND "Уровень" &lt; 20
+            ON aaa."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" = doc."ГђГ Г§Г¤ГҐГ«"
+         INNER JOIN "Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " t_d
+            ON t_d."@Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = doc."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ "
+         WHERE t_d."Г’ГЁГЇГ„Г®ГЄГіГ¬ГҐГ­ГІГ " = 'ГЏГ°Г®ГҐГЄГІ' 
+               AND doc."Г“Г¤Г Г«ГҐГ­" IS NOT TRUE
+               AND "Г“Г°Г®ГўГҐГ­Гј" &lt; 20
       )
-      select aaa."@Документ" from aaa
+      select aaa."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" from aaa
    );
 END;</body>
     </callback>
   </converter>
 
-  <converter abstract="0" call_once="1" deployment_stage="1" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="Палочкин В.В." name="УстановкаДатыВехи" python_extension="1" responsible="Палочкин В.В.">
+  <converter abstract="0" call_once="1" deployment_stage="1" for_new_db="0" for_personal_schemas="1" for_public_schema="0" last_changed="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚." name="Г“Г±ГІГ Г­Г®ГўГЄГ Г„Г ГІГ»Г‚ГҐГµГЁ" python_extension="1" responsible="ГЏГ Г«Г®Г·ГЄГЁГ­ Г‚.Г‚.">
     <callback event="26">
       <body>SqlQuery("""
 WITH T AS (
-    SELECT veha."@Документ" AS "Документ",
-        doc."Дата"
-    FROM "Веха" veha
-    LEFT JOIN "Документ" doc
-        ON doc."@Документ" = veha."@Документ"
+    SELECT veha."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" AS "Г„Г®ГЄГіГ¬ГҐГ­ГІ",
+        doc."Г„Г ГІГ "
+    FROM "Г‚ГҐГµГ " veha
+    LEFT JOIN "Г„Г®ГЄГіГ¬ГҐГ­ГІ" doc
+        ON doc."@Г„Г®ГЄГіГ¬ГҐГ­ГІ" = veha."@Г„Г®ГЄГіГ¬ГҐГ­ГІ"
 )
-UPDATE "Веха" SET "Дата" = T."Дата" FROM T WHERE "@Документ" = T."Документ"
+UPDATE "Г‚ГҐГµГ " SET "Г„Г ГІГ " = T."Г„Г ГІГ " FROM T WHERE "@Г„Г®ГЄГіГ¬ГҐГ­ГІ" = T."Г„Г®ГЄГіГ¬ГҐГ­ГІ"
 """)</body>
     </callback>
   </converter>
